@@ -1,0 +1,5 @@
+Python 3.10.20
+PyTorch: 2.6.0+cu118
+Transformers: 4.55.2
+Accelerate: 1.13.0
+535.274.02

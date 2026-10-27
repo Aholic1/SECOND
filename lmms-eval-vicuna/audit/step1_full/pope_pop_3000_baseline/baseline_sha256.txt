@@ -1,0 +1,2 @@
+0c8a71ef7bda1048dbc4649e0207eeb241a42492458a7ce10080ef5a0d5a5cc3  logs/liuhaotian__llava-v1.6-vicuna-7b/20260810_001849_samples_pope_pop.jsonl
+0e9f8866ec5efae81dfb34b02717ca96db0d95d619c59e45fe09b71c36c8ad77  logs/liuhaotian__llava-v1.6-vicuna-7b/20260810_001849_results.json

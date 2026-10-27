@@ -1,0 +1,1070 @@
+{
+  "schema_version": 2,
+  "purpose": "Matched controls equal under C/D in the historical source run",
+  "freeze_version": "step5-freeze-v1",
+  "seed": 42,
+  "expected_count": 18,
+  "provenance_sha256": "1e375374db60035dd0d60f728c5f82ba52066c3b3f6d3e9f80d1c3b0a28a0de3",
+  "samples": [
+    {
+      "question_id": "237",
+      "doc_id": 236,
+      "dataset_image_id": "3236",
+      "image_id": "500257",
+      "coco_image_id": "500257",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000500257.jpg",
+      "image_sha256": "c39d6a908175616d1d1071632146a2862958779730739a943c9540ca5d4c9e69",
+      "question": "Is there a backpack in the image?",
+      "target_object": "backpack",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "no",
+      "C_correct": false,
+      "D_correct": false,
+      "image_width": 500,
+      "image_height": 400,
+      "aspect_ratio": 1.25,
+      "num_objects": 31,
+      "num_noncrowd_objects": 30,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 1416660,
+          "category": "backpack",
+          "bbox_xywh": [
+            178.04,
+            155.64,
+            29.23,
+            21.92
+          ],
+          "bbox_area": 640.7216000000001,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.0032036080000000006,
+      "largest_target_center_normalized": [
+        0.38531,
+        0.4165
+      ],
+      "largest_target_peripheral_distance": 0.10031462032027037,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2887"
+    },
+    {
+      "question_id": "547",
+      "doc_id": 546,
+      "dataset_image_id": "3546",
+      "image_id": "81336",
+      "coco_image_id": "81336",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000081336.jpg",
+      "image_sha256": "2409e908adca9b7af12c7ce6ac195199dff08b12d4173f4af62765fc68be172d",
+      "question": "Is there a traffic light in the image?",
+      "target_object": "traffic light",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 577,
+      "image_height": 448,
+      "aspect_ratio": 1.2879464285714286,
+      "num_objects": 12,
+      "num_noncrowd_objects": 12,
+      "target_instance_count": 2,
+      "target_bboxes": [
+        {
+          "annotation_id": 1384020,
+          "category": "traffic light",
+          "bbox_xywh": [
+            508.21,
+            48.5,
+            17.06,
+            66.5
+          ],
+          "bbox_area": 1134.49,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1387262,
+          "category": "traffic light",
+          "bbox_xywh": [
+            458.84,
+            169.81,
+            19.1,
+            18.85
+          ],
+          "bbox_area": 360.0350000000001,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.004388810658578856,
+      "largest_target_center_normalized": [
+        0.8955632582322357,
+        0.18247767857142858
+      ],
+      "largest_target_peripheral_distance": 0.35867165755652575,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "1043"
+    },
+    {
+      "question_id": "899",
+      "doc_id": 898,
+      "dataset_image_id": "3898",
+      "image_id": "354398",
+      "coco_image_id": "354398",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000354398.jpg",
+      "image_sha256": "9ab5e2411dc4dd93e30977c456d0bf7d7ffb1643f8ce910dc76194f20b1ad462",
+      "question": "Is there a person in the image?",
+      "target_object": "person",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 486,
+      "aspect_ratio": 1.316872427983539,
+      "num_objects": 5,
+      "num_noncrowd_objects": 5,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 1727199,
+          "category": "person",
+          "bbox_xywh": [
+            243.51,
+            140.57,
+            50.22,
+            115.04
+          ],
+          "bbox_area": 5777.3088,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.018574166666666666,
+      "largest_target_center_normalized": [
+        0.41971875000000003,
+        0.4075925925925926
+      ],
+      "largest_target_peripheral_distance": 0.08655694092711763,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "1333"
+    },
+    {
+      "question_id": "954",
+      "doc_id": 953,
+      "dataset_image_id": "3953",
+      "image_id": "379162",
+      "coco_image_id": "379162",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000379162.jpg",
+      "image_sha256": "cf1ba63ded89c57147883f28e8ce63e3cd58f2dcb68729bfb77ee37a335fdb28",
+      "question": "Is there a cup in the image?",
+      "target_object": "cup",
+      "ground_truth": "no",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": false,
+      "D_correct": false,
+      "image_width": 640,
+      "image_height": 427,
+      "aspect_ratio": 1.4988290398126465,
+      "num_objects": 10,
+      "num_noncrowd_objects": 10,
+      "target_instance_count": 0,
+      "target_bboxes": [],
+      "largest_target_bbox_area_ratio": null,
+      "largest_target_center_normalized": null,
+      "largest_target_peripheral_distance": null,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2478"
+    },
+    {
+      "question_id": "1051",
+      "doc_id": 1050,
+      "dataset_image_id": "4050",
+      "image_id": "18150",
+      "coco_image_id": "18150",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000018150.jpg",
+      "image_sha256": "c49c2bb7e3ea8951c997f9984d13cb9f2bf8c1a0b4f7c398c0317f36435059f0",
+      "question": "Is there a backpack in the image?",
+      "target_object": "backpack",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "no",
+      "C_correct": false,
+      "D_correct": false,
+      "image_width": 640,
+      "image_height": 480,
+      "aspect_ratio": 1.3333333333333333,
+      "num_objects": 7,
+      "num_noncrowd_objects": 7,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 1420782,
+          "category": "backpack",
+          "bbox_xywh": [
+            210.17,
+            105.1,
+            41.32,
+            55.59
+          ],
+          "bbox_area": 2296.9788000000003,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.007477144531250001,
+      "largest_target_center_normalized": [
+        0.360671875,
+        0.2768645833333333
+      ],
+      "largest_target_peripheral_distance": 0.18601309172612362,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2697"
+    },
+    {
+      "question_id": "1123",
+      "doc_id": 1122,
+      "dataset_image_id": "4122",
+      "image_id": "11241",
+      "coco_image_id": "11241",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000011241.jpg",
+      "image_sha256": "f229b7d36a23be6d10ff8557e421af7bd0b9e0491ffa6a41a0c3154d57fbae3e",
+      "question": "Is there a bowl in the image?",
+      "target_object": "bowl",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 427,
+      "aspect_ratio": 1.4988290398126465,
+      "num_objects": 28,
+      "num_noncrowd_objects": 28,
+      "target_instance_count": 7,
+      "target_bboxes": [
+        {
+          "annotation_id": 709683,
+          "category": "bowl",
+          "bbox_xywh": [
+            483.0,
+            315.53,
+            157.0,
+            94.94
+          ],
+          "bbox_area": 14905.58,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1040024,
+          "category": "bowl",
+          "bbox_xywh": [
+            439.14,
+            287.86,
+            67.19,
+            47.04
+          ],
+          "bbox_area": 3160.6176,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1040722,
+          "category": "bowl",
+          "bbox_xywh": [
+            501.48,
+            255.62,
+            43.54,
+            26.27
+          ],
+          "bbox_area": 1143.7957999999999,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1040868,
+          "category": "bowl",
+          "bbox_xywh": [
+            579.44,
+            254.91,
+            59.73,
+            43.86
+          ],
+          "bbox_area": 2619.7578,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1040920,
+          "category": "bowl",
+          "bbox_xywh": [
+            471.92,
+            265.78,
+            61.64,
+            43.86
+          ],
+          "bbox_area": 2703.5304,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1536894,
+          "category": "bowl",
+          "bbox_xywh": [
+            534.85,
+            283.73,
+            105.15,
+            71.03
+          ],
+          "bbox_area": 7468.8045,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1900521,
+          "category": "bowl",
+          "bbox_xywh": [
+            412.75,
+            312.95,
+            58.3,
+            44.77
+          ],
+          "bbox_area": 2610.091,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.054543252341920374,
+      "largest_target_center_normalized": [
+        0.87734375,
+        0.8501170960187353
+      ],
+      "largest_target_peripheral_distance": 0.3639850866372513,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2253"
+    },
+    {
+      "question_id": "1254",
+      "doc_id": 1253,
+      "dataset_image_id": "4253",
+      "image_id": "388983",
+      "coco_image_id": "388983",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000388983.jpg",
+      "image_sha256": "cbb87658b4adbafec3d5aa9cd37c03927a60697d66fc2424ea6c3da93c74a227",
+      "question": "Is there a bottle in the image?",
+      "target_object": "bottle",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "no",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 375,
+      "image_height": 500,
+      "aspect_ratio": 0.75,
+      "num_objects": 4,
+      "num_noncrowd_objects": 4,
+      "target_instance_count": 0,
+      "target_bboxes": [],
+      "largest_target_bbox_area_ratio": null,
+      "largest_target_center_normalized": null,
+      "largest_target_peripheral_distance": null,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2802"
+    },
+    {
+      "question_id": "1361",
+      "doc_id": 1360,
+      "dataset_image_id": "4360",
+      "image_id": "505542",
+      "coco_image_id": "505542",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000505542.jpg",
+      "image_sha256": "7d97c49bff702fa668bd73a6d604962b8bfe7b0f5089fa3d239202a3a8865b5d",
+      "question": "Is there a car in the image?",
+      "target_object": "car",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 530,
+      "aspect_ratio": 1.2075471698113207,
+      "num_objects": 4,
+      "num_noncrowd_objects": 4,
+      "target_instance_count": 2,
+      "target_bboxes": [
+        {
+          "annotation_id": 1771162,
+          "category": "car",
+          "bbox_xywh": [
+            608.87,
+            242.39,
+            31.0,
+            20.33
+          ],
+          "bbox_area": 630.2299999999999,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1775023,
+          "category": "car",
+          "bbox_xywh": [
+            556.92,
+            247.65,
+            29.94,
+            17.08
+          ],
+          "bbox_area": 511.37519999999995,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.0018579893867924524,
+      "largest_target_center_normalized": [
+        0.975578125,
+        0.47651886792452824
+      ],
+      "largest_target_peripheral_distance": 0.33669416132601804,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2559"
+    },
+    {
+      "question_id": "1399",
+      "doc_id": 1398,
+      "dataset_image_id": "4398",
+      "image_id": "463522",
+      "coco_image_id": "463522",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000463522.jpg",
+      "image_sha256": "0a438982195807a57f6989644982e3974b00fa52101c99f99a31e3dfe578937c",
+      "question": "Is there a backpack in the image?",
+      "target_object": "backpack",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "no",
+      "C_correct": false,
+      "D_correct": false,
+      "image_width": 640,
+      "image_height": 480,
+      "aspect_ratio": 1.3333333333333333,
+      "num_objects": 22,
+      "num_noncrowd_objects": 21,
+      "target_instance_count": 2,
+      "target_bboxes": [
+        {
+          "annotation_id": 1168933,
+          "category": "backpack",
+          "bbox_xywh": [
+            518.24,
+            244.77,
+            6.32,
+            12.36
+          ],
+          "bbox_area": 78.1152,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1169777,
+          "category": "backpack",
+          "bbox_xywh": [
+            546.24,
+            239.31,
+            28.95,
+            34.34
+          ],
+          "bbox_area": 994.143,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.003236142578125,
+      "largest_target_center_normalized": [
+        0.8761171875,
+        0.5343333333333333
+      ],
+      "largest_target_peripheral_distance": 0.2670607763325494,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2275"
+    },
+    {
+      "question_id": "1556",
+      "doc_id": 1555,
+      "dataset_image_id": "4555",
+      "image_id": "441156",
+      "coco_image_id": "441156",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000441156.jpg",
+      "image_sha256": "d184a72d816658dcba8f9654efdab923de0a301420b33b31a84a978fff912867",
+      "question": "Is there a dining table in the image?",
+      "target_object": "dining table",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "no",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 480,
+      "aspect_ratio": 1.3333333333333333,
+      "num_objects": 6,
+      "num_noncrowd_objects": 6,
+      "target_instance_count": 0,
+      "target_bboxes": [],
+      "largest_target_bbox_area_ratio": null,
+      "largest_target_center_normalized": null,
+      "largest_target_peripheral_distance": null,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "1016"
+    },
+    {
+      "question_id": "1746",
+      "doc_id": 1745,
+      "dataset_image_id": "4745",
+      "image_id": "343401",
+      "coco_image_id": "343401",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000343401.jpg",
+      "image_sha256": "1cdc78b2822da86e65e85231deae3e7092befbd264eca26ee80d9a19fbb5efdf",
+      "question": "Is there a cup in the image?",
+      "target_object": "cup",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "no",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 361,
+      "image_height": 500,
+      "aspect_ratio": 0.722,
+      "num_objects": 5,
+      "num_noncrowd_objects": 5,
+      "target_instance_count": 0,
+      "target_bboxes": [],
+      "largest_target_bbox_area_ratio": null,
+      "largest_target_center_normalized": null,
+      "largest_target_peripheral_distance": null,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "1512"
+    },
+    {
+      "question_id": "1813",
+      "doc_id": 1812,
+      "dataset_image_id": "4812",
+      "image_id": "188958",
+      "coco_image_id": "188958",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000188958.jpg",
+      "image_sha256": "ff68415d6b5bd566502beb5b401ed74066aa2474829f9a250ffa4fe93da32cff",
+      "question": "Is there a snowboard in the image?",
+      "target_object": "snowboard",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 480,
+      "aspect_ratio": 1.3333333333333333,
+      "num_objects": 15,
+      "num_noncrowd_objects": 15,
+      "target_instance_count": 7,
+      "target_bboxes": [
+        {
+          "annotation_id": 615750,
+          "category": "snowboard",
+          "bbox_xywh": [
+            278.75,
+            239.8,
+            88.59,
+            15.44
+          ],
+          "bbox_area": 1367.8296,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 618955,
+          "category": "snowboard",
+          "bbox_xywh": [
+            556.34,
+            275.45,
+            43.04,
+            27.93
+          ],
+          "bbox_area": 1202.1072,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 619940,
+          "category": "snowboard",
+          "bbox_xywh": [
+            475.8,
+            257.45,
+            96.41,
+            9.38
+          ],
+          "bbox_area": 904.3258000000001,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 620225,
+          "category": "snowboard",
+          "bbox_xywh": [
+            254.25,
+            224.73,
+            68.96,
+            18.27
+          ],
+          "bbox_area": 1259.8991999999998,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 620461,
+          "category": "snowboard",
+          "bbox_xywh": [
+            214.09,
+            246.66,
+            20.07,
+            9.23
+          ],
+          "bbox_area": 185.2461,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 620701,
+          "category": "snowboard",
+          "bbox_xywh": [
+            54.19,
+            243.56,
+            64.43,
+            23.77
+          ],
+          "bbox_area": 1531.5011000000002,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1457527,
+          "category": "snowboard",
+          "bbox_xywh": [
+            337.88,
+            236.87,
+            67.82,
+            11.85
+          ],
+          "bbox_area": 803.6669999999999,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.004985355143229168,
+      "largest_target_center_normalized": [
+        0.1350078125,
+        0.5321770833333334
+      ],
+      "largest_target_peripheral_distance": 0.259089426287407,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "457"
+    },
+    {
+      "question_id": "1829",
+      "doc_id": 1828,
+      "dataset_image_id": "4828",
+      "image_id": "198397",
+      "coco_image_id": "198397",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000198397.jpg",
+      "image_sha256": "48c0508e35699305948acc1a03f14554ee628e68c30ee6d0ac0b1302940b95a0",
+      "question": "Is there a sports ball in the image?",
+      "target_object": "sports ball",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 400,
+      "image_height": 600,
+      "aspect_ratio": 0.6666666666666666,
+      "num_objects": 22,
+      "num_noncrowd_objects": 21,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 304975,
+          "category": "sports ball",
+          "bbox_xywh": [
+            248.17,
+            44.59,
+            13.31,
+            12.4
+          ],
+          "bbox_area": 165.044,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.0006876833333333334,
+      "largest_target_center_normalized": [
+        0.6370625,
+        0.08465000000000002
+      ],
+      "largest_target_peripheral_distance": 0.3092747576235813,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2163"
+    },
+    {
+      "question_id": "2039",
+      "doc_id": 2038,
+      "dataset_image_id": "5038",
+      "image_id": "363908",
+      "coco_image_id": "363908",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000363908.jpg",
+      "image_sha256": "7425e2062242e6b7bcd937e5af33ddc6fc0d99a4ceb9d76851b3c99463faaa12",
+      "question": "Is there a sports ball in the image?",
+      "target_object": "sports ball",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 427,
+      "aspect_ratio": 1.4988290398126465,
+      "num_objects": 9,
+      "num_noncrowd_objects": 9,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 1460056,
+          "category": "sports ball",
+          "bbox_xywh": [
+            323.79,
+            91.09,
+            8.77,
+            8.77
+          ],
+          "bbox_area": 76.9129,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.0002814435743559719,
+      "largest_target_center_normalized": [
+        0.5127734375,
+        0.22359484777517566
+      ],
+      "largest_target_peripheral_distance": 0.19565654714575065,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "311"
+    },
+    {
+      "question_id": "2261",
+      "doc_id": 2260,
+      "dataset_image_id": "5260",
+      "image_id": "549390",
+      "coco_image_id": "549390",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000549390.jpg",
+      "image_sha256": "58869aab26773098433074432a7f042d395d33d1c0f8c293df3168b7e8ec2bc8",
+      "question": "Is there a bicycle in the image?",
+      "target_object": "bicycle",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 427,
+      "aspect_ratio": 1.4988290398126465,
+      "num_objects": 19,
+      "num_noncrowd_objects": 19,
+      "target_instance_count": 6,
+      "target_bboxes": [
+        {
+          "annotation_id": 241301,
+          "category": "bicycle",
+          "bbox_xywh": [
+            589.05,
+            212.79,
+            14.75,
+            21.56
+          ],
+          "bbox_area": 318.01,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1765964,
+          "category": "bicycle",
+          "bbox_xywh": [
+            64.5,
+            199.0,
+            320.0,
+            228.0
+          ],
+          "bbox_area": 72960.0,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1768774,
+          "category": "bicycle",
+          "bbox_xywh": [
+            429.43,
+            222.57,
+            50.96,
+            38.29
+          ],
+          "bbox_area": 1951.2584,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1769094,
+          "category": "bicycle",
+          "bbox_xywh": [
+            549.42,
+            205.98,
+            17.86,
+            31.18
+          ],
+          "bbox_area": 556.8747999999999,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 1769206,
+          "category": "bicycle",
+          "bbox_xywh": [
+            598.96,
+            210.09,
+            19.23,
+            34.26
+          ],
+          "bbox_area": 658.8198,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 2034602,
+          "category": "bicycle",
+          "bbox_xywh": [
+            626.04,
+            211.83,
+            13.96,
+            24.47
+          ],
+          "bbox_area": 341.6012,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.26697892271662765,
+      "largest_target_center_normalized": [
+        0.35078125,
+        0.7330210772833724
+      ],
+      "largest_target_peripheral_distance": 0.19565921625349764,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "645"
+    },
+    {
+      "question_id": "2575",
+      "doc_id": 2574,
+      "dataset_image_id": "5574",
+      "image_id": "516601",
+      "coco_image_id": "516601",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000516601.jpg",
+      "image_sha256": "840255670eb2bb50a500405962564790fe14ad67ddbf844303b55b900e7c1d5d",
+      "question": "Is there a snowboard in the image?",
+      "target_object": "snowboard",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 640,
+      "image_height": 360,
+      "aspect_ratio": 1.7777777777777777,
+      "num_objects": 19,
+      "num_noncrowd_objects": 19,
+      "target_instance_count": 4,
+      "target_bboxes": [
+        {
+          "annotation_id": 616068,
+          "category": "snowboard",
+          "bbox_xywh": [
+            362.4,
+            293.46,
+            75.56,
+            4.22
+          ],
+          "bbox_area": 318.8632,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 620650,
+          "category": "snowboard",
+          "bbox_xywh": [
+            506.51,
+            277.86,
+            26.66,
+            6.97
+          ],
+          "bbox_area": 185.8202,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 2087568,
+          "category": "snowboard",
+          "bbox_xywh": [
+            401.42,
+            236.82,
+            9.39,
+            1.31
+          ],
+          "bbox_area": 12.3009,
+          "iscrowd": false
+        },
+        {
+          "annotation_id": 2087597,
+          "category": "snowboard",
+          "bbox_xywh": [
+            481.63,
+            263.66,
+            13.46,
+            4.54
+          ],
+          "bbox_area": 61.1084,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.0013839548611111112,
+      "largest_target_center_normalized": [
+        0.6252812499999999,
+        0.8210277777777778
+      ],
+      "largest_target_peripheral_distance": 0.24367419406504737,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "2695"
+    },
+    {
+      "question_id": "2826",
+      "doc_id": 2825,
+      "dataset_image_id": "5825",
+      "image_id": "230175",
+      "coco_image_id": "230175",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000230175.jpg",
+      "image_sha256": "36e989be1d9905b0689bb13b165576f97c61b35163682c2dd61e86e2cb7bba48",
+      "question": "Is there a chair in the image?",
+      "target_object": "chair",
+      "ground_truth": "no",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": false,
+      "D_correct": false,
+      "image_width": 640,
+      "image_height": 459,
+      "aspect_ratio": 1.3943355119825709,
+      "num_objects": 7,
+      "num_noncrowd_objects": 7,
+      "target_instance_count": 0,
+      "target_bboxes": [],
+      "largest_target_bbox_area_ratio": null,
+      "largest_target_center_normalized": null,
+      "largest_target_peripheral_distance": null,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "162"
+    },
+    {
+      "question_id": "2987",
+      "doc_id": 2986,
+      "dataset_image_id": "5986",
+      "image_id": "121959",
+      "coco_image_id": "121959",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000121959.jpg",
+      "image_sha256": "48e79e460b8ef71ac702259c5a53740ab1ddc1aa99cb188b6965f9f5fbdaad31",
+      "question": "Is there a handbag in the image?",
+      "target_object": "handbag",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": true,
+      "image_width": 480,
+      "image_height": 640,
+      "aspect_ratio": 0.75,
+      "num_objects": 19,
+      "num_noncrowd_objects": 18,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 1432846,
+          "category": "handbag",
+          "bbox_xywh": [
+            329.99,
+            371.07,
+            39.46,
+            44.35
+          ],
+          "bbox_area": 1750.0510000000002,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.005696780598958334,
+      "largest_target_center_normalized": [
+        0.7285833333333334,
+        0.6144453125
+      ],
+      "largest_target_peripheral_distance": 0.18075960532016055,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "historically_CD_equal_control",
+      "matched_case_question_id": "1025"
+    }
+  ]
+}

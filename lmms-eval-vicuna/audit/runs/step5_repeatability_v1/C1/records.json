@@ -1,0 +1,2546 @@
+{
+  "1016": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a dining table in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "a6cc03174d9d8b6545e5d44abcad051679a7b7a972c6eceaff711d7ecb11f10a",
+      "-1_to_0": "fa671e1bb182850490d41b8dd69a6beb0a16836c32f8c66153df294473fa9f47",
+      "0_to_1": "cf094bc59243c1584e57cb539dd92e57c1f745f533c44abadd5136c192522af7"
+    },
+    "yes_no_margin": 0.16562271118164062,
+    "rank": 0
+  },
+  "1043": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a traffic light in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 500,
+        "height": 333
+      },
+      "padding": {
+        "left": 0,
+        "top": 83,
+        "right": 0,
+        "bottom": 84
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "aa948368c7516b52f538f1defc62bfa49855a7046f61cc49d0e4fc9bf1d279ff",
+      "-1_to_0": "b9d15ab306bc97f5569c9c85b233587d55ae295c286b805f748692f4cfd8a9ac",
+      "0_to_1": "70f95dcde029103fff5e730039dccdbff51781d6977887914d6b867c415be820"
+    },
+    "yes_no_margin": 0.453125,
+    "rank": 0
+  },
+  "1123": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bowl in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "855de31644da8258cc6fe94946e6ce3708a23f197a80cdad75da302f6b9164dd",
+      "-1_to_0": "80260c36a5ca9a0626b29925ad5a721941a5f72a9a3a0cd9dc16a18c406e6efe",
+      "0_to_1": "d510026652356d274c8849343014ad257a78276752f6e4327cc7f53294ed060f"
+    },
+    "yes_no_margin": 6.63749885559082,
+    "rank": 0
+  },
+  "1254": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bottle in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 375,
+        "height": 500
+      },
+      "padding": {
+        "left": 62,
+        "top": 0,
+        "right": 63,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "1096ff2e0b4d68148cb314026ffc89717f74d906ae3aba79aa69d01d56a60a6f",
+      "-1_to_0": "08b17e6445684860f91cafdae42742d5ca98d022cddc7b07527bc818c4685bcc",
+      "0_to_1": "75f034b7356a4890610bf23233828d916f9c74999586d1f39c68a458d98d3335"
+    },
+    "yes_no_margin": 0.328125,
+    "rank": 0
+  },
+  "1339": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a handbag in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 470
+      },
+      "padding": {
+        "left": 0,
+        "top": 85,
+        "right": 0,
+        "bottom": 85
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "047799351e8511f51b6be58391ea154426f93b3c03925bb59997b1dd70a1b65f",
+      "-1_to_0": "f564e5cf33617aa86bfd9503acb3d9e295bcb5da2eb22bb817025182a064b07c",
+      "0_to_1": "04d92acabbeeb72ac7f3e2aab01406782f86819b33e07bae14ba79ed415a73bb"
+    },
+    "yes_no_margin": -0.15312576293945312,
+    "rank": 0
+  },
+  "1399": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "fcad0439e4d04d98accba5d6c149caa77e19474d9992696d110690c7a66dd249",
+      "-1_to_0": "bc90ee978755123ad74d5347edc55db37710c27ba22a6701e8c50eb0fa92a97d",
+      "0_to_1": "155cb76b85f11048a85619666baa36d836cebf676d17e0b21b42a0b09495f882"
+    },
+    "yes_no_margin": -0.7749977111816406,
+    "rank": 0
+  },
+  "1507": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a clock in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 383,
+        "height": 640
+      },
+      "padding": {
+        "left": 128,
+        "top": 0,
+        "right": 129,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "c7a19448c7e7c8e144f986084538c5ba704d86559f117ae745990e47ed682323",
+      "-1_to_0": "f171ee2565d5265735d8cb10139a12cd50bd490a24f28eff5699be02e20ed510",
+      "0_to_1": "09b63b37e22caa3cacef6cbfd906308a973c8ab1463b8f412d4ddc75eb19e6fe"
+    },
+    "yes_no_margin": -0.6281242370605469,
+    "rank": 0
+  },
+  "1556": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a dining table in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "d68a55dcf0c13ebf84422258a285f3876a5b4ffc663bc2e360cabc27bc358c30",
+      "-1_to_0": "01b0b0fd2abc080bc66032b2cb703e2419a49e8a22a0e0c7a2dce1afe5912ad9",
+      "0_to_1": "f7e356ae690f6ffe7419121d0b91570f11d999bb6fa848887b8bd2879999356c"
+    },
+    "yes_no_margin": -9.671873092651367,
+    "rank": 0
+  },
+  "162": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a chair in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 426
+      },
+      "padding": {
+        "left": 0,
+        "top": 107,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "ef014167b0313cf0d2881b1c3ce670d929848ae09d897ce666a94d1f957aeb74",
+      "-1_to_0": "39821a3433f15d69ca3539da5c784ca7bc599575a8d68dc27cc1a45ee594e7c7",
+      "0_to_1": "bc1bed1f5534bd66a44c912ef59486f8f7551550c2e8a05d6d643abe90cef0fe"
+    },
+    "yes_no_margin": 0.7000007629394531,
+    "rank": 0
+  },
+  "1813": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a snowboard in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "71454a4c161b60c61646e0efac370a1eca379cb3fae8a1e9aade508fc0d35de5",
+      "-1_to_0": "9d395452b6a4e321fffe48b9e8a348aaed23912a73b0ffe46b37fab12e56cdc8",
+      "0_to_1": "13f43a7d3ed3802e15b54c68889cf0b149bec01e61080b1a73d4ea22941759e4"
+    },
+    "yes_no_margin": 4.531251907348633,
+    "rank": 0
+  },
+  "2039": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a sports ball in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "fc9fb3e0ac079705144d3c0d351d03bc7f158717126c519e52b5e5a65c732606",
+      "-1_to_0": "3023d372761060bfce37938a1ee1481437deefdb1de74a03e763b665616f3162",
+      "0_to_1": "8214775e39f628855cf3d9563c276d22997ba80e6ad241549e07200d68ec9eba"
+    },
+    "yes_no_margin": 4.687501907348633,
+    "rank": 0
+  },
+  "2253": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bowl in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 500,
+        "height": 375
+      },
+      "padding": {
+        "left": 0,
+        "top": 62,
+        "right": 0,
+        "bottom": 63
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "cfe8f2cfdba13ed7de87bb224a812ff03d9b4cfaa92e040c9e47ca08110decfb",
+      "-1_to_0": "ad3bb49070210e505b6c147d214ff39f8e60f47898563d161066cddc9cce07ce",
+      "0_to_1": "9c09ea66f5a1a1e69edb4a5646459df1582b5e55a8c69a02a2d387ae76feeb3a"
+    },
+    "yes_no_margin": 7.3125,
+    "rank": 0
+  },
+  "2275": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "fb8470ff8e8cfb2065e9ad2e4a1c2ca11480d6a95799aa216329cf57e133b407",
+      "-1_to_0": "321efd2c94aca7dedb6c303677a80c9df943127ad3020afaf8c9d0b0a99301a5",
+      "0_to_1": "7e473bd9192f01056eff05f45067be38deff4814ad7bad55d17502f9fec4779f"
+    },
+    "yes_no_margin": -0.6343727111816406,
+    "rank": 0
+  },
+  "2478": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a cup in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "5b641b60f30fd191ab3f34d8119b8fff92760e1dbfed8c514638ecadd2b1ff9d",
+      "-1_to_0": "626ba34bc53bad5de201b1becb4591202c28bcf5a25ebb2a88af63e3e69e0f01",
+      "0_to_1": "44fc99f028f0d1e5940ae6279d21d53496b960a51637f563f7cd3e9c0ee0f965"
+    },
+    "yes_no_margin": 0.41250038146972656,
+    "rank": 0
+  },
+  "2559": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a car in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "435d1faf1fcf8f175ea0ebe11337075b1b39866154d7030b576077932b1f58c0",
+      "-1_to_0": "05f136431e998f9ef6469d38b2ef8271ca8cbb329f72db06ca3f7a2c39be780a",
+      "0_to_1": "006f414e3c69e4d035e3667edc6828fc4898547c42fd75854245b640b70486a3"
+    },
+    "yes_no_margin": 1.4625015258789062,
+    "rank": 0
+  },
+  "2639": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a handbag in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 612,
+        "height": 612
+      },
+      "padding": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 612,
+        "height": 612
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "f61604e73ca036538e77278e895ab7a487e4e8d5813b35bca7365664feb8a215",
+      "-1_to_0": "d7777b6004d41eaadd8c5df9ffeb8c985d0b6c742592aed4277dd6c974ca6969",
+      "0_to_1": "e4733f4008f6bb6c7502e939ec6a2b5ca5671d44cc5d47ebe8c3e55feb8756de"
+    },
+    "yes_no_margin": -0.24062538146972656,
+    "rank": 0
+  },
+  "2697": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "5b53e581807bcc0655bf5e1e3d15b3361dfd58a503622a6e17a81fa23790ce91",
+      "-1_to_0": "73337c5fda73f2ba9cd0687cbdc73c98cff2dc09991a09a078228ca8a4bdea71",
+      "0_to_1": "3e7c8592a8f3f4dced332b80b4febb1eded0e5c5f4b7ac725c9f4b8a68eb530c"
+    },
+    "yes_no_margin": -0.012500762939453125,
+    "rank": 0
+  },
+  "2802": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bottle in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 512,
+        "height": 640
+      },
+      "padding": {
+        "left": 64,
+        "top": 0,
+        "right": 64,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "bbc1303e4cc39190664bc04de082bdf8fef35737d959ab5aa09f22740999410a",
+      "-1_to_0": "de75755a7b3ef091e4f539eebdc74aa5853e65107706bac705c1014b71f6405e",
+      "0_to_1": "c394ca7306b3ff639267dd4af5a63a85934d15cbd69344926d8b48820bb12bc9"
+    },
+    "yes_no_margin": 0.41250038146972656,
+    "rank": 0
+  },
+  "2887": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 428,
+        "height": 640
+      },
+      "padding": {
+        "left": 106,
+        "top": 0,
+        "right": 106,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "3212cc3345014bab38967e9c8048cb81261ba88ff47e13fafd365e650e45a8f3",
+      "-1_to_0": "04e0b4dfaf747eb30ff8b42c54278bf091a3c724a9eb89db8c0e3ec58fd874bc",
+      "0_to_1": "cc1774a8aef18756c927d5050f5f25fb7283b4ec75b152dea1b6e99f01f38e2d"
+    },
+    "yes_no_margin": -1.1187515258789062,
+    "rank": 0
+  },
+  "311": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a sports ball in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 478
+      },
+      "padding": {
+        "left": 0,
+        "top": 81,
+        "right": 0,
+        "bottom": 81
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "da7ef45950213c78f29bf3fac3ce9a43a40fa54cc0cd8ae19ccf210e79e2b567",
+      "-1_to_0": "1242af4b91aba76e278197195f481264ee38b742d3587bc9c43156c6385b3d75",
+      "0_to_1": "baf0e8f1177ef7aafe6ff24a3ae8c78838a2f73b3e30a4a4d6f571068e0c9437"
+    },
+    "yes_no_margin": 0.484375,
+    "rank": 0
+  },
+  "513": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there an orange in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "73e473be110dad456ab367066655fd2ac7faaa8b804de6bea6bf8d8b7a31d149",
+      "-1_to_0": "e80a0ab4fb5e2e4c56249bc4452781a2c21e712d0f9e6c9495c79a8c6940b26c",
+      "0_to_1": "cbc27eb3ae6d3b35ce73163de80e807f28d8471eeb30ebf791a956c2024a3106"
+    },
+    "yes_no_margin": 0.2531242370605469,
+    "rank": 0
+  },
+  "591": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bicycle in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 509
+      },
+      "padding": {
+        "left": 0,
+        "top": 65,
+        "right": 0,
+        "bottom": 66
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "19932ed552cd3877b33c0acabfc94734d02c554bbb4c120e4a70668365e1de00",
+      "-1_to_0": "1d9149fda7756dbbf403abf229d8c5bdb031f9803b5b087e8c3faed34f24a84b",
+      "0_to_1": "7065d85ec45f97eb2d73a7809eb7ecc5d49e84d7f1bfde6336d6f83f0e2410be"
+    },
+    "yes_no_margin": 1.8156261444091797,
+    "rank": 0
+  },
+  "645": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bicycle in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "5ea7661e4758a77796b85bce041c1d9ee32f0143e101432cd114c7ade17c3b3a",
+      "-1_to_0": "44070c9e39e336bdff4f3379de06b872a3f3fd325989a062ddf64b6617005a95",
+      "0_to_1": "b226c7f307907aa2e5fdb5cc81cad91f00babccd9ff51def71765fbd2408f4b5"
+    },
+    "yes_no_margin": 0.15625,
+    "rank": 0
+  },
+  "945": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a cup in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 496
+      },
+      "padding": {
+        "left": 0,
+        "top": 72,
+        "right": 0,
+        "bottom": 72
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "570e7e0fdf5de655d955c7f3586200d2cce995af5e6727e9fc779c9b86b630d8",
+      "-1_to_0": "7b1cb4684a250f923d7247bac65c1dc267ac14b16c4e468b563dd8bedd9fa62a",
+      "0_to_1": "4f96c511e799c8d91c6a221f999911ef8cee585e7898730d5d7e5bdb7bb5a6b8"
+    },
+    "yes_no_margin": -0.59375,
+    "rank": 0
+  },
+  "1025": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a handbag in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "c8e48b307b56ee9166315f996c83c9e50dab9f29cce871944c6fbebc12856ad0",
+      "-1_to_0": "18527714f79b894ef449d9c7a0677bc957293a85df4d0d3b3f8fa7e6ce099481",
+      "0_to_1": "4027a038e12320ae6cb0423afcaa614d2e5242f2c755b73911b7068422e7c165"
+    },
+    "yes_no_margin": 0.2937507629394531,
+    "rank": 1
+  },
+  "1051": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "72f4c2807942e0c7a7bbe48ad9a53b387b9c027ccd5374d26fee1649310be5c2",
+      "-1_to_0": "4b2248c46048421822c3f0bf156a239caa43ee195dc6255c11ea52a9c47dbe27",
+      "0_to_1": "c4459904bf52f4d58bad3c26e36460e99ad17599f1459c3a610e54c842e595ac"
+    },
+    "yes_no_margin": -6.424997329711914,
+    "rank": 1
+  },
+  "1215": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a handbag in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 500,
+        "height": 332
+      },
+      "padding": {
+        "left": 0,
+        "top": 84,
+        "right": 0,
+        "bottom": 84
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "33856af5b86803806b7a79871b0f252892fb8399145e1971844563a2ea380b05",
+      "-1_to_0": "629efb8f1c208e6eaae558d94db0562a9ee0183ef8684afda3803805529f82ef",
+      "0_to_1": "465bd5259b5929a9984603c033408cf54ebe7aead050b519784d7aabe0bf85a4"
+    },
+    "yes_no_margin": -1.4906253814697266,
+    "rank": 1
+  },
+  "1333": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a person in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "7b140b077dd761295f54f90e1f93dfb0495c0c301451406e90415e10de9277c1",
+      "-1_to_0": "3222d72aa36ce89105ffa3f7271e77a96d4d885d56009d5f5ab54b84f43cb748",
+      "0_to_1": "e460229ae9da68ac7a1f16dee58ce438a56acf42a8a487a6a75d3f7cb79e6dd1"
+    },
+    "yes_no_margin": -0.13125038146972656,
+    "rank": 1
+  },
+  "1361": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a car in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 530
+      },
+      "padding": {
+        "left": 0,
+        "top": 55,
+        "right": 0,
+        "bottom": 55
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "3040a2587192ff6b134964ebcb175670a8e53e1462a3d7152462709360bf6e38",
+      "-1_to_0": "e8766bdfd63f5ad8fe5dc1bbb476faab0c2594f34e7ae7bc24e8a6da255ad9df",
+      "0_to_1": "1f7c6b2fa11e069283958e753bcb37a94f0d03b13547b7ca2376341b04ad1f4f"
+    },
+    "yes_no_margin": 0.890625,
+    "rank": 1
+  },
+  "1463": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a parking meter in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 480,
+        "height": 640
+      },
+      "padding": {
+        "left": 80,
+        "top": 0,
+        "right": 80,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "acc9f5b3afaae05e3388df3c9b4bcf2fb96215a4816d9184abd2ea26ebfb1463",
+      "-1_to_0": "476fc7f51a11c52110c71bd53413726dd76b464db86ac6f59cd816c0f05debb3",
+      "0_to_1": "6fb99c484aec54e3683a7e551033b9a0371bfb559b2a4be85482fb70c51764a5"
+    },
+    "yes_no_margin": -1.640625,
+    "rank": 1
+  },
+  "1512": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a cup in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 383,
+        "height": 640
+      },
+      "padding": {
+        "left": 128,
+        "top": 0,
+        "right": 129,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "66892ea268e472e2df1e4fb8bb754e4b29eb2d4b91be98ecf8c340312087ed14",
+      "-1_to_0": "0fede8e7b00f67e77729a69003a2b5210f1d5afa99c9a8dfb1534f2038326c4c",
+      "0_to_1": "d09c5c1358634b87a853cd879b4b00d48f1450df590e6d660b31f7e27960bb27"
+    },
+    "yes_no_margin": 0.11874771118164062,
+    "rank": 1
+  },
+  "1746": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a cup in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 361,
+        "height": 500
+      },
+      "padding": {
+        "left": 69,
+        "top": 0,
+        "right": 70,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "257d321fe8ce215bc83323587e453e0bde8c46aaec068e525785f67ca9dd68d9",
+      "-1_to_0": "b54f0591c458116911eae748648fc0027b6cbb26623da77ce6eb56f8fa61419f",
+      "0_to_1": "37e079063179ac3b92cc46dcde166009d409ec9d695dc76382da2bd1adffe98a"
+    },
+    "yes_no_margin": -7.921873092651367,
+    "rank": 1
+  },
+  "1829": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a sports ball in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 400,
+        "height": 600
+      },
+      "padding": {
+        "left": 100,
+        "top": 0,
+        "right": 100,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 600,
+        "height": 600
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "dfb1fa4cf760ce0604d4810ca3ca7b7f71b9e7ec525099f473c5a535e4fd2600",
+      "-1_to_0": "8e626f90c03b399ef462cbd6a3444017c16117dbe7358a72a01d6b9cc035c670",
+      "0_to_1": "992f7a79772df45ec9bfac7487cbd8c3080a8e0a23e2cc355eae9d978163498e"
+    },
+    "yes_no_margin": 4.640626907348633,
+    "rank": 1
+  },
+  "2163": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a sports ball in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "a704d05e348c1279e3cde4e471e9b4adc2ebd4f4a07f9cb55ebe612952c409be",
+      "-1_to_0": "a54b4381eb694fcb69ec772f2a1eb35dcfa9591b2143a8cd8eaac4b0dad0fd22",
+      "0_to_1": "ca6242d051a361b277eea1d0f9e97b120ca77e5e030a7b0a1d21351fd6c06c88"
+    },
+    "yes_no_margin": 4.174999237060547,
+    "rank": 1
+  },
+  "2261": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bicycle in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "2bf5b646aec65439d2c15fa617228e0e470309541086850cec853d07247df07e",
+      "-1_to_0": "3f2539ea907faeb95df75f058a70d424711a5f13684adb9b80f6b6ce0fbb0da7",
+      "0_to_1": "78f9687846f9715a16aa5bb9e68a4d8743f689ed3c325b4f7b3b4910b50a0757"
+    },
+    "yes_no_margin": 7.499998092651367,
+    "rank": 1
+  },
+  "2355": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bowl in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 426,
+        "height": 640
+      },
+      "padding": {
+        "left": 107,
+        "top": 0,
+        "right": 107,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "f3139de685c0d06497ac6345f83db0853bb0fbe5950518277c25f8bedac3e18d",
+      "-1_to_0": "f228d0d8be9c9d2252554509a0ab5f8567f7021403d6248c53a39470cb38dd6a",
+      "0_to_1": "154aae5e32aea8e19400ad356b68754970134d730e2d52437c784ba3476e29a7"
+    },
+    "yes_no_margin": -0.28750038146972656,
+    "rank": 1
+  },
+  "237": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 500,
+        "height": 400
+      },
+      "padding": {
+        "left": 0,
+        "top": 50,
+        "right": 0,
+        "bottom": 50
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "6e4368871da385d1f05e61b99dc4625117e0fe0dcb184a7ecda1e63e5733c844",
+      "-1_to_0": "d4c77593825a1ebbc05bdb560db3a69253a1be8b0718e2687f86e688782f0c5d",
+      "0_to_1": "0a6ad5e5ab5b32221ab83daf583a67bb5568e73e06f32bd74b0bd5e779f59f22"
+    },
+    "yes_no_margin": -2.668750762939453,
+    "rank": 1
+  },
+  "2497": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a tv in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 480,
+        "height": 640
+      },
+      "padding": {
+        "left": 80,
+        "top": 0,
+        "right": 80,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "252ec391de67906e33f952841363503908a2b4c04b8c6bf47c625b4ceb0b36ae",
+      "-1_to_0": "77d1afca0609b7b71e9f0e4775891cca478e594f0959f11dc3495e7b9964cfcc",
+      "0_to_1": "fabeb07864547ffddfa2b6da7f8323f49f7d275da9e407cf38578da248acaeb2"
+    },
+    "yes_no_margin": -0.5843753814697266,
+    "rank": 1
+  },
+  "2575": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a snowboard in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 360
+      },
+      "padding": {
+        "left": 0,
+        "top": 140,
+        "right": 0,
+        "bottom": 140
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "854a1a1e85ac3e9cd50897a3f2e4150ae48681c57bfc445c03e92806c6387ed4",
+      "-1_to_0": "3a2cf767eac690f51855a7a81a0fcbce8b303654baf19e838ce0ea4ae1dae039",
+      "0_to_1": "5931aa3525b33b6133821c68b78df24de9c90b9566f0f2c52b2de551f1863cf9"
+    },
+    "yes_no_margin": 0.5750026702880859,
+    "rank": 1
+  },
+  "2695": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a snowboard in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "6802c6cd11d624559660e3ed83bece5ef01cfd3ffe88ea2776e27f37ed7d9967",
+      "-1_to_0": "8a58813256c17556f9e30b2f44f45c048f3c4bd4ba89fa161fb0979383ac7f3a",
+      "0_to_1": "cf539c5196b6575196e08027cac9cfbe41ca6e471fcbcddd2d2d5cb7d6545463"
+    },
+    "yes_no_margin": 0.1874980926513672,
+    "rank": 1
+  },
+  "2745": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a potted plant in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 425
+      },
+      "padding": {
+        "left": 0,
+        "top": 107,
+        "right": 0,
+        "bottom": 108
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "57d391092a32d5ac74e14412755e35ab8492ca80aa5c8060151a9677617e725b",
+      "-1_to_0": "316920505f8937b0010acfc1376cc0139be9cc1de19766481083262f04ddd681",
+      "0_to_1": "05550572b28d0772e5aafdd7c1634e359785fb36ce91882800e4dea07d835e4a"
+    },
+    "yes_no_margin": -0.5687484741210938,
+    "rank": 1
+  },
+  "2826": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a chair in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 459
+      },
+      "padding": {
+        "left": 0,
+        "top": 90,
+        "right": 0,
+        "bottom": 91
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "a8a3011b855b3615bcc23bf0e44d6dd960d55f052ebff6d94d7f075a1313be69",
+      "-1_to_0": "f91f85eac7d464e949529f3f6e2877c40ee549d4bbcc4919e306767fb42889fd",
+      "0_to_1": "05a4ab5a43fbdbb638502d594ee60d409432f145392b55b4d84109e881aa7a08"
+    },
+    "yes_no_margin": 1.5906257629394531,
+    "rank": 1
+  },
+  "2987": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a handbag in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 480,
+        "height": 640
+      },
+      "padding": {
+        "left": 80,
+        "top": 0,
+        "right": 80,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "1239788c1d698dbcda5cb81cd40ff1c580b2084350a9f5d422ef5605d9c24abb",
+      "-1_to_0": "f6231fc66bdd59752de7b235fdf1497c2c3a8d434c4b056a89650635d79e74d1",
+      "0_to_1": "2ba8f0efc5b9fa99ff2c03c29109bf97b9951437882dcc96b8289074e11cbbab"
+    },
+    "yes_no_margin": 2.5093746185302734,
+    "rank": 1
+  },
+  "457": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a snowboard in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "887270546133d89a89f20f1dee1cb84cb55d7328084d4948efdde3c8388cfba7",
+      "-1_to_0": "7c69f45f669c661709b93b66b80fb4cca8f5d8291dbab82c6d87d9f76e5c5c85",
+      "0_to_1": "1570b784dc9e6a4c7199b2a146faab854471f72e96f263679a00288799409303"
+    },
+    "yes_no_margin": -0.024999618530273438,
+    "rank": 1
+  },
+  "547": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a traffic light in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 577,
+        "height": 448
+      },
+      "padding": {
+        "left": 0,
+        "top": 64,
+        "right": 0,
+        "bottom": 65
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 577,
+        "height": 577
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "d581ec25e06a74c21acc91cc1cdce0b33fe710640f9147b13a6c0c535b9313fb",
+      "-1_to_0": "207283f61044f16d5a87682d870940a04cfb1e788a002940c47f553822521cab",
+      "0_to_1": "7582694d80137c1394b05d8c3251d3b47f422bfa91260337f4273f53ccf8e285"
+    },
+    "yes_no_margin": 7.021873474121094,
+    "rank": 1
+  },
+  "627": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a backpack in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "2e6a10fcc8c31b1dd55e7aa53e992701046be962fa4724031eb0ac06ef0abe1b",
+      "-1_to_0": "91269ac85d59b4666e79db597d55994f66b9e9ac738bbde91881dd37e91c12c4",
+      "0_to_1": "6cf6ba63a0a71d7dd6b69435ba7d94dbfb2ef17f73d63c5794551c8badc3eae1"
+    },
+    "yes_no_margin": -0.359375,
+    "rank": 1
+  },
+  "899": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a person in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 486
+      },
+      "padding": {
+        "left": 0,
+        "top": 77,
+        "right": 0,
+        "bottom": 77
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "dd9bfbcbd16d2b54c818cc96fbc6d78ffdb2579e119b5f2857dd024244115123",
+      "-1_to_0": "fe036706f5db7d5f60698a1315b5a885a057e9e2c324e22bb6393049ea8a0b72",
+      "0_to_1": "a3c1af3bb226257cdbf291b6bed04f9ffa44c37e8eb98f9bde9dd36e8d945a45"
+    },
+    "yes_no_margin": 8.362503051757812,
+    "rank": 1
+  },
+  "954": {
+    "prediction": "yes",
+    "final_token_ids": [
+      3869,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a cup in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 427
+      },
+      "padding": {
+        "left": 0,
+        "top": 106,
+        "right": 0,
+        "bottom": 107
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "0_to_1/consumed_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2304
+    },
+    "attention_hashes": {
+      "-2_to_-1": "32d12fe9e58a7d2c382563d5e19a8269a801ef696b75d36c5cac942945e00a2b",
+      "-1_to_0": "b2c8c0bf8c4d13f776406e1e26a23ac48ea352e27eec4c7df8d8f015bb728067",
+      "0_to_1": "bfc5959671c10c455325a74f603d5431b4d8fdb1413524a2d61e7ee67f2e9b22"
+    },
+    "yes_no_margin": 1.2781219482421875,
+    "rank": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "audit_schema_version": 1,
+  "condition": "D",
+  "rank": 0,
+  "sample_id": "814",
+  "doc_id": 26,
+  "question_id": "814",
+  "image_id": "3813",
+  "task": "pope_pop_audit",
+  "split": "popular",
+  "question": "Is there a dining table in the image?",
+  "ground_truth": "no",
+  "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a dining table in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+  "generation_config": {
+    "max_new_tokens": 128,
+    "temperature": 0.0,
+    "top_p": 0,
+    "num_beams": 1,
+    "do_sample": false
+  },
+  "final_token_ids": [
+    1939,
+    2
+  ],
+  "final_decoded_response": "No",
+  "raw_response": "No",
+  "prediction": "no",
+  "correct": true
+}

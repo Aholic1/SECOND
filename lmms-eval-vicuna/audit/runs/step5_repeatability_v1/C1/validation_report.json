@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "condition": "C",
+  "artifact_mode": "compact",
+  "expected_count": 48,
+  "captured_count": 48,
+  "reference_predictions": null,
+  "reference_prediction_mismatch_count": 0,
+  "reference_prediction_mismatches": [],
+  "historical_prediction_mismatch_count": 22,
+  "historical_prediction_mismatches": [
+    {
+      "question_id": "1043",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "1254",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "1339",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1507",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2253",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "2275",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2559",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "2639",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2697",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2887",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "311",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "513",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "591",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "645",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "945",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1025",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "1215",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1463",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2163",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "2695",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "2745",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "627",
+      "baseline": "yes",
+      "captured": "no"
+    }
+  ],
+  "warnings": [
+    "22 predictions differ from the historical Step 1 baseline"
+  ],
+  "errors": []
+}

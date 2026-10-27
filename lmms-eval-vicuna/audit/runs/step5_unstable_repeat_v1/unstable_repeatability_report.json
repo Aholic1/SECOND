@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "study_plan_sha256": "defdddb847f60ec1c0ce65df323c2738a83d594bdde1a33ac46d3c5310650012",
+  "parent_study": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1",
+  "question_ids": [
+    "457",
+    "1512"
+  ],
+  "repeats_per_condition": 5,
+  "samples": [
+    {
+      "question_id": "457",
+      "question": "Is there a snowboard in the image?",
+      "ground_truth": "yes",
+      "target_object": "snowboard",
+      "image_id": "406403",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "condition_summary": {
+        "C": {
+          "prediction_counts": {
+            "no": 1,
+            "yes": 4
+          },
+          "prediction_stable_across_five_runs": false,
+          "correct_count_out_of_five": 4,
+          "final_token_sequence_distinct_count": 2,
+          "distinct_stage_mask_hash_sets": 1,
+          "distinct_stage_selection_signal_hash_sets": 3,
+          "yes_no_margin_values": [
+            -0.024999618530273438,
+            0.04374885559082031,
+            0.05624961853027344,
+            0.05624961853027344,
+            0.05624961853027344
+          ],
+          "yes_no_margin_median": 0.05624961853027344,
+          "yes_no_margin_min": -0.024999618530273438,
+          "yes_no_margin_max": 0.05624961853027344
+        },
+        "D": {
+          "prediction_counts": {
+            "no": 3,
+            "yes": 2
+          },
+          "prediction_stable_across_five_runs": false,
+          "correct_count_out_of_five": 2,
+          "final_token_sequence_distinct_count": 2,
+          "distinct_stage_mask_hash_sets": 2,
+          "distinct_stage_selection_signal_hash_sets": 2,
+          "yes_no_margin_values": [
+            0.10000038146972656,
+            0.10000038146972656,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "yes_no_margin_median": 0.0,
+          "yes_no_margin_min": 0.0,
+          "yes_no_margin_max": 0.10000038146972656
+        }
+      },
+      "paired_C_D_repeats": [
+        {
+          "repeat": 1,
+          "C": "no",
+          "D": "yes",
+          "selection_changed_prediction": true,
+          "corrected_by_D": true,
+          "degraded_by_D": false
+        },
+        {
+          "repeat": 2,
+          "C": "yes",
+          "D": "yes",
+          "selection_changed_prediction": false,
+          "corrected_by_D": false,
+          "degraded_by_D": false
+        },
+        {
+          "repeat": 3,
+          "C": "yes",
+          "D": "no",
+          "selection_changed_prediction": true,
+          "corrected_by_D": false,
+          "degraded_by_D": true
+        },
+        {
+          "repeat": 4,
+          "C": "yes",
+          "D": "no",
+          "selection_changed_prediction": true,
+          "corrected_by_D": false,
+          "degraded_by_D": true
+        },
+        {
+          "repeat": 5,
+          "C": "yes",
+          "D": "no",
+          "selection_changed_prediction": true,
+          "corrected_by_D": false,
+          "degraded_by_D": true
+        }
+      ]
+    },
+    {
+      "question_id": "1512",
+      "question": "Is there a cup in the image?",
+      "ground_truth": "no",
+      "target_object": "cup",
+      "image_id": "23731",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "condition_summary": {
+        "C": {
+          "prediction_counts": {
+            "no": 4,
+            "yes": 1
+          },
+          "prediction_stable_across_five_runs": false,
+          "correct_count_out_of_five": 4,
+          "final_token_sequence_distinct_count": 2,
+          "distinct_stage_mask_hash_sets": 1,
+          "distinct_stage_selection_signal_hash_sets": 2,
+          "yes_no_margin_values": [
+            0.11874771118164062,
+            -0.11875152587890625,
+            -0.11875152587890625,
+            -0.11875152587890625,
+            -0.11875152587890625
+          ],
+          "yes_no_margin_median": -0.11875152587890625,
+          "yes_no_margin_min": -0.11875152587890625,
+          "yes_no_margin_max": 0.11874771118164062
+        },
+        "D": {
+          "prediction_counts": {
+            "no": 5
+          },
+          "prediction_stable_across_five_runs": true,
+          "correct_count_out_of_five": 5,
+          "final_token_sequence_distinct_count": 1,
+          "distinct_stage_mask_hash_sets": 1,
+          "distinct_stage_selection_signal_hash_sets": 1,
+          "yes_no_margin_values": [
+            -0.23125267028808594,
+            -0.23125267028808594,
+            -0.23125267028808594,
+            -0.23125267028808594,
+            -0.23125267028808594
+          ],
+          "yes_no_margin_median": -0.23125267028808594,
+          "yes_no_margin_min": -0.23125267028808594,
+          "yes_no_margin_max": -0.23125267028808594
+        }
+      },
+      "paired_C_D_repeats": [
+        {
+          "repeat": 1,
+          "C": "yes",
+          "D": "no",
+          "selection_changed_prediction": true,
+          "corrected_by_D": true,
+          "degraded_by_D": false
+        },
+        {
+          "repeat": 2,
+          "C": "no",
+          "D": "no",
+          "selection_changed_prediction": false,
+          "corrected_by_D": false,
+          "degraded_by_D": false
+        },
+        {
+          "repeat": 3,
+          "C": "no",
+          "D": "no",
+          "selection_changed_prediction": false,
+          "corrected_by_D": false,
+          "degraded_by_D": false
+        },
+        {
+          "repeat": 4,
+          "C": "no",
+          "D": "no",
+          "selection_changed_prediction": false,
+          "corrected_by_D": false,
+          "degraded_by_D": false
+        },
+        {
+          "repeat": 5,
+          "C": "no",
+          "D": "no",
+          "selection_changed_prediction": false,
+          "corrected_by_D": false,
+          "degraded_by_D": false
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The two questions were selected because the original Step 5 report found instability; results do not estimate population accuracy.",
+    "Five repeats are descriptive and do not establish universal determinism or a calibrated probability.",
+    "C/D repeats use the same two-GPU launch setup; no cross-GPU or cross-seed claim is made.",
+    "Original POPE labels remain unchanged; this is not a relabeling or causal intervention."
+  ],
+  "interpretation": "Counts and margins describe only these outcome-selected questions under this fixed setup; they are not population estimates or causal evidence."
+}

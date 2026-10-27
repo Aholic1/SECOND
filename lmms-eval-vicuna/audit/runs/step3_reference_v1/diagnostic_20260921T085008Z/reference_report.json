@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "expected_count": 100,
+  "reference_count": 100,
+  "historical_prediction_mismatch_count": 4,
+  "historical_prediction_mismatches": [
+    {
+      "question_id": "1029",
+      "historical": "no",
+      "current_reference": "yes"
+    },
+    {
+      "question_id": "1298",
+      "historical": "yes",
+      "current_reference": "no"
+    },
+    {
+      "question_id": "146",
+      "historical": "yes",
+      "current_reference": "no"
+    },
+    {
+      "question_id": "2695",
+      "historical": "no",
+      "current_reference": "yes"
+    }
+  ],
+  "warnings": [
+    "4 current predictions differ from the historical Step 1 baseline"
+  ],
+  "errors": []
+}

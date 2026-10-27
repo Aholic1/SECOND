@@ -1,0 +1,161 @@
+{
+  "results": {
+    "pope_pop_audit": {
+      "alias": "pope_pop_audit",
+      "pope_accuracy,none": 1.0,
+      "pope_accuracy_stderr,none": "N/A",
+      "pope_precision,none": 1.0,
+      "pope_precision_stderr,none": "N/A",
+      "pope_recall,none": 1.0,
+      "pope_recall_stderr,none": "N/A",
+      "pope_f1_score,none": 1.0,
+      "pope_f1_score_stderr,none": "N/A",
+      "pope_yes_ratio,none": 0.5,
+      "pope_yes_ratio_stderr,none": "N/A",
+      "pope_pred_yes_ratio,none": 0.5,
+      "pope_pred_yes_ratio_stderr,none": "N/A",
+      "pope_gt_yes_ratio,none": 0.5,
+      "pope_gt_yes_ratio_stderr,none": "N/A",
+      "pope_invalid_ratio,none": 0.0,
+      "pope_invalid_ratio_stderr,none": "N/A"
+    }
+  },
+  "group_subtasks": {
+    "pope_pop_audit": []
+  },
+  "configs": {
+    "pope_pop_audit": {
+      "task": "pope_pop_audit",
+      "dataset_path": "lmms-lab/POPE",
+      "dataset_name": "Full",
+      "dataset_kwargs": {
+        "token": true
+      },
+      "test_split": "popular",
+      "full_docs": false,
+      "process_results_use_image": false,
+      "process_docs": "<function pope_process_audit_docs at 0x794de8c48f70>",
+      "doc_to_visual": "<function pope_doc_to_visual at 0x794de8c49000>",
+      "doc_to_text": "<function pope_doc_to_text at 0x794de8c49750>",
+      "doc_to_target": "answer",
+      "process_results": "<function pope_process_results at 0x794de8c49ea0>",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "pope_accuracy",
+          "aggregation": "<function pope_aggregate_accuracy at 0x794de8c4a5f0>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_precision",
+          "aggregation": "<function pope_aggregate_precision at 0x794de8c4ad40>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_recall",
+          "aggregation": "<function pope_aggregate_recall at 0x794de8c4b490>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_f1_score",
+          "aggregation": "<function pope_aggregate_f1_score at 0x794de8c4bbe0>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_yes_ratio",
+          "aggregation": "<function pope_aggregate_yes_ratio at 0x794de8c7c3a0>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_pred_yes_ratio",
+          "aggregation": "<function pope_aggregate_pred_yes_ratio at 0x794de8c7caf0>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_gt_yes_ratio",
+          "aggregation": "<function pope_aggregate_gt_yes_ratio at 0x794de8c7d240>",
+          "higher_is_better": true
+        },
+        {
+          "metric": "pope_invalid_ratio",
+          "aggregation": "<function pope_aggregate_invalid_ratio at 0x794de8c7d990>",
+          "higher_is_better": false
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_new_tokens": 128,
+        "temperature": 0.0,
+        "top_p": 0,
+        "num_beams": 1,
+        "do_sample": false,
+        "until": [
+          "\n\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 2.0
+      }
+    }
+  },
+  "versions": {
+    "pope_pop_audit": 2.0
+  },
+  "n-shot": {
+    "pope_pop_audit": 0
+  },
+  "higher_is_better": {
+    "pope_pop_audit": {
+      "pope_accuracy": true,
+      "pope_precision": true,
+      "pope_recall": true,
+      "pope_f1_score": true,
+      "pope_yes_ratio": true,
+      "pope_pred_yes_ratio": true,
+      "pope_gt_yes_ratio": true,
+      "pope_invalid_ratio": false
+    }
+  },
+  "n-samples": {
+    "pope_pop_audit": {
+      "original": 2,
+      "effective": 2
+    }
+  },
+  "config": {
+    "model": "llava",
+    "model_args": "pretrained=liuhaotian/llava-v1.6-vicuna-7b,audit_condition=C,audit_output_dir=/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_unstable_repeat_v1/C5/artifacts,audit_token_idx=0,audit_artifact_mode=compact",
+    "batch_size": "1",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": "",
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "1a4bdd2",
+  "date": "20261025_231357",
+  "task_hashes": {
+    "pope_pop_audit": "978c89de14c583f50e94e12fa775c7e3e5f330d4237bee496e8673036af299b6"
+  },
+  "model_source": "llava",
+  "model_name": "liuhaotian/llava-v1.6-vicuna-7b",
+  "model_name_sanitized": "liuhaotian__llava-v1.6-vicuna-7b",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 8458950.160937274,
+  "end_time": 8459005.402502634,
+  "total_evaluation_time_seconds": "55.24156535975635"
+}

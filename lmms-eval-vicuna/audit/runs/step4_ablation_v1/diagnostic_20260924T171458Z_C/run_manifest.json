@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "purpose": "Step 4 paired B/C diagnostic ablation",
+  "mode": "diagnostic",
+  "task": "pope_pop_audit",
+  "expected_count": 100,
+  "condition": "C",
+  "condition_definition": "recursive all-token, with contrastive decoding",
+  "artifact_mode": "compact",
+  "git_commit": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+  "source_fingerprint_sha256": "91d394fa9031fada82dbb41fd961d1277e6ebe500e1efe50ca4ae86c26b40199",
+  "runtime": {
+    "conda_environment": "SECOND_clean",
+    "cuda_visible_devices": "0,1",
+    "num_processes": 2,
+    "main_process_port": 29911
+  },
+  "second_parameters": {
+    "generation_type": "recursion",
+    "fix_grid": "2x2",
+    "attention_thresholding_type": "attn_topk",
+    "attention_threshold": 1.0,
+    "positional_embedding_type": "bilinear_interpolation",
+    "stages": [
+      -2,
+      -1,
+      0,
+      1
+    ],
+    "contrastive_alphas": [
+      0.8,
+      0.8,
+      0.8
+    ]
+  }
+}

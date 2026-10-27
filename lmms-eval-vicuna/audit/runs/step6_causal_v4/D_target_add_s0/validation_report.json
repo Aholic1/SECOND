@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "condition": "D",
+  "artifact_mode": "compact",
+  "expected_count": 48,
+  "captured_count": 48,
+  "reference_predictions": null,
+  "reference_prediction_mismatch_count": 0,
+  "reference_prediction_mismatches": [],
+  "historical_prediction_mismatch_count": 1,
+  "historical_prediction_mismatches": [
+    {
+      "question_id": "2253",
+      "baseline": "no",
+      "captured": "yes"
+    }
+  ],
+  "warnings": [
+    "1 predictions differ from the historical Step 1 baseline"
+  ],
+  "errors": []
+}

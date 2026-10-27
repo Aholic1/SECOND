@@ -1,0 +1,33 @@
+{
+  "status": "FAIL",
+  "condition": "D",
+  "artifact_mode": "visual",
+  "expected_count": 100,
+  "captured_count": 100,
+  "prediction_mismatch_count": 4,
+  "prediction_mismatches": [
+    {
+      "question_id": "1029",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "1298",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "146",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2695",
+      "baseline": "no",
+      "captured": "yes"
+    }
+  ],
+  "errors": [
+    "4 predictions differ from the frozen baseline"
+  ]
+}

@@ -1,0 +1,27 @@
+dataset_path: flaviagiammarino/vqa-rad
+dataset_kwargs:
+  token: True
+task: "vqa-rad"
+test_split: test
+output_type: generate_until
+doc_to_visual: !function utils.vqa_rad_doc_to_visual
+doc_to_text: !function utils.vqa_rad_doc_to_text
+doc_to_target: "answer"
+generation_kwargs:
+  max_new_tokens: 12
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: false
+# The return value of process_results will be used by metrics
+process_results: !function utils.vqa_rad_process_results
+# Note that the metric name can be either a registed metric function (such as the case for GQA) or a key name returned by process_results
+metric_list:
+  - metric: vqa_rad_closed_accuracy
+    aggregation: !function utils.vqa_rad_aggregate_results
+    higher_is_better: true 
+  - metric: vqa_rad_open_accuracy
+    aggregation: !function utils.vqa_rad_aggregate_results
+    higher_is_better: true 
+metadata:
+  - version: 0.0

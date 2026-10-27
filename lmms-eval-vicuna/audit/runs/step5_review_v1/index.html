@@ -1,0 +1,253 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>POPE 视觉标签独立复核</title>
+<style>body{font:17px sans-serif;max-width:980px;margin:30px auto;background:#fafafa}article{background:white;border:1px solid #ddd;padding:20px;margin:20px 0}img{max-width:100%;max-height:680px}label{display:block;margin:12px 0}select,input,button,textarea{font:inherit}textarea{width:95%;height:90px}header{position:sticky;top:0;background:#eef5ff;padding:12px}h2{font-size:20px}</style>
+<h1>视觉标签独立复核</h1><p>只根据图像回答；目标类别不等于同名颜色、相关物品或画面外物品。可点击图片查看原始大小。无法确定时选择“无法确定”。本页隐藏原标签及模型预测，不会自动替你判断。</p>
+<p>建议两人独立复核。若你已经看过模型结果，请在复核者说明中注明。页面不自动保存，关闭前请导出；可导入已导出的文件继续。</p>
+<header>复核者 <input id="reviewer" placeholder="姓名或代号"><button onclick="save()">导出复核 JSON</button><input type="file" accept=".json" onchange="restore(this)"></header>
+<article data-id="R001"><h2>R001</h2><p>Is there a sports ball in the image?</p>
+<a href="images/R001.jpg" target="_blank"><img src="images/R001.jpg" alt="Review image R001"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R002"><h2>R002</h2><p>Is there a cup in the image?</p>
+<a href="images/R002.jpg" target="_blank"><img src="images/R002.jpg" alt="Review image R002"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R003"><h2>R003</h2><p>Is there a chair in the image?</p>
+<a href="images/R003.jpg" target="_blank"><img src="images/R003.jpg" alt="Review image R003"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R004"><h2>R004</h2><p>Is there a backpack in the image?</p>
+<a href="images/R004.jpg" target="_blank"><img src="images/R004.jpg" alt="Review image R004"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R005"><h2>R005</h2><p>Is there a cup in the image?</p>
+<a href="images/R005.jpg" target="_blank"><img src="images/R005.jpg" alt="Review image R005"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R006"><h2>R006</h2><p>Is there a snowboard in the image?</p>
+<a href="images/R006.jpg" target="_blank"><img src="images/R006.jpg" alt="Review image R006"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R007"><h2>R007</h2><p>Is there a tv in the image?</p>
+<a href="images/R007.jpg" target="_blank"><img src="images/R007.jpg" alt="Review image R007"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R008"><h2>R008</h2><p>Is there a handbag in the image?</p>
+<a href="images/R008.jpg" target="_blank"><img src="images/R008.jpg" alt="Review image R008"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R009"><h2>R009</h2><p>Is there a bicycle in the image?</p>
+<a href="images/R009.jpg" target="_blank"><img src="images/R009.jpg" alt="Review image R009"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R010"><h2>R010</h2><p>Is there a person in the image?</p>
+<a href="images/R010.jpg" target="_blank"><img src="images/R010.jpg" alt="Review image R010"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R011"><h2>R011</h2><p>Is there a potted plant in the image?</p>
+<a href="images/R011.jpg" target="_blank"><img src="images/R011.jpg" alt="Review image R011"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R012"><h2>R012</h2><p>Is there a cup in the image?</p>
+<a href="images/R012.jpg" target="_blank"><img src="images/R012.jpg" alt="Review image R012"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R013"><h2>R013</h2><p>Is there a backpack in the image?</p>
+<a href="images/R013.jpg" target="_blank"><img src="images/R013.jpg" alt="Review image R013"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R014"><h2>R014</h2><p>Is there a handbag in the image?</p>
+<a href="images/R014.jpg" target="_blank"><img src="images/R014.jpg" alt="Review image R014"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R015"><h2>R015</h2><p>Is there a bowl in the image?</p>
+<a href="images/R015.jpg" target="_blank"><img src="images/R015.jpg" alt="Review image R015"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R016"><h2>R016</h2><p>Is there a handbag in the image?</p>
+<a href="images/R016.jpg" target="_blank"><img src="images/R016.jpg" alt="Review image R016"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R017"><h2>R017</h2><p>Is there a chair in the image?</p>
+<a href="images/R017.jpg" target="_blank"><img src="images/R017.jpg" alt="Review image R017"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R018"><h2>R018</h2><p>Is there a cup in the image?</p>
+<a href="images/R018.jpg" target="_blank"><img src="images/R018.jpg" alt="Review image R018"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R019"><h2>R019</h2><p>Is there a bottle in the image?</p>
+<a href="images/R019.jpg" target="_blank"><img src="images/R019.jpg" alt="Review image R019"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R020"><h2>R020</h2><p>Is there a traffic light in the image?</p>
+<a href="images/R020.jpg" target="_blank"><img src="images/R020.jpg" alt="Review image R020"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R021"><h2>R021</h2><p>Is there a backpack in the image?</p>
+<a href="images/R021.jpg" target="_blank"><img src="images/R021.jpg" alt="Review image R021"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R022"><h2>R022</h2><p>Is there a car in the image?</p>
+<a href="images/R022.jpg" target="_blank"><img src="images/R022.jpg" alt="Review image R022"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R023"><h2>R023</h2><p>Is there a clock in the image?</p>
+<a href="images/R023.jpg" target="_blank"><img src="images/R023.jpg" alt="Review image R023"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R024"><h2>R024</h2><p>Is there a backpack in the image?</p>
+<a href="images/R024.jpg" target="_blank"><img src="images/R024.jpg" alt="Review image R024"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R025"><h2>R025</h2><p>Is there a backpack in the image?</p>
+<a href="images/R025.jpg" target="_blank"><img src="images/R025.jpg" alt="Review image R025"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R026"><h2>R026</h2><p>Is there a parking meter in the image?</p>
+<a href="images/R026.jpg" target="_blank"><img src="images/R026.jpg" alt="Review image R026"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R027"><h2>R027</h2><p>Is there a sports ball in the image?</p>
+<a href="images/R027.jpg" target="_blank"><img src="images/R027.jpg" alt="Review image R027"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R028"><h2>R028</h2><p>Is there a bicycle in the image?</p>
+<a href="images/R028.jpg" target="_blank"><img src="images/R028.jpg" alt="Review image R028"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R029"><h2>R029</h2><p>Is there a bowl in the image?</p>
+<a href="images/R029.jpg" target="_blank"><img src="images/R029.jpg" alt="Review image R029"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R030"><h2>R030</h2><p>Is there a bowl in the image?</p>
+<a href="images/R030.jpg" target="_blank"><img src="images/R030.jpg" alt="Review image R030"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R031"><h2>R031</h2><p>Is there a person in the image?</p>
+<a href="images/R031.jpg" target="_blank"><img src="images/R031.jpg" alt="Review image R031"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R032"><h2>R032</h2><p>Is there a bottle in the image?</p>
+<a href="images/R032.jpg" target="_blank"><img src="images/R032.jpg" alt="Review image R032"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R033"><h2>R033</h2><p>Is there a snowboard in the image?</p>
+<a href="images/R033.jpg" target="_blank"><img src="images/R033.jpg" alt="Review image R033"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R034"><h2>R034</h2><p>Is there a traffic light in the image?</p>
+<a href="images/R034.jpg" target="_blank"><img src="images/R034.jpg" alt="Review image R034"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R035"><h2>R035</h2><p>Is there a backpack in the image?</p>
+<a href="images/R035.jpg" target="_blank"><img src="images/R035.jpg" alt="Review image R035"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R036"><h2>R036</h2><p>Is there an orange in the image?</p>
+<a href="images/R036.jpg" target="_blank"><img src="images/R036.jpg" alt="Review image R036"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R037"><h2>R037</h2><p>Is there a backpack in the image?</p>
+<a href="images/R037.jpg" target="_blank"><img src="images/R037.jpg" alt="Review image R037"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R038"><h2>R038</h2><p>Is there a snowboard in the image?</p>
+<a href="images/R038.jpg" target="_blank"><img src="images/R038.jpg" alt="Review image R038"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R039"><h2>R039</h2><p>Is there a car in the image?</p>
+<a href="images/R039.jpg" target="_blank"><img src="images/R039.jpg" alt="Review image R039"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R040"><h2>R040</h2><p>Is there a handbag in the image?</p>
+<a href="images/R040.jpg" target="_blank"><img src="images/R040.jpg" alt="Review image R040"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R041"><h2>R041</h2><p>Is there a dining table in the image?</p>
+<a href="images/R041.jpg" target="_blank"><img src="images/R041.jpg" alt="Review image R041"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R042"><h2>R042</h2><p>Is there a bicycle in the image?</p>
+<a href="images/R042.jpg" target="_blank"><img src="images/R042.jpg" alt="Review image R042"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R043"><h2>R043</h2><p>Is there a sports ball in the image?</p>
+<a href="images/R043.jpg" target="_blank"><img src="images/R043.jpg" alt="Review image R043"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R044"><h2>R044</h2><p>Is there a handbag in the image?</p>
+<a href="images/R044.jpg" target="_blank"><img src="images/R044.jpg" alt="Review image R044"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R045"><h2>R045</h2><p>Is there a cup in the image?</p>
+<a href="images/R045.jpg" target="_blank"><img src="images/R045.jpg" alt="Review image R045"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R046"><h2>R046</h2><p>Is there a dining table in the image?</p>
+<a href="images/R046.jpg" target="_blank"><img src="images/R046.jpg" alt="Review image R046"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R047"><h2>R047</h2><p>Is there a sports ball in the image?</p>
+<a href="images/R047.jpg" target="_blank"><img src="images/R047.jpg" alt="Review image R047"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<article data-id="R048"><h2>R048</h2><p>Is there a snowboard in the image?</p>
+<a href="images/R048.jpg" target="_blank"><img src="images/R048.jpg" alt="Review image R048"></a>
+<label>图像中目标是否可见 <select class="presence"><option value="unreviewed">未复核</option><option value="yes">可见</option><option value="no">未见</option><option value="uncertain">无法确定</option></select></label>
+<label>能否明确定位目标 <select class="localizable"><option value="unreviewed">未复核</option><option value="yes">可以</option><option value="no">不可以</option><option value="uncertain">无法确定</option></select></label>
+<textarea placeholder="说明可见证据、遮挡或类别歧义。不要根据上下文推断画面外目标。"></textarea></article>
+<script>
+const cohort = "746e4644d84714ee8c43dc3463781838f0dc74185c7581d4e2d04e20ddb86f0b";
+function save(){let rows=[...document.querySelectorAll('article')].map(a=>({review_id:a.dataset.id,presence:a.querySelector('.presence').value,localizable:a.querySelector('.localizable').value,notes:a.querySelector('textarea').value}));
+let reviewer=document.getElementById('reviewer').value.trim();if(!reviewer){alert('请填写复核者');return;}
+let bad=rows.find(r=>r.presence==='no'&&r.localizable==='yes');if(bad){alert(bad.review_id+'：未见目标却标为可定位，请复核');return;}
+let data={schema_version:1,cohort_sha256:cohort,reviewer,exported_at:new Date().toISOString(),reviews:rows};let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download='visual_review.json';a.click();URL.revokeObjectURL(a.href);}
+async function restore(input){try{let data=JSON.parse(await input.files[0].text());if(data.cohort_sha256!==cohort)throw Error('清单哈希不匹配');document.getElementById('reviewer').value=data.reviewer||'';for(let r of data.reviews){let a=[...document.querySelectorAll('article')].find(a=>a.dataset.id===r.review_id);if(!a)throw Error('未知 review_id');a.querySelector('.presence').value=r.presence;a.querySelector('.localizable').value=r.localizable;a.querySelector('textarea').value=r.notes||'';}}catch(e){alert(e.message);}}
+</script></html>

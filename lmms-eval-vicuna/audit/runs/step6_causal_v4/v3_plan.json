@@ -1,0 +1,19 @@
+{
+  "driver_sha256": "dcafa417c3872bd633f1a0aaf1d74aeebc2d1053fda7e14de7c413f2a307a66c",
+  "parent_study": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step6_interventions_v1",
+  "parent_completion_sha256": {
+    "C1": "a9e6b5b833e4bc6964c556f6ea57336a8029a35b19c87155bc9fd910f6f2cd24",
+    "D1": "4dc2c463b822c80635818e4773e3e86455124cfcb03577b230fc3c7e72553547",
+    "D2": "250c54937818a27bfd310f1b897e9420b27235060ea36138892a5fba74a4d51c",
+    "C2": "a036613233f36df65600931b16a988a49369267eb19db46f24077be0953324fb"
+  },
+  "primary_ids": [
+    "2253",
+    "2559",
+    "311",
+    "645",
+    "1043"
+  ],
+  "1025": "Retained in the 48-row execution but excluded from primary mechanism inference because its D1/D2 masks differed.",
+  "design": "Same-token-budget reallocation. Target arm adds dropped target cells and removes equal-count retained non-target content cells. Feasible-dose controls add dropped non-target cells and remove the same number of retained non-target cells. Full target dose is compared with baseline if a same-dose non-target control is unavailable."
+}

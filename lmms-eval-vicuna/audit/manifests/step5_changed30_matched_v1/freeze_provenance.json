@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "freeze_version": "step5-freeze-v1",
+  "created_at_utc": "2026-10-12T16:23:30.274321+00:00",
+  "seed": 42,
+  "matching_policy": {
+    "version": "step5-freeze-v1",
+    "mandatory": [
+      "same queried category",
+      "same ground truth",
+      "same C correctness"
+    ],
+    "controls": "C equals D in the source run only; repeatability is not established",
+    "exclusions": [
+      "all case COCO images",
+      "annotation-conflicting controls"
+    ],
+    "reuse": "each control question and each control COCO image at most once",
+    "objective": "maximum matched count, then minimum relaxed pairs, then minimum distance",
+    "strict_calipers": {
+      "largest_target_bbox_area_ratio_factor": 2.0,
+      "target_center_distance_in_diagonal_units": 0.15,
+      "scene_object_count_plus_one_factor": 2.0,
+      "aspect_ratio_factor": 1.5
+    },
+    "relaxed_calipers": {
+      "largest_target_bbox_area_ratio_factor": 4.0,
+      "target_center_distance_in_diagonal_units": 0.3,
+      "scene_object_count_plus_one_factor": 3.0,
+      "aspect_ratio_factor": 2.0
+    },
+    "geometry": "all COCO target boxes saved; matching uses the largest box, not the historical single box",
+    "negative_samples": "no target-size/location covariates when ground truth is no",
+    "distance": "sum of caliper-normalized log/center differences; positive target geometry gets weight 2; log target instance count gets weight 0.25",
+    "ties": "SHA256(seed, case question ID, control question ID), never Python hash()",
+    "warning": "Controls are descriptive matched comparisons; matching alone does not identify causal effects."
+  },
+  "source_files": {
+    "B_samples": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/full_B_20260926T050031Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260926_130041_samples_pope_pop.jsonl",
+      "sha256": "a5967690538317d7acbb0184a55f5c5f9b87d935aeba8402b6ee6108252be811",
+      "bytes": 4454901
+    },
+    "B_manifest": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/full_B_20260926T050031Z/run_manifest.json",
+      "sha256": "ff7ed3980844bdffb33549e52d1827e637b311f31a67aeb7b37ffd898365d6fe",
+      "bytes": 834
+    },
+    "B_validation": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/full_B_20260926T050031Z/validation_report.json",
+      "sha256": "5d696bbc199856ae2296bb88ee6451c1cdef895209c012f6f83e9347a194e266",
+      "bytes": 11387
+    },
+    "C_samples": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/full_C_20260926T082950Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260926_163001_samples_pope_pop.jsonl",
+      "sha256": "8a9410a5bc4dbc70bc5bd17a2f4293aff978cebcb4820b92722326e6420b39cb",
+      "bytes": 4455881
+    },
+    "C_manifest": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/full_C_20260926T082950Z/run_manifest.json",
+      "sha256": "672f9f9201027ce12bbb8cb45c61829c175abb9af9218f4e6919f09c79e8ed22",
+      "bytes": 831
+    },
+    "C_validation": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/full_C_20260926T082950Z/validation_report.json",
+      "sha256": "6c9135c59c52387e479b180a8ced49b33ee01049c8619049080f3ef4a3c78ab9",
+      "bytes": 4743
+    },
+    "D_samples": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step2_token_selection_v2/full_20260925T124957Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260925_205012_samples_pope_pop.jsonl",
+      "sha256": "ece07a7827ea192a350e1334ea3b6b7b216c1fdad596c09920e369846152d44f",
+      "bytes": 4455861
+    },
+    "D_manifest": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step2_token_selection_v2/full_20260925T124957Z/run_manifest.json",
+      "sha256": "5ffc329c9f7920a48c4c5f805ce454f39c04b3057f8eb2e5c8ea6901068f7405",
+      "bytes": 960
+    },
+    "D_validation": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step2_token_selection_v2/full_20260925T124957Z/validation_report.json",
+      "sha256": "2b7787de24c3a57b2ec9a45dc5f8724efe1a76f9271c1ee53d417a7c1b70680f",
+      "bytes": 2409
+    },
+    "report": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step4_ablation_v1/bcd_full_paired_report.json",
+      "sha256": "a8f0072e1f33dc40ba67daf974cd486ef3c57925da6640092f8fdbc564155797",
+      "bytes": 55056
+    },
+    "features": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/step1_full/pope_pop_3000_baseline/enhanced_features.jsonl",
+      "sha256": "3a4d331cb1e8433a35d248f5f0f0dceba8061b409a101825f51f7a2f716b8624",
+      "bytes": 1463513
+    },
+    "image_mapping": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/step1_full/pope_pop_3000_baseline/image_mapping.jsonl",
+      "sha256": "a94991e593bdf03e860aeb6659a02782c07b3723b3b6edc3443a591e68aeb483",
+      "bytes": 895419
+    },
+    "coco": {
+      "path": "/home/yxq/CAAC64/annotations_trainval2014/annotations/instances_val2014.json",
+      "sha256": "e1b4d1bc54906827b1a029981b1c77f2088bd4462569b7615db7929070c3ab47",
+      "bytes": 160682675
+    },
+    "generator": {
+      "path": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/freeze_step5_cases.py",
+      "sha256": "b6864eaa408ddb8c2a30ac5b764bb0c0bf91331ff82e3a66d7063b454a7916d3",
+      "bytes": 32086
+    }
+  },
+  "recorded_run_manifests": {
+    "B": {
+      "schema_version": 1,
+      "purpose": "Step 4 full 3000-sample ablation",
+      "mode": "full",
+      "task": "pope_pop",
+      "expected_count": 3000,
+      "condition": "B",
+      "condition_definition": "recursive all-token without contrastive decoding",
+      "artifact_mode": "compact",
+      "git_commit": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+      "runtime": {
+        "conda_environment": "SECOND_clean",
+        "cuda_visible_devices": "0,1",
+        "num_processes": 2,
+        "main_process_port": 29920
+      },
+      "second_parameters": {
+        "generation_type": "recursion",
+        "fix_grid": "2x2",
+        "attention_thresholding_type": "attn_topk",
+        "attention_threshold": 1.0,
+        "positional_embedding_type": "bilinear_interpolation",
+        "stages": [
+          -2,
+          -1,
+          0,
+          1
+        ],
+        "contrastive_alphas": [
+          0.8,
+          0.8,
+          0.8
+        ]
+      }
+    },
+    "C": {
+      "schema_version": 1,
+      "purpose": "Step 4 full 3000-sample ablation",
+      "mode": "full",
+      "task": "pope_pop",
+      "expected_count": 3000,
+      "condition": "C",
+      "condition_definition": "recursive all-token with contrastive decoding",
+      "artifact_mode": "compact",
+      "git_commit": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+      "runtime": {
+        "conda_environment": "SECOND_clean",
+        "cuda_visible_devices": "0,1",
+        "num_processes": 2,
+        "main_process_port": 29921
+      },
+      "second_parameters": {
+        "generation_type": "recursion",
+        "fix_grid": "2x2",
+        "attention_thresholding_type": "attn_topk",
+        "attention_threshold": 1.0,
+        "positional_embedding_type": "bilinear_interpolation",
+        "stages": [
+          -2,
+          -1,
+          0,
+          1
+        ],
+        "contrastive_alphas": [
+          0.8,
+          0.8,
+          0.8
+        ]
+      }
+    },
+    "D": {
+      "schema_version": 1,
+      "capture_schema_version": 2,
+      "mode": "full",
+      "task": "pope_pop",
+      "expected_count": 3000,
+      "condition": "D",
+      "artifact_mode": "compact",
+      "audit_token_idx": 0,
+      "git_commit": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+      "step1_historical_baseline": "audit/step1_full/pope_pop_3000_baseline/baseline_predictions.jsonl",
+      "current_code_reference": null,
+      "diagnostic_manifest": null,
+      "runtime": {
+        "conda_environment": "SECOND_clean",
+        "python": "Python 3.10.20",
+        "cuda_visible_devices": "0,1",
+        "num_processes": 2,
+        "main_process_port": 29892
+      },
+      "second_parameters": {
+        "generation_type": "recursion",
+        "fix_grid": "2x2",
+        "attention_thresholding_type": "attn_topk",
+        "attention_threshold": 1.0,
+        "positional_embedding_type": "bilinear_interpolation",
+        "stages": [
+          -2,
+          -1,
+          0,
+          1
+        ],
+        "contrastive_alphas": [
+          0.8,
+          0.8,
+          0.8
+        ]
+      }
+    }
+  },
+  "current_worktree": {
+    "head": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+    "status": [
+      " M run.sh",
+      "?? audit/STEP1.5_ENHANCED_FEATURES.md",
+      "?? audit/STEP5_FREEZE_AND_MATCH.md",
+      "?? audit/freeze_step5_cases.py",
+      "?? audit/generate_bcd_paired_report.py",
+      "?? audit/ppt_figures/",
+      "?? audit/run_step4_ablation.sh",
+      "?? audit/run_step4_full_ablation.sh",
+      "?? audit/runs/",
+      "?? audit/step1_diagnostic/diagnostic_manifest_enhanced.json",
+      "?? audit/step1_diagnostic/diagnostic_summary_enhanced.json",
+      "?? audit/step1_diagnostic/strata_config_enhanced.json",
+      "?? audit/step1_full/pope_pop_3000_baseline/enhanced_features.jsonl",
+      "?? audit/step1_full/pope_pop_3000_baseline/repo_status.txt",
+      "?? audit/step1_full/pope_pop_3000_baseline/uncommitted_changes.patch",
+      "?? audit/test_freeze_step5_cases.py",
+      "?? logs/",
+      "?? tests/test_run_sh.py"
+    ],
+    "tracked_diff_sha256": "0de8f0d5fa64b371b6159dce20b4731fe36466cd94c1877293733185749e3aca",
+    "scope": "Current freeze-time worktree only; historical dirty files cannot be reconstructed from a commit ID alone."
+  },
+  "selected_image_hashes_verified": 46,
+  "features_usage": "Question/GT/COCO ID/dimension cross-checks only. Historical predictions, strata and single target bbox are not used for matching.",
+  "warnings": [
+    "This outcome-selected cohort cannot estimate the overall 3000-sample accuracy effect.",
+    "Historical C/D equality does not establish repeatability; repeat C and D before causal intervention.",
+    "COCO bounding boxes are approximate localization; annotation absence does not by itself prove object absence.",
+    "Question-to-COCO mapping uses the frozen Step 1 mapping, checked against metadata, annotations and image hashes; it is not rederived from the HF dataset here.",
+    "Same recorded commit is not proof of identical historical dirty worktrees, model files or numeric execution.",
+    "8 pairs use declared relaxed calipers; inspect pairs.json before downstream analysis."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "failed_ids": [],
+  "differences": {
+    "1025": [
+      "prediction",
+      "final_token_ids",
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1051": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1215": [
+      "prediction",
+      "final_token_ids",
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1333": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1361": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1463": [
+      "prediction",
+      "final_token_ids",
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1512": [
+      "prediction",
+      "final_token_ids",
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1746": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "1829": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2163": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2261": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2355": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "237": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2497": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2575": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2695": [
+      "prediction",
+      "final_token_ids",
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2745": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2826": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "2987": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "457": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "547": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "627": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "899": [
+      "attention_hashes",
+      "yes_no_margin"
+    ],
+    "954": [
+      "attention_hashes",
+      "yes_no_margin"
+    ]
+  },
+  "primary_ids": [
+    "2253",
+    "2559",
+    "311",
+    "645",
+    "1043"
+  ],
+  "rule": "Exact all-row masks; exact primary input/prediction/token records; margins and selection signals reported separately."
+}

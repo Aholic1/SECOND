@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "expected_count": 2,
+  "description": "Exact subset of the frozen Step 5 changed30_matched cohort; labels unchanged.",
+  "parent_combined_sha256": "746e4644d84714ee8c43dc3463781838f0dc74185c7581d4e2d04e20ddb86f0b",
+  "samples": [
+    {
+      "question_id": "457",
+      "doc_id": 456,
+      "dataset_image_id": "3456",
+      "image_id": "406403",
+      "coco_image_id": "406403",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000406403.jpg",
+      "image_sha256": "aa52a956584b146bcbe725f1b49be5b184c84aa821fd6e7528c7b51290f5189a",
+      "question": "Is there a snowboard in the image?",
+      "target_object": "snowboard",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "no",
+      "C_correct": true,
+      "D_correct": false,
+      "image_width": 640,
+      "image_height": 480,
+      "aspect_ratio": 1.3333333333333333,
+      "num_objects": 8,
+      "num_noncrowd_objects": 8,
+      "target_instance_count": 1,
+      "target_bboxes": [
+        {
+          "annotation_id": 620194,
+          "category": "snowboard",
+          "bbox_xywh": [
+            50.61,
+            407.26,
+            38.25,
+            10.36
+          ],
+          "bbox_area": 396.27,
+          "iscrowd": false
+        }
+      ],
+      "largest_target_bbox_area_ratio": 0.00128994140625,
+      "largest_target_center_normalized": [
+        0.1089609375,
+        0.85925
+      ],
+      "largest_target_peripheral_distance": 0.3754810986593592,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "changed_case",
+      "change_direction": "degraded"
+    },
+    {
+      "question_id": "1512",
+      "doc_id": 1511,
+      "dataset_image_id": "4511",
+      "image_id": "23731",
+      "coco_image_id": "23731",
+      "image_id_semantics": "image_id and coco_image_id are COCO IDs; dataset_image_id is the evaluation document ID",
+      "image_path": "/home/yxq/CAAC64/coco/val2014/COCO_val2014_000000023731.jpg",
+      "image_sha256": "8fac9ed602cdaee985d723bb595a9d70c3243cf8aaf2d0f097f6af853de10d75",
+      "question": "Is there a cup in the image?",
+      "target_object": "cup",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "yes",
+      "C_correct": true,
+      "D_correct": false,
+      "image_width": 383,
+      "image_height": 640,
+      "aspect_ratio": 0.5984375,
+      "num_objects": 4,
+      "num_noncrowd_objects": 4,
+      "target_instance_count": 0,
+      "target_bboxes": [],
+      "largest_target_bbox_area_ratio": null,
+      "largest_target_center_normalized": null,
+      "largest_target_peripheral_distance": null,
+      "annotation_issues": [],
+      "matching_geometry_available": true,
+      "role": "changed_case",
+      "change_direction": "degraded"
+    }
+  ]
+}

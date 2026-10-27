@@ -1,0 +1,164 @@
+{
+  "status": "NEEDS_REVIEW",
+  "changed_count": 30,
+  "corrected_count": 13,
+  "degraded_count": 17,
+  "control_count": 18,
+  "combined_count": 48,
+  "strict_pairs": 10,
+  "relaxed_pairs": 8,
+  "unmatched_count": 12,
+  "unmatched": [
+    {
+      "question_id": "513",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 4,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "591",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 12,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "627",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 4,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "945",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 1,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1215",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 5,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1339",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 5,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1463",
+      "reason": "no candidate in mandatory stratum",
+      "same_mandatory_stratum_candidates": 0,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1507",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 8,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2355",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 26,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2497",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 20,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2639",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 5,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2745",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 1,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    }
+  ],
+  "case_control_question_overlap": 0,
+  "case_control_coco_image_overlap": 0,
+  "control_unique_images": 18,
+  "selected_images_sha256_verified": 46,
+  "changed_groups": {
+    "corrected|gt_no": 2,
+    "degraded|gt_yes": 14,
+    "corrected|gt_yes": 11,
+    "degraded|gt_no": 3
+  },
+  "case_annotation_issues": [
+    {
+      "question_id": "513",
+      "issues": [
+        "GT=yes but COCO contains no queried category annotation"
+      ]
+    },
+    {
+      "question_id": "591",
+      "issues": [
+        "GT=yes but COCO contains no queried category annotation"
+      ]
+    },
+    {
+      "question_id": "945",
+      "issues": [
+        "GT=yes but COCO contains no queried category annotation"
+      ]
+    },
+    {
+      "question_id": "2355",
+      "issues": [
+        "GT=yes but COCO contains no queried category annotation"
+      ]
+    },
+    {
+      "question_id": "2497",
+      "issues": [
+        "GT=yes but COCO contains no queried category annotation"
+      ]
+    }
+  ],
+  "all_dataset_annotation_issue_count": 149,
+  "historically_equal_pool_after_image_and_annotation_exclusions": 2691,
+  "case_unique_images": 28,
+  "warnings": [
+    "This outcome-selected cohort cannot estimate the overall 3000-sample accuracy effect.",
+    "Historical C/D equality does not establish repeatability; repeat C and D before causal intervention.",
+    "COCO bounding boxes are approximate localization; annotation absence does not by itself prove object absence.",
+    "Question-to-COCO mapping uses the frozen Step 1 mapping, checked against metadata, annotations and image hashes; it is not rederived from the HF dataset here.",
+    "Same recorded commit is not proof of identical historical dirty worktrees, model files or numeric execution.",
+    "8 pairs use declared relaxed calipers; inspect pairs.json before downstream analysis."
+  ],
+  "output_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/manifests/step5_changed30_matched_v1",
+  "status_semantics": "PASS verifies freezing and declared matching rules only, not repeatability or causality."
+}

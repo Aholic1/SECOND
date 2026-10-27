@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "prediction_source": "logs/liuhaotian__llava-v1.6-vicuna-7b/20260810_001849_samples_pope_pop.jsonl",
+  "results_source": "logs/liuhaotian__llava-v1.6-vicuna-7b/20260810_001849_results.json",
+  "prediction_source_sha256": "0c8a71ef7bda1048dbc4649e0207eeb241a42492458a7ce10080ef5a0d5a5cc3",
+  "results_source_sha256": "0e9f8866ec5efae81dfb34b02717ca96db0d95d619c59e45fe09b71c36c8ad77",
+  "prediction_run_commit": "4ad65872d9c03ea7b60ea68c2b663d22a373ec33",
+  "audit_commit": "a28e0a5ef17868f3c3058f382d486a10b3c47688",
+  "commit_semantics": {
+    "prediction_run_commit": "Commit reported by the historical evaluation results.",
+    "audit_commit": "Repository HEAD used while deriving the Step 1 audit artifacts."
+  },
+  "model": {
+    "backend": "llava",
+    "pretrained": "liuhaotian/llava-v1.6-vicuna-7b",
+    "model_args": "pretrained=liuhaotian/llava-v1.6-vicuna-7b"
+  },
+  "task": {
+    "name": "pope_pop",
+    "hash": "b5aa871bc6960e8d3d209d20d5308b27d69ae7ffd5da5d7db6804a6c1569e3a6",
+    "num_fewshot": 0
+  },
+  "dataset": {
+    "path": "lmms-lab/POPE",
+    "config": "Full",
+    "split": "popular",
+    "num_samples": 3000
+  },
+  "cohort_policy": {
+    "quantitative": "All 3000 POPE Popular samples; no sampling.",
+    "diagnostic": "100 samples selected by fixed-seed error/complexity strata for visualization and causal analysis.",
+    "legacy_smoke_manifest": "audit/manifests/pope_pop_seed42_80.json",
+    "legacy_smoke_role": "Smoke/regression checks only; never used for population-level conclusions."
+  },
+  "run_parameters": {
+    "launcher": "accelerate.commands.launch",
+    "cuda_visible_devices": "0,1",
+    "num_processes": 2,
+    "main_process_port": 29881,
+    "batch_size": 1,
+    "generation_type": "recursion",
+    "fix_grid": "2x2",
+    "attention_thresholding_type": "attn_topk",
+    "attention_threshold": 1.0,
+    "positional_embedding_type": "bilinear_interpolation",
+    "stages": [-2, -1, 0, 1],
+    "contrastive_alphas": [0.8, 0.8, 0.8],
+    "generation_kwargs": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false,
+      "until": ["\n\n"]
+    },
+    "seeds": {
+      "random": 0,
+      "numpy": 1234,
+      "torch": 1234,
+      "fewshot": 1234
+    }
+  },
+  "metrics": {
+    "total": 3000,
+    "counts": {
+      "TP": 1270,
+      "TN": 1420,
+      "FN": 230,
+      "FP": 80
+    },
+    "accuracy": 0.8966666666666666,
+    "precision": 0.9407407407407408,
+    "recall": 0.8466666666666667,
+    "f1": 0.8912280701754387,
+    "yes_ratio": 0.45
+  },
+  "reported_results": {
+    "alias": "pope_pop",
+    "pope_accuracy,none": 0.8966666666666666,
+    "pope_accuracy_stderr,none": "N/A",
+    "pope_precision,none": 0.9407407407407408,
+    "pope_precision_stderr,none": "N/A",
+    "pope_recall,none": 0.8466666666666667,
+    "pope_recall_stderr,none": "N/A",
+    "pope_f1_score,none": 0.8912280701754387,
+    "pope_f1_score_stderr,none": "N/A",
+    "pope_yes_ratio,none": 0.5,
+    "pope_yes_ratio_stderr,none": "N/A"
+  },
+  "environment_snapshot": {
+    "path": "audit/step1_full/pope_pop_3000_baseline/environment.txt",
+    "scope": "Audit/processing environment at artifact generation time; not asserted to be the historical prediction environment."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "condition": "D",
+  "artifact_mode": "visual",
+  "expected_count": 100,
+  "captured_count": 100,
+  "reference_predictions": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step2_reference_v2/diagnostic_20260919T192859Z/reference_predictions.jsonl",
+  "reference_prediction_mismatch_count": 0,
+  "reference_prediction_mismatches": [],
+  "historical_prediction_mismatch_count": 4,
+  "historical_prediction_mismatches": [
+    {
+      "question_id": "1029",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "1298",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "146",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2695",
+      "baseline": "no",
+      "captured": "yes"
+    }
+  ],
+  "warnings": [
+    "4 predictions differ from the historical Step 1 baseline"
+  ],
+  "errors": []
+}

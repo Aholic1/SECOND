@@ -1,0 +1,5 @@
+group : pope_gqa_full
+task:
+  - pope_gqa_adv
+  - pope_gqa_pop
+  - pope_gqa_random

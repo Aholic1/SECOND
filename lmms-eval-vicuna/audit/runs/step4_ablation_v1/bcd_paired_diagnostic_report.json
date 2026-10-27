@@ -1,0 +1,800 @@
+{
+  "inputs": {
+    "B": "audit/runs/step4_ablation_v1/diagnostic_B_20260925T041220Z",
+    "C": "audit/runs/step4_ablation_v1/diagnostic_C_20260925T041948Z",
+    "D": "audit/runs/step2_token_selection_v2/diagnostic_20260925T035732Z"
+  },
+  "git_commits": {
+    "B": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+    "C": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+    "D": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4"
+  },
+  "second_parameters": {
+    "B": {
+      "generation_type": "recursion",
+      "fix_grid": "2x2",
+      "attention_thresholding_type": "attn_topk",
+      "attention_threshold": 1.0,
+      "positional_embedding_type": "bilinear_interpolation",
+      "stages": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "contrastive_alphas": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "C": {
+      "generation_type": "recursion",
+      "fix_grid": "2x2",
+      "attention_thresholding_type": "attn_topk",
+      "attention_threshold": 1.0,
+      "positional_embedding_type": "bilinear_interpolation",
+      "stages": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "contrastive_alphas": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "D": {
+      "generation_type": "recursion",
+      "fix_grid": "2x2",
+      "attention_thresholding_type": "attn_topk",
+      "attention_threshold": 1.0,
+      "positional_embedding_type": "bilinear_interpolation",
+      "stages": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "contrastive_alphas": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    }
+  },
+  "condition_definitions": {
+    "B": "recursive all-token without contrastive decoding",
+    "C": "recursive all-token with contrastive decoding",
+    "D": "SECOND-selected tokens with contrastive decoding"
+  },
+  "overall": {
+    "B": {
+      "count": 100,
+      "correct": 61,
+      "accuracy": 0.61,
+      "invalid": 0,
+      "TP": 31,
+      "TN": 30,
+      "FP": 5,
+      "FN": 34
+    },
+    "C": {
+      "count": 100,
+      "correct": 56,
+      "accuracy": 0.56,
+      "invalid": 0,
+      "TP": 32,
+      "TN": 24,
+      "FP": 11,
+      "FN": 33
+    },
+    "D": {
+      "count": 100,
+      "correct": 54,
+      "accuracy": 0.54,
+      "invalid": 0,
+      "TP": 32,
+      "TN": 22,
+      "FP": 13,
+      "FN": 33
+    }
+  },
+  "B_to_C_cd_effect": {
+    "left": "B",
+    "right": "C",
+    "count": 100,
+    "left_accuracy": 0.61,
+    "right_accuracy": 0.56,
+    "accuracy_delta": -0.04999999999999993,
+    "accuracy_delta_percentage_points": -4.999999999999993,
+    "prediction_changed_count": 7,
+    "corrected_count": 1,
+    "corrected_question_ids": [
+      "2695"
+    ],
+    "degraded_count": 6,
+    "degraded_question_ids": [
+      "1278",
+      "1436",
+      "1768",
+      "2356",
+      "2662",
+      "2802"
+    ],
+    "net_corrected_minus_degraded": -5
+  },
+  "C_to_D_selection_effect": {
+    "left": "C",
+    "right": "D",
+    "count": 100,
+    "left_accuracy": 0.56,
+    "right_accuracy": 0.54,
+    "accuracy_delta": -0.020000000000000018,
+    "accuracy_delta_percentage_points": -2.0000000000000018,
+    "prediction_changed_count": 4,
+    "corrected_count": 1,
+    "corrected_question_ids": [
+      "1029"
+    ],
+    "degraded_count": 3,
+    "degraded_question_ids": [
+      "196",
+      "1264",
+      "2559"
+    ],
+    "net_corrected_minus_degraded": -2
+  },
+  "by_ground_truth": {
+    "yes": {
+      "B": {
+        "count": 65,
+        "correct": 31,
+        "accuracy": 0.47692307692307695,
+        "invalid": 0,
+        "TP": 31,
+        "TN": 0,
+        "FP": 0,
+        "FN": 34
+      },
+      "C": {
+        "count": 65,
+        "correct": 32,
+        "accuracy": 0.49230769230769234,
+        "invalid": 0,
+        "TP": 32,
+        "TN": 0,
+        "FP": 0,
+        "FN": 33
+      },
+      "D": {
+        "count": 65,
+        "correct": 32,
+        "accuracy": 0.49230769230769234,
+        "invalid": 0,
+        "TP": 32,
+        "TN": 0,
+        "FP": 0,
+        "FN": 33
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 65,
+        "left_accuracy": 0.47692307692307695,
+        "right_accuracy": 0.49230769230769234,
+        "accuracy_delta": 0.015384615384615385,
+        "accuracy_delta_percentage_points": 1.5384615384615385,
+        "prediction_changed_count": 1,
+        "corrected_count": 1,
+        "corrected_question_ids": [
+          "2695"
+        ],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 1
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 65,
+        "left_accuracy": 0.49230769230769234,
+        "right_accuracy": 0.49230769230769234,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 2,
+        "corrected_count": 1,
+        "corrected_question_ids": [
+          "1029"
+        ],
+        "degraded_count": 1,
+        "degraded_question_ids": [
+          "2559"
+        ],
+        "net_corrected_minus_degraded": 0
+      }
+    },
+    "no": {
+      "B": {
+        "count": 35,
+        "correct": 30,
+        "accuracy": 0.8571428571428571,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 30,
+        "FP": 5,
+        "FN": 0
+      },
+      "C": {
+        "count": 35,
+        "correct": 24,
+        "accuracy": 0.6857142857142857,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 24,
+        "FP": 11,
+        "FN": 0
+      },
+      "D": {
+        "count": 35,
+        "correct": 22,
+        "accuracy": 0.6285714285714286,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 22,
+        "FP": 13,
+        "FN": 0
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 35,
+        "left_accuracy": 0.8571428571428571,
+        "right_accuracy": 0.6857142857142857,
+        "accuracy_delta": -0.17142857142857137,
+        "accuracy_delta_percentage_points": -17.14285714285714,
+        "prediction_changed_count": 6,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 6,
+        "degraded_question_ids": [
+          "1278",
+          "1436",
+          "1768",
+          "2356",
+          "2662",
+          "2802"
+        ],
+        "net_corrected_minus_degraded": -6
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 35,
+        "left_accuracy": 0.6857142857142857,
+        "right_accuracy": 0.6285714285714286,
+        "accuracy_delta": -0.05714285714285716,
+        "accuracy_delta_percentage_points": -5.714285714285716,
+        "prediction_changed_count": 2,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 2,
+        "degraded_question_ids": [
+          "196",
+          "1264"
+        ],
+        "net_corrected_minus_degraded": -2
+      }
+    }
+  },
+  "by_visual_stratum": {
+    "FN_relation": {
+      "count": 15,
+      "B": {
+        "count": 15,
+        "correct": 0,
+        "accuracy": 0.0,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 15
+      },
+      "C": {
+        "count": 15,
+        "correct": 0,
+        "accuracy": 0.0,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 15
+      },
+      "D": {
+        "count": 15,
+        "correct": 0,
+        "accuracy": 0.0,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 0,
+        "FP": 0,
+        "FN": 15
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 15,
+        "left_accuracy": 0.0,
+        "right_accuracy": 0.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 15,
+        "left_accuracy": 0.0,
+        "right_accuracy": 0.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      }
+    },
+    "FN_simple": {
+      "count": 20,
+      "B": {
+        "count": 20,
+        "correct": 1,
+        "accuracy": 0.05,
+        "invalid": 0,
+        "TP": 1,
+        "TN": 0,
+        "FP": 0,
+        "FN": 19
+      },
+      "C": {
+        "count": 20,
+        "correct": 2,
+        "accuracy": 0.1,
+        "invalid": 0,
+        "TP": 2,
+        "TN": 0,
+        "FP": 0,
+        "FN": 18
+      },
+      "D": {
+        "count": 20,
+        "correct": 2,
+        "accuracy": 0.1,
+        "invalid": 0,
+        "TP": 2,
+        "TN": 0,
+        "FP": 0,
+        "FN": 18
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 20,
+        "left_accuracy": 0.05,
+        "right_accuracy": 0.1,
+        "accuracy_delta": 0.05,
+        "accuracy_delta_percentage_points": 5.0,
+        "prediction_changed_count": 1,
+        "corrected_count": 1,
+        "corrected_question_ids": [
+          "2695"
+        ],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 1
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 20,
+        "left_accuracy": 0.1,
+        "right_accuracy": 0.1,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 2,
+        "corrected_count": 1,
+        "corrected_question_ids": [
+          "1029"
+        ],
+        "degraded_count": 1,
+        "degraded_question_ids": [
+          "2559"
+        ],
+        "net_corrected_minus_degraded": 0
+      }
+    },
+    "FP_hallucination": {
+      "count": 15,
+      "B": {
+        "count": 15,
+        "correct": 10,
+        "accuracy": 0.6666666666666666,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 10,
+        "FP": 5,
+        "FN": 0
+      },
+      "C": {
+        "count": 15,
+        "correct": 4,
+        "accuracy": 0.26666666666666666,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 4,
+        "FP": 11,
+        "FN": 0
+      },
+      "D": {
+        "count": 15,
+        "correct": 2,
+        "accuracy": 0.13333333333333333,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 2,
+        "FP": 13,
+        "FN": 0
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 15,
+        "left_accuracy": 0.6666666666666666,
+        "right_accuracy": 0.26666666666666666,
+        "accuracy_delta": -0.39999999999999997,
+        "accuracy_delta_percentage_points": -40.0,
+        "prediction_changed_count": 6,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 6,
+        "degraded_question_ids": [
+          "1278",
+          "1436",
+          "1768",
+          "2356",
+          "2662",
+          "2802"
+        ],
+        "net_corrected_minus_degraded": -6
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 15,
+        "left_accuracy": 0.26666666666666666,
+        "right_accuracy": 0.13333333333333333,
+        "accuracy_delta": -0.13333333333333333,
+        "accuracy_delta_percentage_points": -13.333333333333334,
+        "prediction_changed_count": 2,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 2,
+        "degraded_question_ids": [
+          "196",
+          "1264"
+        ],
+        "net_corrected_minus_degraded": -2
+      }
+    },
+    "TN_correct": {
+      "count": 20,
+      "B": {
+        "count": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 20,
+        "FP": 0,
+        "FN": 0
+      },
+      "C": {
+        "count": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 20,
+        "FP": 0,
+        "FN": 0
+      },
+      "D": {
+        "count": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 0,
+        "TN": 20,
+        "FP": 0,
+        "FN": 0
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 20,
+        "left_accuracy": 1.0,
+        "right_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 20,
+        "left_accuracy": 1.0,
+        "right_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      }
+    },
+    "TP_relation": {
+      "count": 10,
+      "B": {
+        "count": 10,
+        "correct": 10,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 10,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "C": {
+        "count": 10,
+        "correct": 10,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 10,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "D": {
+        "count": 10,
+        "correct": 10,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 10,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 10,
+        "left_accuracy": 1.0,
+        "right_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 10,
+        "left_accuracy": 1.0,
+        "right_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      }
+    },
+    "TP_simple": {
+      "count": 20,
+      "B": {
+        "count": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 20,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "C": {
+        "count": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 20,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "D": {
+        "count": 20,
+        "correct": 20,
+        "accuracy": 1.0,
+        "invalid": 0,
+        "TP": 20,
+        "TN": 0,
+        "FP": 0,
+        "FN": 0
+      },
+      "B_to_C": {
+        "left": "B",
+        "right": "C",
+        "count": 20,
+        "left_accuracy": 1.0,
+        "right_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      },
+      "C_to_D": {
+        "left": "C",
+        "right": "D",
+        "count": 20,
+        "left_accuracy": 1.0,
+        "right_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_percentage_points": 0.0,
+        "prediction_changed_count": 0,
+        "corrected_count": 0,
+        "corrected_question_ids": [],
+        "degraded_count": 0,
+        "degraded_question_ids": [],
+        "net_corrected_minus_degraded": 0
+      }
+    }
+  },
+  "changed_samples": [
+    {
+      "question_id": "196",
+      "question": "Is there a car in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "car"
+    },
+    {
+      "question_id": "1029",
+      "question": "Is there a bowl in the image?",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "yes",
+      "visual_stratum": "FN_simple",
+      "target_object": "bowl"
+    },
+    {
+      "question_id": "1264",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "no",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "dining table"
+    },
+    {
+      "question_id": "1278",
+      "question": "Is there a chair in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "chair"
+    },
+    {
+      "question_id": "1436",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "dining table"
+    },
+    {
+      "question_id": "1768",
+      "question": "Is there a car in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "car"
+    },
+    {
+      "question_id": "2356",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "dining table"
+    },
+    {
+      "question_id": "2559",
+      "question": "Is there a car in the image?",
+      "ground_truth": "yes",
+      "B_prediction": "yes",
+      "C_prediction": "yes",
+      "D_prediction": "no",
+      "visual_stratum": "FN_simple",
+      "target_object": "car"
+    },
+    {
+      "question_id": "2662",
+      "question": "Is there a car in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "car"
+    },
+    {
+      "question_id": "2695",
+      "question": "Is there a snowboard in the image?",
+      "ground_truth": "yes",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FN_simple",
+      "target_object": "snowboard"
+    },
+    {
+      "question_id": "2802",
+      "question": "Is there a bottle in the image?",
+      "ground_truth": "no",
+      "B_prediction": "no",
+      "C_prediction": "yes",
+      "D_prediction": "yes",
+      "visual_stratum": "FP_hallucination",
+      "target_object": "bottle"
+    }
+  ]
+}

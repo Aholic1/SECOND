@@ -1,0 +1,8 @@
+{
+  "TP_simple": 20,
+  "TP_relation": 10,
+  "TN_correct": 20,
+  "FN_simple": 20,
+  "FN_relation": 15,
+  "FP_hallucination": 15
+}

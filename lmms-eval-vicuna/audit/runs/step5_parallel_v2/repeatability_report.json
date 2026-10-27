@@ -1,0 +1,3054 @@
+{
+  "summary": {
+    "data_validation_status": "PASS",
+    "cross_gpu_pair_prediction_consistency_status": "MISMATCH",
+    "historical_prediction_reproduction_across_gpu_pairs_status": "MISMATCH",
+    "cross_gpu_pair_first_answer_mask_consistency_status": "MISMATCH",
+    "cross_gpu_pair_final_token_sequence_consistency_status": "MISMATCH",
+    "case_count": 30,
+    "control_count": 18,
+    "outcome_counts": {
+      "repeat_stable_but_historical_mismatch": 10,
+      "historical_equal_control_reproduced": 17,
+      "historical_change_reproduced": 14,
+      "repeat_unstable": 7
+    },
+    "unstable_prediction_ids": [
+      "457",
+      "1025",
+      "1333",
+      "1512",
+      "2355",
+      "2497",
+      "2695"
+    ],
+    "historical_prediction_mismatch_ids": [
+      "162",
+      "457",
+      "627",
+      "1016",
+      "1025",
+      "1215",
+      "1254",
+      "1333",
+      "1463",
+      "1512",
+      "2163",
+      "2355",
+      "2478",
+      "2497",
+      "2695",
+      "2745",
+      "2802"
+    ],
+    "unstable_first_answer_mask_ids": [
+      "237",
+      "457",
+      "547",
+      "627",
+      "899",
+      "954",
+      "1025",
+      "1051",
+      "1215",
+      "1333",
+      "1361",
+      "1463",
+      "1512",
+      "1746",
+      "1829",
+      "2163",
+      "2261",
+      "2355",
+      "2497",
+      "2575",
+      "2695",
+      "2745",
+      "2826",
+      "2987"
+    ],
+    "unstable_final_token_sequence_ids": [
+      "457",
+      "1025",
+      "1333",
+      "1512",
+      "2355",
+      "2497",
+      "2695"
+    ],
+    "annotation_review_ids": [
+      "513",
+      "591",
+      "945",
+      "2355",
+      "2497"
+    ],
+    "mechanism_screen_candidate_ids_pending_label_review": [
+      "311",
+      "645",
+      "1043",
+      "1339",
+      "1507",
+      "2253",
+      "2275",
+      "2559",
+      "2639",
+      "2697",
+      "2887"
+    ],
+    "limitations": [
+      "Each condition runs once per GPU pair; this tests cross-pair consistency, not within-pair repeatability or universal determinism.",
+      "Attention/masks are recorded only for first answer token, all three stage transitions.",
+      "Labels are unchanged; no automated report establishes target presence or causality.",
+      "Same-image questions are correlated; this outcome-selected set cannot estimate population accuracy.",
+      "Subset scheduling differs from the historical full run; stable historical mismatch needs investigation, not baseline replacement.",
+      "GPU pair and round vary together within each condition. Disagreement requires follow-up repeats on the SAME pair; no separate hardware/time effect is identifiable here."
+    ],
+    "experiment_design": "two-round cross-GPU-pair consistency; not same-GPU repeatability",
+    "gpu_layout": {
+      "C1": "1,2",
+      "D1": "3,4",
+      "D2": "1,2",
+      "C2": "3,4"
+    }
+  },
+  "samples": [
+    {
+      "question_id": "162",
+      "coco_image_id": "33270",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.7000007629394531,
+        "D1": 0.5031242370605469,
+        "D2": 0.5031242370605469,
+        "C2": 0.7000007629394531
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "237",
+      "coco_image_id": "500257",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -2.937501907348633,
+        "D1": -2.65625,
+        "D2": -2.065622329711914,
+        "C2": -2.515625
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.4218769073486328,
+        "D": 0.5906276702880859
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "311",
+      "coco_image_id": "437347",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.484375,
+        "D1": -0.41562461853027344,
+        "D2": -0.41562461853027344,
+        "C2": 0.484375
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "457",
+      "coco_image_id": "406403",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 0.2687511444091797,
+        "D1": -0.012500762939453125,
+        "D2": 0.10000038146972656,
+        "C2": 0.04374885559082031
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.22500228881835938,
+        "D": 0.11250114440917969
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "513",
+      "coco_image_id": "175506",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": true,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.2531242370605469,
+        "D1": -0.5062484741210938,
+        "D2": -0.5062484741210938,
+        "C2": 0.2531242370605469
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "547",
+      "coco_image_id": "81336",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 7.034374237060547,
+        "D1": 7.118749618530273,
+        "D2": 7.118749618530273,
+        "C2": 7.0625
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.028125762939453125,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "591",
+      "coco_image_id": "557016",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": true,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 1.8156261444091797,
+        "D1": -3.8374996185302734,
+        "D2": -3.8374996185302734,
+        "C2": 1.8156261444091797
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "627",
+      "coco_image_id": "94944",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.009374618530273438,
+        "D1": -0.65625,
+        "D2": -0.7124996185302734,
+        "C2": -0.3750019073486328
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.3656272888183594,
+        "D": 0.05624961853027344
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "645",
+      "coco_image_id": "382670",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.15625,
+        "D1": -0.15312767028808594,
+        "D2": -0.15312767028808594,
+        "C2": 0.15625
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "899",
+      "coco_image_id": "354398",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 8.193746566772461,
+        "D1": 7.771875381469727,
+        "D2": 6.140625,
+        "C2": 8.41874885559082
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.22500228881835938,
+        "D": 1.6312503814697266
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "945",
+      "coco_image_id": "111817",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": true,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.59375,
+        "D1": 0.30624961853027344,
+        "D2": 0.30624961853027344,
+        "C2": -0.59375
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "954",
+      "coco_image_id": "379162",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 0.6593742370605469,
+        "D1": 1.3343753814697266,
+        "D2": 0.7718734741210938,
+        "C2": 1.1656265258789062
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.5062522888183594,
+        "D": 0.5625019073486328
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1016",
+      "coco_image_id": "278226",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.16562271118164062,
+        "D1": 0.6999988555908203,
+        "D2": 0.6999988555908203,
+        "C2": 0.16562271118164062
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1025",
+      "coco_image_id": "449432",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 0.05312538146972656,
+        "D1": 0.30624961853027344,
+        "D2": -0.003124237060546875,
+        "C2": 0.2781257629394531
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.22500038146972656,
+        "D": 0.3093738555908203
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1043",
+      "coco_image_id": "249720",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.453125,
+        "D1": -1.4593753814697266,
+        "D2": -1.4593753814697266,
+        "C2": 0.453125
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1051",
+      "coco_image_id": "18150",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -6.44062614440918,
+        "D1": -6.215625762939453,
+        "D2": -6.131248474121094,
+        "C2": -6.328125
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.11250114440917969,
+        "D": 0.08437728881835938
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1123",
+      "coco_image_id": "11241",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 6.63749885559082,
+        "D1": 6.890623092651367,
+        "D2": 6.890623092651367,
+        "C2": 6.63749885559082
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1215",
+      "coco_image_id": "112664",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -1.9249992370605469,
+        "D1": -1.5593738555908203,
+        "D2": -1.7562503814697266,
+        "C2": -1.5593757629394531
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.36562347412109375,
+        "D": 0.19687652587890625
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1254",
+      "coco_image_id": "388983",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.328125,
+        "D1": -0.03749847412109375,
+        "D2": -0.03749847412109375,
+        "C2": 0.328125
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1333",
+      "coco_image_id": "299074",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.13125038146972656,
+        "D1": -0.10312843322753906,
+        "D2": 0.06562423706054688,
+        "C2": -0.04687309265136719
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.08437728881835938,
+        "D": 0.16875267028808594
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1339",
+      "coco_image_id": "120648",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.15312576293945312,
+        "D1": 0.043750762939453125,
+        "D2": 0.043750762939453125,
+        "C2": -0.15312576293945312
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1361",
+      "coco_image_id": "505542",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 0.3562507629394531,
+        "D1": 0.9187488555908203,
+        "D2": 0.9187507629394531,
+        "C2": 0.8062496185302734
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.4499988555908203,
+        "D": 1.9073486328125e-06
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1399",
+      "coco_image_id": "463522",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.7749977111816406,
+        "D1": -1.1124992370605469,
+        "D2": -1.1124992370605469,
+        "C2": -0.7749977111816406
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1463",
+      "coco_image_id": "115626",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.8250007629394531,
+        "D1": -1.7250003814697266,
+        "D2": -1.6125011444091797,
+        "C2": -1.5562496185302734
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.7312488555908203,
+        "D": 0.11249923706054688
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1507",
+      "coco_image_id": "23731",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.6281242370605469,
+        "D1": 0.07499885559082031,
+        "D2": 0.07499885559082031,
+        "C2": -0.6281242370605469
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1512",
+      "coco_image_id": "23731",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.0062503814697265625,
+        "D1": 0.049999237060546875,
+        "D2": -0.23125267028808594,
+        "C2": -0.11875152587890625
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.11250114440917969,
+        "D": 0.2812519073486328
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1556",
+      "coco_image_id": "441156",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -9.671873092651367,
+        "D1": -9.728126525878906,
+        "D2": -9.728126525878906,
+        "C2": -9.671873092651367
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1746",
+      "coco_image_id": "343401",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -7.865623474121094,
+        "D1": -8.146873474121094,
+        "D2": -7.94999885559082,
+        "C2": -7.696874618530273
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.1687488555908203,
+        "D": 0.19687461853027344
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "1813",
+      "coco_image_id": "188958",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 4.531251907348633,
+        "D1": 5.290624618530273,
+        "D2": 5.290624618530273,
+        "C2": 4.531251907348633
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "1829",
+      "coco_image_id": "198397",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 4.709377288818359,
+        "D1": 4.625,
+        "D2": 4.681249618530273,
+        "C2": 4.765625
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.056247711181640625,
+        "D": 0.05624961853027344
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2039",
+      "coco_image_id": "363908",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 4.687501907348633,
+        "D1": 4.771875381469727,
+        "D2": 4.771875381469727,
+        "C2": 4.687501907348633
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2163",
+      "coco_image_id": "155131",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 4.034372329711914,
+        "D1": 3.8656253814697266,
+        "D2": 4.006250381469727,
+        "C2": 4.17500114440918
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.14062881469726562,
+        "D": 0.140625
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2253",
+      "coco_image_id": "199940",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 7.3125,
+        "D1": -0.7593765258789062,
+        "D2": -0.7593765258789062,
+        "C2": 7.3125
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "2261",
+      "coco_image_id": "549390",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 7.443748474121094,
+        "D1": 7.5,
+        "D2": 7.528127670288086,
+        "C2": 7.443752288818359
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 3.814697265625e-06,
+        "D": 0.028127670288085938
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2275",
+      "coco_image_id": "368541",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.6343727111816406,
+        "D1": 0.35000038146972656,
+        "D2": 0.35000038146972656,
+        "C2": -0.6343727111816406
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2355",
+      "coco_image_id": "44993",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": true,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": false,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": false,
+        "D": true
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 0.06562423706054688,
+        "D1": -0.5812492370605469,
+        "D2": -0.6937503814697266,
+        "C2": -0.46875
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.5343742370605469,
+        "D": 0.11250114440917969
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "2478",
+      "coco_image_id": "388237",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.41250038146972656,
+        "D1": 0.27187538146972656,
+        "D2": 0.27187538146972656,
+        "C2": 0.41250038146972656
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2497",
+      "coco_image_id": "378751",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": true,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.33124732971191406,
+        "D1": 0.1750011444091797,
+        "D2": -1.1187496185302734,
+        "C2": -0.5843753814697266
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.2531280517578125,
+        "D": 1.2937507629394531
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2559",
+      "coco_image_id": "478736",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "no",
+        "D2": "no",
+        "C2": "yes"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 1.4625015258789062,
+        "D1": -0.5343742370605469,
+        "D2": -0.5343742370605469,
+        "C2": 1.4625015258789062
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "2575",
+      "coco_image_id": "516601",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 0.6031246185302734,
+        "D1": 0.5468769073486328,
+        "D2": 0.6312465667724609,
+        "C2": 0.5749988555908203
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.028125762939453125,
+        "D": 0.08436965942382812
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2639",
+      "coco_image_id": "16451",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.24062538146972656,
+        "D1": 0.20937347412109375,
+        "D2": 0.20937347412109375,
+        "C2": -0.24062538146972656
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2695",
+      "coco_image_id": "550514",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_unstable",
+      "prediction_repeat_equal": {
+        "C": false,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": false,
+        "D": true
+      },
+      "currently_CD_different": null,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.03750038146972656,
+        "D1": 0.1875,
+        "D2": 0.21562767028808594,
+        "C2": 0.1875
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.22500038146972656,
+        "D": 0.028127670288085938
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2697",
+      "coco_image_id": "550514",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -0.012500762939453125,
+        "D1": 0.04374885559082031,
+        "D2": 0.04374885559082031,
+        "C2": -0.012500762939453125
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2745",
+      "coco_image_id": "233426",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "no",
+        "D2": "no",
+        "C2": "no"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": false
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": -0.3718757629394531,
+        "D1": -0.4843769073486328,
+        "D2": -0.8500003814697266,
+        "C2": -0.5687484741210938
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.19687271118164062,
+        "D": 0.36562347412109375
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "no"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "no"
+        }
+      }
+    },
+    {
+      "question_id": "2802",
+      "coco_image_id": "355776",
+      "role": "changed_case",
+      "historical_change_direction": "degraded",
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "repeat_stable_but_historical_mismatch",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": false,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": 0.41250038146972656,
+        "D1": 0.8343753814697266,
+        "D2": 0.8343753814697266,
+        "C2": 0.41250038146972656
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2826",
+      "coco_image_id": "230175",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "no",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 1.9562511444091797,
+        "D1": 1.703125,
+        "D2": 1.703125,
+        "C2": 1.5906238555908203
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.3656272888183594,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2887",
+      "coco_image_id": "41180",
+      "role": "changed_case",
+      "historical_change_direction": "corrected",
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "no",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "no"
+      },
+      "outcome": "historical_change_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": true,
+      "first_answer_attention_bitwise_equal": {
+        "C": true,
+        "D": true
+      },
+      "yes_no_margins": {
+        "C1": -1.1187515258789062,
+        "D1": 0.034374237060546875,
+        "D2": 0.034374237060546875,
+        "C2": -1.1187515258789062
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.0,
+        "D": 0.0
+      },
+      "mechanism_screen_candidate_pending_label_review": true,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "no",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "no",
+          "D": "yes"
+        }
+      }
+    },
+    {
+      "question_id": "2987",
+      "coco_image_id": "121959",
+      "role": "historically_CD_equal_control",
+      "historical_change_direction": null,
+      "original_ground_truth": "yes",
+      "annotation_review_flag": false,
+      "historical_predictions": {
+        "C": "yes",
+        "D": "yes"
+      },
+      "predictions": {
+        "C1": "yes",
+        "D1": "yes",
+        "D2": "yes",
+        "C2": "yes"
+      },
+      "outcome": "historical_equal_control_reproduced",
+      "prediction_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "historical_prediction_match": {
+        "C": true,
+        "D": true
+      },
+      "first_answer_masks_repeat_equal": {
+        "C": true,
+        "D": false
+      },
+      "final_token_ids_repeat_equal": {
+        "C": true,
+        "D": true
+      },
+      "currently_CD_different": false,
+      "first_answer_attention_bitwise_equal": {
+        "C": false,
+        "D": false
+      },
+      "yes_no_margins": {
+        "C1": 2.3125,
+        "D1": 2.3687496185302734,
+        "D2": 2.59375,
+        "C2": 2.4812488555908203
+      },
+      "margin_absolute_repeat_difference": {
+        "C": 0.1687488555908203,
+        "D": 0.22500038146972656
+      },
+      "mechanism_screen_candidate_pending_label_review": false,
+      "same_pair_CD_comparisons": {
+        "GPU_1_2_C1_vs_D2": {
+          "C": "yes",
+          "D": "yes"
+        },
+        "GPU_3_4_C2_vs_D1": {
+          "C": "yes",
+          "D": "yes"
+        }
+      }
+    }
+  ],
+  "study_plan_sha256": "8523d44cf6c7866e96e931a79012801f24b19b290704f17254b9f04b23b474ad",
+  "cohort": {
+    "folder": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/manifests/step5_changed30_matched_v1",
+    "sha256_index": "e2dec4f578b5af5eff299d0719b1711b4aab2fdb729edff5979351658c81202c",
+    "combined_sha256": "746e4644d84714ee8c43dc3463781838f0dc74185c7581d4e2d04e20ddb86f0b",
+    "count": 48,
+    "historical_matching_status": "NEEDS_REVIEW",
+    "control_count": 18
+  }
+}

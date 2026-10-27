@@ -1,0 +1,47 @@
+{
+  "audit_schema_version": 1,
+  "condition": "B",
+  "sample_id": "1767",
+  "token_idx": 0,
+  "source_stage": 0,
+  "target_stage": 1,
+  "second_entropy": 3.5976028442382812,
+  "normalized_entropy": 0.9293247259930009,
+  "entropy_2d": 7.328794956207275,
+  "attention_cutoff": 0.229400634765625,
+  "requested_keep_ratio": 0.8920528878292385,
+  "actual_keep_ratio": 0.8923611111111112,
+  "selected_token_count": 2056,
+  "total_token_count": 2304,
+  "source_stage_margin": {
+    "available": true,
+    "reason": null,
+    "yes_token_id": 8241,
+    "no_token_id": 3782,
+    "yes_logit": 13.46875,
+    "no_logit": 12.4765625,
+    "yes_no_margin": 0.9921875
+  },
+  "proposed_selected_token_count": 2056,
+  "proposed_keep_ratio": 0.8923611111111112,
+  "applied_selected_token_count": 2304,
+  "applied_keep_ratio": 1.0,
+  "target_stage_margin": {
+    "available": true,
+    "reason": null,
+    "yes_token_id": 8241,
+    "no_token_id": 3782,
+    "yes_logit": 13.65625,
+    "no_logit": 12.9375,
+    "yes_no_margin": 0.71875
+  },
+  "final_decoding_margin": {
+    "available": true,
+    "reason": null,
+    "yes_token_id": 8241,
+    "no_token_id": 3782,
+    "yes_logit": 13.65625,
+    "no_logit": 12.9375,
+    "yes_no_margin": 0.71875
+  }
+}

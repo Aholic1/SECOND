@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "snapshot_sha256": "c11c12ffbadd38a2f5559b8ac2999bab9d89a9fa992753222d4c527a92fba3dc",
+  "output_hashes": {
+    "records.json": "f86bb0cc8329e6dc2555050639783880200b2da8e44f620c2bfa83df3580a5ae",
+    "validation_report.json": "c4cd84582932bea243eb42623d94ca74cddf6075850576761f599847f07fc526",
+    "run_manifest.json": "d17cb0b8abb92ad51b2e01c4b41ca298d329cc32ad445d25fe3127794b4cf111",
+    "console.log": "e94bf9f7b6e154f0a743657e50dbd46b9bb1c3562ae6525995cf036ea60acbce",
+    "validation.log": "c4cd84582932bea243eb42623d94ca74cddf6075850576761f599847f07fc526",
+    "results/liuhaotian__llava-v1.6-vicuna-7b/20261025_231250_samples_pope_pop_audit.jsonl": "3ac9041f3030e8ae64d30237cba160511f9e89bdab4c90a75f8fef46f9b6fe33"
+  },
+  "semantics": "Structure and artifact validation passed; prediction stability is reported separately."
+}

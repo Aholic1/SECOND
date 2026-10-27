@@ -1,0 +1,1217 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-25T15:18:07.497403+00:00",
+  "status": "PASS",
+  "git_commit": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+  "study_plan_sha256": "1539a3cc9340848a2e1027f22d5f6658c452bda43ef3b91293fec48e5fbe9298",
+  "repeatability_report_sha256": "9ac44abf48c82ac0ee91e92f1306a0c0718b3aaf6891c22d453df17e9d220f79",
+  "frozen_cohort_sha256": "746e4644d84714ee8c43dc3463781838f0dc74185c7581d4e2d04e20ddb86f0b",
+  "candidate_ids": [
+    "311",
+    "645",
+    "1025",
+    "1043",
+    "1339",
+    "1507",
+    "2253",
+    "2275",
+    "2559",
+    "2639",
+    "2697",
+    "2887"
+  ],
+  "selection_signal_semantics": "ret_attn is SECOND's rank-transformed selection signal. It is not raw causal attention, semantic relevance, or proof that a patch caused an answer.",
+  "selection_signal_to_consumed_grid": "For stage score coloring, ret_attn is resized to the consumed feature grid with the same floor-index nearest-neighbor mapping used by torch interpolate(mode='nearest'); the masks are independently checked against saved consumed masks.",
+  "geometry_semantics": "Rectangles come from runtime-validated provenance original_rect_clipped coordinates. AnyRes tile IDs and patch rows/columns are retained in the source JSONL; the plots project each patch rectangle to original-image coordinates.",
+  "rendering": {
+    "green": "runtime-consumed/retained token",
+    "red": "runtime-dropped token",
+    "yellow": "COCO target annotation box",
+    "score_color_range_by_transition": {
+      "-2_to_-1": [
+        0.031646728515625,
+        1.0
+      ],
+      "-1_to_0": [
+        0.0309600830078125,
+        4.09246826171875
+      ],
+      "0_to_1": [
+        0.0299224853515625,
+        18.47576904296875
+      ]
+    }
+  },
+  "samples": [
+    {
+      "question_id": "311",
+      "question": "Is there a sports ball in the image?",
+      "target_object": "sports ball",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "image_sha256": "fb6c14ade62870a23c01b42a9543938795b591526e6c3098595b7ddcca1ac8fe",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/311",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/311",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 1,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 1,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 520,
+          "dropped_count": 56,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 2,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 2,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2096,
+          "dropped_count": 208,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 4,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 4,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "645",
+      "question": "Is there a bicycle in the image?",
+      "target_object": "bicycle",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "image_sha256": "7db514528ed8ed3cb9abcd5a2adf84baea820c2718cc049673502e5b5c68cee6",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/645",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/645",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 54,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 54,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 540,
+          "dropped_count": 36,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 170,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 170,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2136,
+          "dropped_count": 168,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 660,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 660,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "1025",
+      "question": "Is there a handbag in the image?",
+      "target_object": "handbag",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "image_sha256": "8f9aded677bac57da1d4b55e370dbc97456b332ccfb5620d4cd20917843aa830",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_1/1025",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_1/1025",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 144,
+          "dropped_count": 0,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 4,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 4,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 564,
+          "dropped_count": 12,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 6,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 6,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2068,
+          "dropped_count": 236,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 15,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 15,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "1043",
+      "question": "Is there a traffic light in the image?",
+      "target_object": "traffic light",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "image_sha256": "a44dcddb2ec187c5840c026fe21e50b5db84be2c4bf1e0a68c6781ad41edc45b",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/1043",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/1043",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 3,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 3,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 528,
+          "dropped_count": 48,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 8,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 8,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2064,
+          "dropped_count": 240,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 18,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 18,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "1339",
+      "question": "Is there a handbag in the image?",
+      "target_object": "handbag",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "image_sha256": "f3c338d13cf8848a8864b018f10ec70435cef2867814abd99a92a6d9265d297d",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/1339",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/1339",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 6,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 6,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 544,
+          "dropped_count": 32,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 16,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 16,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2160,
+          "dropped_count": 144,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 49,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 49,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "1507",
+      "question": "Is there a clock in the image?",
+      "target_object": "clock",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "image_sha256": "8fac9ed602cdaee985d723bb595a9d70c3243cf8aaf2d0f097f6af853de10d75",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/1507",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/1507",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 4,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 4,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 520,
+          "dropped_count": 56,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 9,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 9,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2016,
+          "dropped_count": 288,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 25,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 25,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "2253",
+      "question": "Is there a bowl in the image?",
+      "target_object": "bowl",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "image_sha256": "2c0ac02fdf41eff574970666a1f138b740b4ce0b10ce56e4d395b49af6225359",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/2253",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/2253",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 6,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 2,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 560,
+          "dropped_count": 16,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 20,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 4,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2184,
+          "dropped_count": 120,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 63,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 14,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "2275",
+      "question": "Is there a backpack in the image?",
+      "target_object": "backpack",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "image_sha256": "e3e2d51761032ef5460a5cdfc39d6aeebe6c5b12f9b17d014eaa29a5124f469d",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/2275",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/2275",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 3,
+          "candidate_cells_intersecting_any_coco_target_box": 3,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 3,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 524,
+          "dropped_count": 52,
+          "target_bbox_count": 3,
+          "candidate_cells_intersecting_any_coco_target_box": 5,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 5,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2092,
+          "dropped_count": 212,
+          "target_bbox_count": 3,
+          "candidate_cells_intersecting_any_coco_target_box": 13,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 13,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "2559",
+      "question": "Is there a car in the image?",
+      "target_object": "car",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "yes",
+        "D": "no"
+      },
+      "image_sha256": "da6eb507bc5bfed5abc7cf7e91d02af0a43cab3d352c67b82d188b9a934333be",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/2559",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/2559",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 2,
+          "candidate_cells_intersecting_any_coco_target_box": 3,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 1,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 528,
+          "dropped_count": 48,
+          "target_bbox_count": 2,
+          "candidate_cells_intersecting_any_coco_target_box": 8,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 4,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2128,
+          "dropped_count": 176,
+          "target_bbox_count": 2,
+          "candidate_cells_intersecting_any_coco_target_box": 15,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 6,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "2639",
+      "question": "Is there a handbag in the image?",
+      "target_object": "handbag",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "image_sha256": "83fade2162445d292c33005ad31d9ad05de5a4691489b0762bc81ec401cb2cbc",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/2639",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/2639",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 3,
+          "candidate_cells_intersecting_any_coco_target_box": 12,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 12,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 544,
+          "dropped_count": 32,
+          "target_bbox_count": 3,
+          "candidate_cells_intersecting_any_coco_target_box": 36,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 36,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2116,
+          "dropped_count": 188,
+          "target_bbox_count": 3,
+          "candidate_cells_intersecting_any_coco_target_box": 128,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 128,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "2697",
+      "question": "Is there a backpack in the image?",
+      "target_object": "backpack",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "image_sha256": "8e499dad4b37bbe9bc0b79004aa26af77a3cdfc610cc8fa0c56c25b577cca603",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/2697",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/2697",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 2,
+          "candidate_cells_intersecting_any_coco_target_box": 5,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 5,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 540,
+          "dropped_count": 36,
+          "target_bbox_count": 2,
+          "candidate_cells_intersecting_any_coco_target_box": 8,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 8,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2116,
+          "dropped_count": 188,
+          "target_bbox_count": 2,
+          "candidate_cells_intersecting_any_coco_target_box": 19,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 19,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    },
+    {
+      "question_id": "2887",
+      "question": "Is there a backpack in the image?",
+      "target_object": "backpack",
+      "ground_truth": "yes",
+      "historical_predictions": {
+        "C": "no",
+        "D": "yes"
+      },
+      "image_sha256": "8b010eca6b85dc9c15c07f2160e3917e3d53c2219eead900d402b2a27d0e3e13",
+      "d1_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D1/artifacts/D/rank_0/2887",
+      "d2_artifact_dir": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_repeatability_v1/D2/artifacts/D/rank_0/2887",
+      "stages": [
+        {
+          "transition": [
+            -2,
+            -1
+          ],
+          "provenance_forward_stage": -1,
+          "source_type": "low_res_base",
+          "grid_shape": [
+            12,
+            12
+          ],
+          "candidate_count": 144,
+          "selected_count": 136,
+          "dropped_count": 8,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 2,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 2,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.031646728515625,
+            1.0
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-2_to_-1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            -1,
+            0
+          ],
+          "provenance_forward_stage": 0,
+          "source_type": "base",
+          "grid_shape": [
+            24,
+            24
+          ],
+          "candidate_count": 576,
+          "selected_count": 544,
+          "dropped_count": 32,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 2,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 2,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0309600830078125,
+            4.09246826171875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_-1_to_0.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        },
+        {
+          "transition": [
+            0,
+            1
+          ],
+          "provenance_forward_stage": 1,
+          "source_type": "anyres_tile",
+          "grid_shape": [
+            48,
+            48
+          ],
+          "candidate_count": 2304,
+          "selected_count": 2104,
+          "dropped_count": 200,
+          "target_bbox_count": 1,
+          "candidate_cells_intersecting_any_coco_target_box": 8,
+          "selected_candidate_cells_intersecting_any_coco_target_box": 8,
+          "score_grid_min_max_shared_across_candidates_for_this_transition": [
+            0.0299224853515625,
+            18.47576904296875
+          ],
+          "selection_signal_visualized_from_run": "D1",
+          "selection_signal_D1_D2_bitwise_equal": true,
+          "selection_signal_D1_D2_max_abs_difference": 0.0,
+          "image": "stage_0_to_1.png",
+          "note": "BBox overlap counts candidate cells, not unique image area; tile/crop overlap can count the same pixels more than once."
+        }
+      ],
+      "contact_sheet": "three_transition_contact_sheet.png"
+    }
+  ],
+  "limitations": [
+    "These 12 cases were selected from the observed C/D changes; they are not a random sample.",
+    "A selected region is not necessarily question-relevant, and ret_attn is not a causal attribution map.",
+    "COCO boxes are dataset annotations, not pixel-level masks; box intersection is only a coarse localization check.",
+    "For negative questions with no target box, the plots show selection but cannot define a positive target region."
+  ]
+}

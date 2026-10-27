@@ -1,0 +1,13 @@
+## main...origin/main [ahead 22]
+ M lmms-eval-vicuna/run.sh
+ M lmms-eval-vicuna/tools/second_audit.py
+?? lmms-eval-vicuna/audit/STEP1_IMPLEMENTATION.md
+?? lmms-eval-vicuna/audit/ppt_figures/
+?? lmms-eval-vicuna/audit/runs/
+?? lmms-eval-vicuna/audit/step1_diagnostic/
+?? lmms-eval-vicuna/audit/step1_full/
+?? lmms-eval-vicuna/audit/step1_run.sh
+?? lmms-eval-vicuna/audit/test_step1.py
+?? lmms-eval-vicuna/audit/validate_step1.py
+?? lmms-eval-vicuna/logs/
+?? lmms-eval-vicuna/tests/test_run_sh.py

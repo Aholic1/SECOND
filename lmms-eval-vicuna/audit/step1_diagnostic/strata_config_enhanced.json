@@ -1,0 +1,22 @@
+{
+  "_comment": "Enhanced stratification based on visual features from COCO annotations",
+  
+  "TP_small_center": 15,
+  "TP_small_peripheral": 10,
+  "TP_large_center": 10,
+  "TP_medium_center": 5,
+  
+  "TN_simple": 10,
+  "TN_medium": 10,
+  "TN_complex": 10,
+  
+  "FN_small_center": 15,
+  "FN_small_peripheral": 10,
+  "FN_medium_center": 5,
+  "FN_large_center": 5,
+  "FN_simple": 5,
+  
+  "FP_hallucination": 10,
+  
+  "_total": 120
+}

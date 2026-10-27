@@ -1,0 +1,553 @@
+{
+  "schema_version": 1,
+  "matching_policy": {
+    "version": "step5-freeze-v1",
+    "mandatory": [
+      "same queried category",
+      "same ground truth",
+      "same C correctness"
+    ],
+    "controls": "C equals D in the source run only; repeatability is not established",
+    "exclusions": [
+      "all case COCO images",
+      "annotation-conflicting controls"
+    ],
+    "reuse": "each control question and each control COCO image at most once",
+    "objective": "maximum matched count, then minimum relaxed pairs, then minimum distance",
+    "strict_calipers": {
+      "largest_target_bbox_area_ratio_factor": 2.0,
+      "target_center_distance_in_diagonal_units": 0.15,
+      "scene_object_count_plus_one_factor": 2.0,
+      "aspect_ratio_factor": 1.5
+    },
+    "relaxed_calipers": {
+      "largest_target_bbox_area_ratio_factor": 4.0,
+      "target_center_distance_in_diagonal_units": 0.3,
+      "scene_object_count_plus_one_factor": 3.0,
+      "aspect_ratio_factor": 2.0
+    },
+    "geometry": "all COCO target boxes saved; matching uses the largest box, not the historical single box",
+    "negative_samples": "no target-size/location covariates when ground truth is no",
+    "distance": "sum of caliper-normalized log/center differences; positive target geometry gets weight 2; log target instance count gets weight 0.25",
+    "ties": "SHA256(seed, case question ID, control question ID), never Python hash()",
+    "warning": "Controls are descriptive matched comparisons; matching alone does not identify causal effects."
+  },
+  "seed": 42,
+  "pairs": [
+    {
+      "pair_id": "pair_162",
+      "case_question_id": "162",
+      "case_coco_image_id": "33270",
+      "case_change_direction": "corrected",
+      "control_question_id": "2826",
+      "control_coco_image_id": "230175",
+      "tier": "strict",
+      "distance": 0.18401303169907035,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.0,
+        "log_aspect_ratio_difference": 0.07461086379117464
+      },
+      "cost": 184013720,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 9,
+        "strict_candidates": 5,
+        "relaxed_candidates": 1,
+        "candidate_control_images": 6
+      }
+    },
+    {
+      "pair_id": "pair_311",
+      "case_question_id": "311",
+      "case_coco_image_id": "437347",
+      "case_change_direction": "degraded",
+      "control_question_id": "2039",
+      "control_coco_image_id": "363908",
+      "tier": "strict",
+      "distance": 3.9288053465570396,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.5108256237659907,
+        "log_aspect_ratio_difference": 0.11282671926283151,
+        "target_log_area_ratio_difference": 0.662659590722981,
+        "target_center_distance": 0.07511575600179211,
+        "target_log_instance_count_difference": 0.0
+      },
+      "cost": 3928805641,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 20,
+        "strict_candidates": 1,
+        "relaxed_candidates": 1,
+        "candidate_control_images": 2
+      }
+    },
+    {
+      "pair_id": "pair_457",
+      "case_question_id": "457",
+      "case_coco_image_id": "406403",
+      "case_change_direction": "degraded",
+      "control_question_id": "1813",
+      "control_coco_image_id": "188958",
+      "tier": "relaxed",
+      "distance": 8.310769840528224,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.5753641449035618,
+        "log_aspect_ratio_difference": 0.0,
+        "target_log_area_ratio_difference": 1.351907847418772,
+        "target_center_distance": 0.2320076857715126,
+        "target_log_instance_count_difference": 1.9459101490553135
+      },
+      "cost": 1000008310770766,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 8,
+        "strict_candidates": 0,
+        "relaxed_candidates": 1,
+        "candidate_control_images": 1
+      }
+    },
+    {
+      "pair_id": "pair_645",
+      "case_question_id": "645",
+      "case_coco_image_id": "382670",
+      "case_change_direction": "degraded",
+      "control_question_id": "2261",
+      "control_coco_image_id": "549390",
+      "tier": "strict",
+      "distance": 2.4576746032554393,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.5108256237659907,
+        "log_aspect_ratio_difference": 0.11700209067331224,
+        "target_log_area_ratio_difference": 0.28751191469520604,
+        "target_center_distance": 0.011596684004611437,
+        "target_log_instance_count_difference": 1.791759469228055
+      },
+      "cost": 2457675267,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 12,
+        "strict_candidates": 1,
+        "relaxed_candidates": 5,
+        "candidate_control_images": 6
+      }
+    },
+    {
+      "pair_id": "pair_1016",
+      "case_question_id": "1016",
+      "case_coco_image_id": "278226",
+      "case_change_direction": "degraded",
+      "control_question_id": "1556",
+      "control_coco_image_id": "441156",
+      "tier": "strict",
+      "distance": 0.0,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.0,
+        "log_aspect_ratio_difference": 0.0
+      },
+      "cost": 257,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 324,
+        "strict_candidates": 176,
+        "relaxed_candidates": 99,
+        "candidate_control_images": 275
+      }
+    },
+    {
+      "pair_id": "pair_1025",
+      "case_question_id": "1025",
+      "case_coco_image_id": "449432",
+      "case_change_direction": "degraded",
+      "control_question_id": "2987",
+      "control_coco_image_id": "121959",
+      "tier": "relaxed",
+      "distance": 3.9715164395750246,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.10536051565782628,
+        "log_aspect_ratio_difference": 0.692366235576874,
+        "target_log_area_ratio_difference": 0.18621616789387085,
+        "target_center_distance": 0.11809663636398944,
+        "target_log_instance_count_difference": 0.0
+      },
+      "cost": 1000003971516791,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 20,
+        "strict_candidates": 0,
+        "relaxed_candidates": 3,
+        "candidate_control_images": 3
+      }
+    },
+    {
+      "pair_id": "pair_1043",
+      "case_question_id": "1043",
+      "case_coco_image_id": "249720",
+      "case_change_direction": "degraded",
+      "control_question_id": "547",
+      "control_coco_image_id": "81336",
+      "tier": "strict",
+      "distance": 3.971704446624569,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.48550781578170077,
+        "log_aspect_ratio_difference": 0.15341657434863343,
+        "target_log_area_ratio_difference": 0.35709733962936935,
+        "target_center_distance": 0.12669307371342434,
+        "target_log_instance_count_difference": 0.6931471805599453
+      },
+      "cost": 3971704492,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 18,
+        "strict_candidates": 1,
+        "relaxed_candidates": 3,
+        "candidate_control_images": 4
+      }
+    },
+    {
+      "pair_id": "pair_1333",
+      "case_question_id": "1333",
+      "case_coco_image_id": "299074",
+      "case_change_direction": "degraded",
+      "control_question_id": "899",
+      "control_coco_image_id": "354398",
+      "tier": "strict",
+      "distance": 1.1339478034358805,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.40546510810816444,
+        "log_aspect_ratio_difference": 0.01242251999855711,
+        "target_log_area_ratio_difference": 0.14606482389647016,
+        "target_center_distance": 0.007267020334749598,
+        "target_log_instance_count_difference": 0.0
+      },
+      "cost": 1133948105,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 297,
+        "strict_candidates": 4,
+        "relaxed_candidates": 20,
+        "candidate_control_images": 24
+      }
+    },
+    {
+      "pair_id": "pair_1512",
+      "case_question_id": "1512",
+      "case_coco_image_id": "23731",
+      "case_change_direction": "degraded",
+      "control_question_id": "1746",
+      "control_coco_image_id": "343401",
+      "tier": "strict",
+      "distance": 0.7259670807550793,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.1823215567939546,
+        "log_aspect_ratio_difference": 0.18770304708376073
+      },
+      "cost": 725967160,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 133,
+        "strict_candidates": 11,
+        "relaxed_candidates": 7,
+        "candidate_control_images": 18
+      }
+    },
+    {
+      "pair_id": "pair_2163",
+      "case_question_id": "2163",
+      "case_coco_image_id": "155131",
+      "case_change_direction": "degraded",
+      "control_question_id": "1829",
+      "control_coco_image_id": "198397",
+      "tier": "relaxed",
+      "distance": 4.145690821735615,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.19105523676270922,
+        "log_aspect_ratio_difference": 0.6931471805599453,
+        "target_log_area_ratio_difference": 0.16680711663461528,
+        "target_center_distance": 0.12594311158974297,
+        "target_log_instance_count_difference": 0.0
+      },
+      "cost": 1000004145691455,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 20,
+        "strict_candidates": 0,
+        "relaxed_candidates": 2,
+        "candidate_control_images": 2
+      }
+    },
+    {
+      "pair_id": "pair_2253",
+      "case_question_id": "2253",
+      "case_coco_image_id": "199940",
+      "case_change_direction": "degraded",
+      "control_question_id": "1123",
+      "control_coco_image_id": "11241",
+      "tier": "relaxed",
+      "distance": 4.385470293893793,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.9694005571881036,
+        "log_aspect_ratio_difference": 0.11700209067331224,
+        "target_log_area_ratio_difference": 0.5550944419538858,
+        "target_center_distance": 0.045766254115726684,
+        "target_log_instance_count_difference": 1.9459101490553135
+      },
+      "cost": 1000004385470340,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 26,
+        "strict_candidates": 0,
+        "relaxed_candidates": 4,
+        "candidate_control_images": 4
+      }
+    },
+    {
+      "pair_id": "pair_2275",
+      "case_question_id": "2275",
+      "case_coco_image_id": "368541",
+      "case_change_direction": "corrected",
+      "control_question_id": "1399",
+      "control_coco_image_id": "463522",
+      "tier": "relaxed",
+      "distance": 7.469847463956143,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.3610133455373305,
+        "log_aspect_ratio_difference": 0.0,
+        "target_log_area_ratio_difference": 1.1469420164578241,
+        "target_center_distance": 0.265370542872441,
+        "target_log_instance_count_difference": 0.4054651081081644
+      },
+      "cost": 1000007469847216,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 4,
+        "strict_candidates": 0,
+        "relaxed_candidates": 2,
+        "candidate_control_images": 2
+      }
+    },
+    {
+      "pair_id": "pair_2478",
+      "case_question_id": "2478",
+      "case_coco_image_id": "388237",
+      "case_change_direction": "corrected",
+      "control_question_id": "954",
+      "control_coco_image_id": "379162",
+      "tier": "strict",
+      "distance": 0.12553088208385882,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.0870113769896297,
+        "log_aspect_ratio_difference": 0.0
+      },
+      "cost": 125531677,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 9,
+        "strict_candidates": 6,
+        "relaxed_candidates": 2,
+        "candidate_control_images": 8
+      }
+    },
+    {
+      "pair_id": "pair_2559",
+      "case_question_id": "2559",
+      "case_coco_image_id": "478736",
+      "case_change_direction": "degraded",
+      "control_question_id": "1361",
+      "control_coco_image_id": "505542",
+      "tier": "strict",
+      "distance": 2.423920232780804,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.6931471805599453,
+        "log_aspect_ratio_difference": 0.09909090264423097,
+        "target_log_area_ratio_difference": 0.09449215187206571,
+        "target_center_distance": 0.06801639590113644,
+        "target_log_instance_count_difference": 0.0
+      },
+      "cost": 2423920878,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 44,
+        "strict_candidates": 1,
+        "relaxed_candidates": 3,
+        "candidate_control_images": 4
+      }
+    },
+    {
+      "pair_id": "pair_2695",
+      "case_question_id": "2695",
+      "case_coco_image_id": "550514",
+      "case_change_direction": "degraded",
+      "control_question_id": "2575",
+      "control_coco_image_id": "516601",
+      "tier": "relaxed",
+      "distance": 3.9630474721426308,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.0,
+        "log_aspect_ratio_difference": 0.2876820724517809,
+        "target_log_area_ratio_difference": 0.8170347279874134,
+        "target_center_distance": 0.061811382155641595,
+        "target_log_instance_count_difference": 0.2876820724517809
+      },
+      "cost": 1000003963047419,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 8,
+        "strict_candidates": 0,
+        "relaxed_candidates": 1,
+        "candidate_control_images": 1
+      }
+    },
+    {
+      "pair_id": "pair_2697",
+      "case_question_id": "2697",
+      "case_coco_image_id": "550514",
+      "case_change_direction": "corrected",
+      "control_question_id": "1051",
+      "control_coco_image_id": "18150",
+      "tier": "relaxed",
+      "distance": 6.385494450000433,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.9162907318741551,
+        "log_aspect_ratio_difference": 0.0,
+        "target_log_area_ratio_difference": 0.4996125228863312,
+        "target_center_distance": 0.2586526906278613,
+        "target_log_instance_count_difference": 0.6931471805599453
+      },
+      "cost": 1000006385494700,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 4,
+        "strict_candidates": 0,
+        "relaxed_candidates": 3,
+        "candidate_control_images": 3
+      }
+    },
+    {
+      "pair_id": "pair_2802",
+      "case_question_id": "2802",
+      "case_coco_image_id": "355776",
+      "case_change_direction": "degraded",
+      "control_question_id": "1254",
+      "control_coco_image_id": "388983",
+      "tier": "strict",
+      "distance": 0.15917157813824628,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.0,
+        "log_aspect_ratio_difference": 0.06453852113757116
+      },
+      "cost": 159172967,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 30,
+        "strict_candidates": 5,
+        "relaxed_candidates": 15,
+        "candidate_control_images": 20
+      }
+    },
+    {
+      "pair_id": "pair_2887",
+      "case_question_id": "2887",
+      "case_coco_image_id": "41180",
+      "case_change_direction": "corrected",
+      "control_question_id": "237",
+      "control_coco_image_id": "500257",
+      "tier": "relaxed",
+      "distance": 3.493841629748462,
+      "covariate_differences": {
+        "scene_log_count_difference": 0.5753641449035618,
+        "log_aspect_ratio_difference": 0.6254885320861306,
+        "target_log_area_ratio_difference": 0.015387885526690806,
+        "target_center_distance": 0.0807541534913813,
+        "target_log_instance_count_difference": 0.0
+      },
+      "cost": 1000003493842603,
+      "candidate_counts": {
+        "same_mandatory_stratum_candidates": 4,
+        "strict_candidates": 0,
+        "relaxed_candidates": 2,
+        "candidate_control_images": 2
+      }
+    }
+  ],
+  "unmatched": [
+    {
+      "question_id": "513",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 4,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "591",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 12,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "627",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 4,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "945",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 1,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1215",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 5,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1339",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 5,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1463",
+      "reason": "no candidate in mandatory stratum",
+      "same_mandatory_stratum_candidates": 0,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "1507",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 8,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2355",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 26,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2497",
+      "reason": "case annotation requires review",
+      "same_mandatory_stratum_candidates": 20,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2639",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 5,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    },
+    {
+      "question_id": "2745",
+      "reason": "no candidate within declared calipers",
+      "same_mandatory_stratum_candidates": 1,
+      "strict_candidates": 0,
+      "relaxed_candidates": 0,
+      "candidate_control_images": 0
+    }
+  ]
+}

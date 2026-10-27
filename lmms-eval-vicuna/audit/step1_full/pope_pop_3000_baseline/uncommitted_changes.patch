@@ -1,0 +1,432 @@
+diff --git a/lmms-eval-vicuna/run.sh b/lmms-eval-vicuna/run.sh
+index f4b4148..67f5dc1 100755
+--- a/lmms-eval-vicuna/run.sh
++++ b/lmms-eval-vicuna/run.sh
+@@ -1,3 +1,6 @@
++export NCCL_P2P_DISABLE="${NCCL_P2P_DISABLE:-1}"
++export NCCL_IB_DISABLE="${NCCL_IB_DISABLE:-1}"
++
+ CUDA_VISIBLE_DEVICES=0,1 python3 -m accelerate.commands.launch \
+     --num_processes=2 \
+     --main_process_port 29881 \
+@@ -37,4 +40,3 @@ CUDA_VISIBLE_DEVICES=0,1 python3 -m accelerate.commands.launch \
+ #     --stages "-2" "-1" "0" "1" \
+ #     --verbosity DEBUG \
+ #     --contrastive_alphas "0.1" "0.2" "0.1"
+-
+diff --git a/lmms-eval-vicuna/tools/second_audit.py b/lmms-eval-vicuna/tools/second_audit.py
+index 0c0f767..e75fb73 100644
+--- a/lmms-eval-vicuna/tools/second_audit.py
++++ b/lmms-eval-vicuna/tools/second_audit.py
+@@ -1,9 +1,11 @@
+ #!/usr/bin/env python3
+ import argparse
+ from collections import Counter, defaultdict
++import hashlib
+ import json
+ import math
+ from pathlib import Path
++from PIL import Image
+ import random
+ import re
+ 
+@@ -316,6 +318,303 @@ def _report_markdown(report):
+     return "\n".join(lines)
+ 
+ 
++def build_full_index(samples_jsonl, output):
++    """Generate full index from samples without sampling."""
++    samples_jsonl = Path(samples_jsonl)
++    output = Path(output)
++
++    # Load POPE dataset to get image_source mapping
++    from datasets import load_dataset
++    try:
++        pope_dataset = load_dataset("lmms-lab/POPE", "Full", split="popular")
++    except Exception as e:
++        raise RuntimeError(f"Failed to load POPE dataset. Ensure internet connection or local cache exists: {e}")
++
++    # Build mapping from question_id to COCO image_id
++    question_id_to_coco_id = {}
++    for item in pope_dataset:
++        qid = str(item["question_id"])
++        # Extract COCO image ID from image_source (e.g., "COCO_val2014_000000310196" -> "310196")
++        image_source = item["image_source"]
++        if image_source.startswith("COCO_val2014_"):
++            coco_id = image_source.replace("COCO_val2014_", "").lstrip("0") or "0"
++        else:
++            coco_id = image_source
++        question_id_to_coco_id[qid] = coco_id
++
++    records = []
++    seen_question_ids = set()
++
++    for row in _read_jsonl(samples_jsonl):
++        record = _sample_record(row)
++        question_id = record["question_id"]
++
++        if question_id in seen_question_ids:
++            raise ValueError(f"duplicate question_id in sample log: {question_id}")
++        seen_question_ids.add(question_id)
++
++        gt = record["ground_truth"]
++        pred = record["original_d_prediction"]
++
++        # Get real COCO image_id from POPE dataset
++        coco_image_id = question_id_to_coco_id.get(question_id, record["image_id"])
++
++        records.append({
++            "question_id": question_id,
++            "image_id": coco_image_id,
++            "question": record["question"],
++            "gt": gt,
++            "pred": pred,
++            "correct": gt == pred,
++            "stratum": record["stratum"],
++        })
++
++    output.parent.mkdir(parents=True, exist_ok=True)
++    with output.open("w", encoding="utf-8") as f:
++        for record in records:
++            f.write(json.dumps(record, ensure_ascii=False) + "\n")
++
++    return len(records)
++
++
++def summarize_index(index_path, output):
++    """Compute statistics from full index."""
++    index_path = Path(index_path)
++    output = Path(output)
++
++    records = list(_read_jsonl(index_path))
++    total = len(records)
++
++    counts = Counter(r["stratum"] for r in records)
++    correct = sum(1 for r in records if r["correct"])
++
++    tp = counts.get("TP", 0)
++    tn = counts.get("TN", 0)
++    fp = counts.get("FP", 0)
++    fn = counts.get("FN", 0)
++
++    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
++    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
++    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
++    accuracy = correct / total if total > 0 else 0.0
++    yes_count = sum(1 for r in records if r["pred"] == "yes")
++    yes_ratio = yes_count / total if total > 0 else 0.0
++
++    summary = {
++        "total": total,
++        "counts": {
++            "TP": tp,
++            "TN": tn,
++            "FN": fn,
++            "FP": fp,
++        },
++        "accuracy": accuracy,
++        "precision": precision,
++        "recall": recall,
++        "f1": f1,
++        "yes_ratio": yes_ratio,
++    }
++
++    output.parent.mkdir(parents=True, exist_ok=True)
++    output.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
++
++    return summary
++
++
++def map_images(index_path, coco_dir, output):
++    """Map question_ids to COCO image paths."""
++    index_path = Path(index_path)
++    coco_dir = Path(coco_dir)
++    output = Path(output)
++
++    if not coco_dir.exists():
++        raise FileNotFoundError(f"COCO directory not found: {coco_dir}")
++
++    records = list(_read_jsonl(index_path))
++    mappings = []
++
++    for record in records:
++        question_id = record["question_id"]
++        image_id = record["image_id"]
++
++        # POPE uses COCO val2014
++        # image_id is typically the COCO ID without leading zeros
++        # COCO filename format: COCO_val2014_000000{id}.jpg
++        coco_id_padded = image_id.zfill(6)
++        image_filename = f"COCO_val2014_000000{coco_id_padded}.jpg"
++        image_path = coco_dir / image_filename
++
++        mapping = {
++            "question_id": question_id,
++            "image_id": image_id,
++            "image_path": str(image_path),
++            "image_filename": image_filename,
++            "readable": False,
++            "width": 0,
++            "height": 0,
++            "sha256": "",
++        }
++
++        if image_path.exists():
++            try:
++                with Image.open(image_path) as img:
++                    mapping["width"] = img.width
++                    mapping["height"] = img.height
++                    mapping["readable"] = True
++
++                # Compute SHA256
++                with open(image_path, "rb") as f:
++                    mapping["sha256"] = hashlib.sha256(f.read()).hexdigest()
++
++            except Exception as e:
++                mapping["error"] = str(e)
++
++        mappings.append(mapping)
++
++    output.parent.mkdir(parents=True, exist_ok=True)
++    with output.open("w", encoding="utf-8") as f:
++        for mapping in mappings:
++            f.write(json.dumps(mapping, ensure_ascii=False) + "\n")
++
++    readable_count = sum(1 for m in mappings if m["readable"])
++    return {"total": len(mappings), "readable": readable_count}
++
++
++def extract_features(index_path, image_mapping_path, output):
++    """Extract lightweight features for diagnostic selection."""
++    index_path = Path(index_path)
++    image_mapping_path = Path(image_mapping_path)
++    output = Path(output)
++
++    index_records = {r["question_id"]: r for r in _read_jsonl(index_path)}
++    image_mappings = {m["question_id"]: m for m in _read_jsonl(image_mapping_path)}
++
++    relation_keywords = ["next to", "behind", "in front of", "on", "under", "beside", "near", "above", "below"]
++
++    features = []
++    for question_id, record in index_records.items():
++        mapping = image_mappings.get(question_id, {})
++        question = record.get("question", "").lower()
++
++        # Detect relation questions
++        has_relation = any(keyword in question for keyword in relation_keywords)
++
++        # Image complexity proxy: aspect ratio
++        width = mapping.get("width", 0)
++        height = mapping.get("height", 0)
++        aspect_ratio = width / height if height > 0 else 0.0
++
++        # Question length
++        question_length = len(question.split())
++
++        # Parse target object from question
++        # POPE format: "Is there a {object} in the image?"
++        target_match = re.search(r"is there an? (.+?) in the image", question)
++        target_object = target_match.group(1) if target_match else ""
++
++        feature = {
++            "question_id": question_id,
++            "stratum": record["stratum"],
++            "image_id": record["image_id"],
++            "gt": record["gt"],
++            "pred": record["pred"],
++            "correct": record["correct"],
++            "question_length": question_length,
++            "has_relation": has_relation,
++            "target_object": target_object,
++            "image_width": width,
++            "image_height": height,
++            "aspect_ratio": aspect_ratio,
++            "image_readable": mapping.get("readable", False),
++        }
++
++        features.append(feature)
++
++    output.parent.mkdir(parents=True, exist_ok=True)
++    with output.open("w", encoding="utf-8") as f:
++        for feature in features:
++            f.write(json.dumps(feature, ensure_ascii=False) + "\n")
++
++    return len(features)
++
++
++def select_diagnostic_samples(features_path, strata_config_path, output, seed):
++    """Select diagnostic samples using stratified sampling."""
++    features_path = Path(features_path)
++    strata_config_path = Path(strata_config_path)
++    output = Path(output)
++
++    # Load strata configuration
++    strata_config = json.loads(strata_config_path.read_text(encoding="utf-8"))
++
++    # Load features
++    features = list(_read_jsonl(features_path))
++
++    # Group by visual stratum
++    by_visual_stratum = defaultdict(list)
++
++    for feature in features:
++        stratum = feature["stratum"]
++        has_relation = feature["has_relation"]
++        image_readable = feature["image_readable"]
++
++        # Skip unreadable images
++        if not image_readable:
++            continue
++
++        # Define visual strata
++        if stratum == "TP":
++            # For TP, split by question complexity
++            if has_relation:
++                visual_stratum = "TP_relation"
++            else:
++                visual_stratum = "TP_simple"
++        elif stratum == "TN":
++            visual_stratum = "TN_correct"
++        elif stratum == "FN":
++            # For FN, split by relation vs simple
++            if has_relation:
++                visual_stratum = "FN_relation"
++            else:
++                visual_stratum = "FN_simple"
++        elif stratum == "FP":
++            visual_stratum = "FP_hallucination"
++        else:
++            continue
++
++        feature["visual_stratum"] = visual_stratum
++        by_visual_stratum[visual_stratum].append(feature)
++
++    # Sample from each stratum
++    rng = random.Random(seed)
++    selected = []
++
++    for visual_stratum, requested_count in strata_config.items():
++        available = by_visual_stratum[visual_stratum]
++
++        if requested_count > len(available):
++            print(f"Warning: requested {requested_count} samples from {visual_stratum}, "
++                  f"but only {len(available)} available. Taking all.")
++            selected.extend(available)
++        else:
++            selected.extend(rng.sample(available, requested_count))
++
++    # Create manifest
++    manifest = {
++        "schema_version": 2,
++        "source_features": str(features_path.resolve()),
++        "seed": seed,
++        "strata_config": strata_config,
++        "actual_counts": dict(Counter(s["visual_stratum"] for s in selected)),
++        "samples": sorted(selected, key=lambda x: x["question_id"]),
++    }
++
++    output.parent.mkdir(parents=True, exist_ok=True)
++    output.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
++
++    return manifest
++
++
+ def _add_sample_parser(subparsers):
+     parser = subparsers.add_parser("sample", help="build a stratified POPE audit manifest")
+     parser.add_argument("--samples-jsonl", required=True, type=Path)
+@@ -346,12 +645,56 @@ def _add_analyze_parser(subparsers):
+     return parser
+ 
+ 
++def _add_index_parser(subparsers):
++    parser = subparsers.add_parser("index", help="generate full index from samples (no sampling)")
++    parser.add_argument("--samples-jsonl", required=True, type=Path)
++    parser.add_argument("--output", required=True, type=Path)
++    return parser
++
++
++def _add_summarize_parser(subparsers):
++    parser = subparsers.add_parser("summarize", help="compute statistics from full index")
++    parser.add_argument("--index", required=True, type=Path)
++    parser.add_argument("--output", required=True, type=Path)
++    return parser
++
++
++def _add_map_images_parser(subparsers):
++    parser = subparsers.add_parser("map_images", help="map question_ids to COCO image paths")
++    parser.add_argument("--index", required=True, type=Path)
++    parser.add_argument("--coco-dir", required=True, type=Path)
++    parser.add_argument("--output", required=True, type=Path)
++    return parser
++
++
++def _add_extract_features_parser(subparsers):
++    parser = subparsers.add_parser("extract_features", help="extract lightweight features for diagnostic selection")
++    parser.add_argument("--index", required=True, type=Path)
++    parser.add_argument("--image-mapping", required=True, type=Path)
++    parser.add_argument("--output", required=True, type=Path)
++    return parser
++
++
++def _add_select_diagnostic_parser(subparsers):
++    parser = subparsers.add_parser("select_diagnostic", help="select diagnostic samples using stratified sampling")
++    parser.add_argument("--features", required=True, type=Path)
++    parser.add_argument("--strata-config", required=True, type=Path)
++    parser.add_argument("--output", required=True, type=Path)
++    parser.add_argument("--seed", type=int, default=42)
++    return parser
++
++
+ def main(argv=None):
+     parser = argparse.ArgumentParser(description="SECOND Token Selection Audit utilities")
+     subparsers = parser.add_subparsers(dest="command", required=True)
+     _add_sample_parser(subparsers)
+     _add_parity_parser(subparsers)
+     _add_analyze_parser(subparsers)
++    _add_index_parser(subparsers)
++    _add_summarize_parser(subparsers)
++    _add_map_images_parser(subparsers)
++    _add_extract_features_parser(subparsers)
++    _add_select_diagnostic_parser(subparsers)
+     args = parser.parse_args(argv)
+ 
+     if args.command == "sample":
+@@ -401,6 +744,38 @@ def main(argv=None):
+         print(f"audit report written to {args.output}")
+         return 0
+ 
++    if args.command == "index":
++        count = build_full_index(args.samples_jsonl, args.output)
++        print(f"full index written to {args.output}: {count} samples")
++        return 0
++
++    if args.command == "summarize":
++        summary = summarize_index(args.index, args.output)
++        print(f"summary written to {args.output}")
++        print(f"Total: {summary['total']}, Accuracy: {summary['accuracy']:.4f}, "
++              f"F1: {summary['f1']:.4f}")
++        print(f"Counts: TP={summary['counts']['TP']} TN={summary['counts']['TN']} "
++              f"FN={summary['counts']['FN']} FP={summary['counts']['FP']}")
++        return 0
++
++    if args.command == "map_images":
++        result = map_images(args.index, args.coco_dir, args.output)
++        print(f"image mapping written to {args.output}")
++        print(f"Total: {result['total']}, Readable: {result['readable']}")
++        return 0
++
++    if args.command == "extract_features":
++        count = extract_features(args.index, args.image_mapping, args.output)
++        print(f"features written to {args.output}: {count} samples")
++        return 0
++
++    if args.command == "select_diagnostic":
++        manifest = select_diagnostic_samples(args.features, args.strata_config, args.output, args.seed)
++        print(f"diagnostic manifest written to {args.output}")
++        print(f"Selected {len(manifest['samples'])} samples")
++        print(f"Counts by visual stratum: {manifest['actual_counts']}")
++        return 0
++
+     raise AssertionError(f"unhandled command: {args.command}")
+ 
+ 

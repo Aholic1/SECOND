@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "condition": "B",
+  "artifact_mode": "compact",
+  "expected_count": 100,
+  "captured_count": 100,
+  "reference_predictions": null,
+  "reference_prediction_mismatch_count": 0,
+  "reference_prediction_mismatches": [],
+  "historical_prediction_mismatch_count": 11,
+  "historical_prediction_mismatches": [
+    {
+      "question_id": "1264",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1278",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "196",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2356",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2559",
+      "baseline": "no",
+      "captured": "yes"
+    },
+    {
+      "question_id": "2662",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "2802",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1298",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1436",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "146",
+      "baseline": "yes",
+      "captured": "no"
+    },
+    {
+      "question_id": "1768",
+      "baseline": "yes",
+      "captured": "no"
+    }
+  ],
+  "warnings": [
+    "11 predictions differ from the historical Step 1 baseline"
+  ],
+  "errors": []
+}

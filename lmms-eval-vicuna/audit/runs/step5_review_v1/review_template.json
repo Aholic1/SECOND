@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "cohort_sha256": "746e4644d84714ee8c43dc3463781838f0dc74185c7581d4e2d04e20ddb86f0b",
+  "reviewer": "",
+  "reviews": [
+    {
+      "review_id": "R001",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R002",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R003",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R004",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R005",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R006",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R007",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R008",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R009",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R010",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R011",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R012",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R013",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R014",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R015",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R016",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R017",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R018",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R019",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R020",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R021",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R022",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R023",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R024",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R025",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R026",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R027",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R028",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R029",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R030",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R031",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R032",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R033",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R034",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R035",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R036",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R037",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R038",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R039",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R040",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R041",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R042",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R043",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R044",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R045",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R046",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R047",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    },
+    {
+      "review_id": "R048",
+      "presence": "unreviewed",
+      "localizable": "unreviewed",
+      "notes": ""
+    }
+  ]
+}

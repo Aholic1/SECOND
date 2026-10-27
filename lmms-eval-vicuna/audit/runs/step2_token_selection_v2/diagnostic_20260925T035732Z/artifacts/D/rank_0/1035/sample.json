@@ -1,0 +1,48 @@
+{
+  "audit_schema_version": 2,
+  "condition": "D",
+  "artifact_mode": "visual",
+  "rank": 0,
+  "sample_id": "1035",
+  "doc_id": 38,
+  "question_id": "1035",
+  "image_id": "4034",
+  "task": "pope_pop_audit",
+  "split": "popular",
+  "question": "Is there a bed in the image?",
+  "ground_truth": "yes",
+  "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a bed in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+  "generation_config": {
+    "max_new_tokens": 128,
+    "temperature": 0.0,
+    "top_p": 0,
+    "num_beams": 1,
+    "do_sample": false
+  },
+  "image_transform": {
+    "original_size": {
+      "width": 375,
+      "height": 500
+    },
+    "padding": {
+      "left": 62,
+      "top": 0,
+      "right": 63,
+      "bottom": 0
+    },
+    "mask_coordinate_space": "model_input_canvas",
+    "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+    "model_input_size": {
+      "width": 500,
+      "height": 500
+    }
+  },
+  "final_token_ids": [
+    1939,
+    2
+  ],
+  "final_decoded_response": "No",
+  "raw_response": "No",
+  "prediction": "no",
+  "correct": false
+}

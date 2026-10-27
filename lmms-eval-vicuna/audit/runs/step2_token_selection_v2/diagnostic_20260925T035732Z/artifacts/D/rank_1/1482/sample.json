@@ -1,0 +1,48 @@
+{
+  "audit_schema_version": 2,
+  "condition": "D",
+  "artifact_mode": "visual",
+  "rank": 1,
+  "sample_id": "1482",
+  "doc_id": 53,
+  "question_id": "1482",
+  "image_id": "4481",
+  "task": "pope_pop_audit",
+  "split": "popular",
+  "question": "Is there a chair in the image?",
+  "ground_truth": "no",
+  "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a chair in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+  "generation_config": {
+    "max_new_tokens": 128,
+    "temperature": 0.0,
+    "top_p": 0,
+    "num_beams": 1,
+    "do_sample": false
+  },
+  "image_transform": {
+    "original_size": {
+      "width": 640,
+      "height": 426
+    },
+    "padding": {
+      "left": 0,
+      "top": 107,
+      "right": 0,
+      "bottom": 107
+    },
+    "mask_coordinate_space": "model_input_canvas",
+    "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+    "model_input_size": {
+      "width": 640,
+      "height": 640
+    }
+  },
+  "final_token_ids": [
+    1939,
+    2
+  ],
+  "final_decoded_response": "No",
+  "raw_response": "No",
+  "prediction": "no",
+  "correct": true
+}

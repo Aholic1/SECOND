@@ -1,0 +1,1547 @@
+{
+  "sources": {
+    "B": "audit/runs/step4_ablation_v1/full_B_20260926T050031Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260926_130041_samples_pope_pop.jsonl",
+    "C": "audit/runs/step4_ablation_v1/full_C_20260926T082950Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260926_163001_samples_pope_pop.jsonl",
+    "D": "audit/runs/step2_token_selection_v2/full_20260925T124957Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260925_205012_samples_pope_pop.jsonl"
+  },
+  "groups": {
+    "all": [
+      {
+        "transition": [
+          -2,
+          -1
+        ],
+        "n": 3000,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9583642638388107,
+            "min": 0.8905926540842654,
+            "max": 0.9982434290799034
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9694444444444444,
+            "min": 0.9166666666666666,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9694444444444444,
+            "min": 0.9166666666666666,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.973162391778511,
+            "min": 0.9283335942601199,
+            "max": 0.9988890184968967
+          }
+        },
+        "all_kept": 1260
+      },
+      {
+        "transition": [
+          -1,
+          0
+        ],
+        "n": 3000,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9513827951394626,
+            "min": 0.8753045857699542,
+            "max": 0.9970455549604792
+          },
+          "actual_keep_ratio": {
+            "mean": 0.956925925925926,
+            "min": 0.875,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.956925925925926,
+            "min": 0.875,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.9685421923951358,
+            "min": 0.917897426087612,
+            "max": 0.9981306884759581
+          }
+        },
+        "all_kept": 509
+      },
+      {
+        "transition": [
+          0,
+          1
+        ],
+        "n": 3000,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9388597885847446,
+            "min": 0.8570272939594066,
+            "max": 0.9935190887520721
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9395844907407408,
+            "min": 0.8576388888888888,
+            "max": 0.9947916666666666
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9395844907407408,
+            "min": 0.8576388888888888,
+            "max": 0.9947916666666666
+          },
+          "normalized_entropy": {
+            "mean": 0.9603256536688174,
+            "min": 0.9052760627983234,
+            "max": 0.9958948682249928
+          }
+        },
+        "all_kept": 0
+      }
+    ],
+    "harm": [
+      {
+        "transition": [
+          -2,
+          -1
+        ],
+        "n": 17,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9450339437086773,
+            "min": 0.9130138810055157,
+            "max": 0.9932391784689354
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9558823529411764,
+            "min": 0.9166666666666666,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9558823529411764,
+            "min": 0.9166666666666666,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.964536647898366,
+            "min": 0.943444765699858,
+            "max": 0.995717187553312
+          }
+        },
+        "all_kept": 3
+      },
+      {
+        "transition": [
+          -1,
+          0
+        ],
+        "n": 17,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9333957581400603,
+            "min": 0.9007261239671621,
+            "max": 0.9851733936581931
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9387254901960784,
+            "min": 0.9027777777777778,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9387254901960784,
+            "min": 0.9027777777777778,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.9568406167386141,
+            "min": 0.9351915138972152,
+            "max": 0.9905836018662075
+          }
+        },
+        "all_kept": 1
+      },
+      {
+        "transition": [
+          0,
+          1
+        ],
+        "n": 17,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.922974959420661,
+            "min": 0.889101250405028,
+            "max": 0.971793512297979
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9237132352941176,
+            "min": 0.8888888888888888,
+            "max": 0.9722222222222222
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9237132352941176,
+            "min": 0.8888888888888888,
+            "max": 0.9722222222222222
+          },
+          "normalized_entropy": {
+            "mean": 0.9499357056448489,
+            "min": 0.9273202909356252,
+            "max": 0.9820092315116948
+          }
+        },
+        "all_kept": 0
+      }
+    ],
+    "benefit": [
+      {
+        "transition": [
+          -2,
+          -1
+        ],
+        "n": 13,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9430648345072413,
+            "min": 0.9238879410146338,
+            "max": 0.9958301257924282
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9529914529914529,
+            "min": 0.9444444444444444,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9529914529914529,
+            "min": 0.9444444444444444,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.963236549630004,
+            "min": 0.9506921047085439,
+            "max": 0.9973606567816679
+          }
+        },
+        "all_kept": 2
+      },
+      {
+        "transition": [
+          -1,
+          0
+        ],
+        "n": 13,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9334189279100451,
+            "min": 0.9006143569822949,
+            "max": 0.9942593199231728
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9358974358974359,
+            "min": 0.9027777777777778,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9358974358974359,
+            "min": 0.9027777777777778,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.9568315037016941,
+            "min": 0.9351161304857291,
+            "max": 0.9963645980284281
+          }
+        },
+        "all_kept": 1
+      },
+      {
+        "transition": [
+          0,
+          1
+        ],
+        "n": 13,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.918854579882613,
+            "min": 0.8745362532938674,
+            "max": 0.9843254295096033
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9197382478632479,
+            "min": 0.875,
+            "max": 0.984375
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9197382478632479,
+            "min": 0.875,
+            "max": 0.984375
+          },
+          "normalized_entropy": {
+            "mean": 0.9471413100990719,
+            "min": 0.9173700501459815,
+            "max": 0.9900423686798184
+          }
+        },
+        "all_kept": 0
+      }
+    ],
+    "unchanged": [
+      {
+        "transition": [
+          -2,
+          -1
+        ],
+        "n": 2970,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9585075325335994,
+            "min": 0.8905926540842654,
+            "max": 0.9982434290799034
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9695940890385335,
+            "min": 0.9166666666666666,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9695940890385335,
+            "min": 0.9166666666666666,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.9732552111703943,
+            "min": 0.9283335942601199,
+            "max": 0.9988890184968967
+          }
+        },
+        "all_kept": 1255
+      },
+      {
+        "transition": [
+          -1,
+          0
+        ],
+        "n": 2970,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9515643809653791,
+            "min": 0.8753045857699542,
+            "max": 0.9970455549604792
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9571221473999252,
+            "min": 0.875,
+            "max": 1.0
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9571221473999252,
+            "min": 0.875,
+            "max": 1.0
+          },
+          "normalized_entropy": {
+            "mean": 0.9686604300177539,
+            "min": 0.917897426087612,
+            "max": 0.9981306884759581
+          }
+        },
+        "all_kept": 507
+      },
+      {
+        "transition": [
+          0,
+          1
+        ],
+        "n": 2970,
+        "fields": {
+          "requested_keep_ratio": {
+            "mean": 0.9390382767358951,
+            "min": 0.8570272939594066,
+            "max": 0.9935190887520721
+          },
+          "actual_keep_ratio": {
+            "mean": 0.9397622053872053,
+            "min": 0.8576388888888888,
+            "max": 0.9947916666666666
+          },
+          "consumed_keep_ratio": {
+            "mean": 0.9397622053872053,
+            "min": 0.8576388888888888,
+            "max": 0.9947916666666666
+          },
+          "normalized_entropy": {
+            "mean": 0.9604428339997313,
+            "min": 0.9052760627983234,
+            "max": 0.9958948682249928
+          }
+        },
+        "all_kept": 0
+      }
+    ]
+  },
+  "final_visual_count": {
+    "mean": 2891.592,
+    "min": 2660,
+    "max": 3048,
+    "alltoken": 3060
+  },
+  "changed_cases": [
+    {
+      "question_id": "162",
+      "type": "benefit",
+      "question": "Is there a chair in the image?",
+      "gt": "no",
+      "stage_margins": [
+        -0.828125,
+        -0.96875,
+        -1.3125,
+        -0.4375
+      ],
+      "final_margin": -0.12499809265136719,
+      "keep": [
+        1.0,
+        1.0,
+        0.984375
+      ]
+    },
+    {
+      "question_id": "311",
+      "type": "harm",
+      "question": "Is there a sports ball in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -2.1875,
+        -0.703125,
+        -1.09375,
+        -1.203125
+      ],
+      "final_margin": -0.41562461853027344,
+      "keep": [
+        0.9444444444444444,
+        0.9027777777777778,
+        0.9097222222222222
+      ]
+    },
+    {
+      "question_id": "457",
+      "type": "harm",
+      "question": "Is there a snowboard in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.984375,
+        -0.5,
+        -0.421875,
+        -0.4375
+      ],
+      "final_margin": 0.0,
+      "keep": [
+        0.9722222222222222,
+        0.9305555555555556,
+        0.9149305555555556
+      ]
+    },
+    {
+      "question_id": "513",
+      "type": "harm",
+      "question": "Is there an orange in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.984375,
+        1.65625,
+        -1.03125,
+        -0.71875
+      ],
+      "final_margin": -0.5062484741210938,
+      "keep": [
+        0.9444444444444444,
+        0.9236111111111112,
+        0.8888888888888888
+      ]
+    },
+    {
+      "question_id": "591",
+      "type": "harm",
+      "question": "Is there a bicycle in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.671875,
+        -0.953125,
+        0.421875,
+        -2.875
+      ],
+      "final_margin": -3.8374996185302734,
+      "keep": [
+        0.9166666666666666,
+        0.9444444444444444,
+        0.9288194444444444
+      ]
+    },
+    {
+      "question_id": "627",
+      "type": "benefit",
+      "question": "Is there a backpack in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.109375,
+        -2.078125,
+        -2.15625,
+        -0.265625
+      ],
+      "final_margin": 0.4093742370605469,
+      "keep": [
+        0.9444444444444444,
+        0.9097222222222222,
+        0.8854166666666666
+      ]
+    },
+    {
+      "question_id": "645",
+      "type": "harm",
+      "question": "Is there a bicycle in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.828125,
+        -2.0625,
+        1.140625,
+        -0.453125
+      ],
+      "final_margin": -0.15312767028808594,
+      "keep": [
+        0.9444444444444444,
+        0.9375,
+        0.9270833333333334
+      ]
+    },
+    {
+      "question_id": "945",
+      "type": "benefit",
+      "question": "Is there a cup in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.296875,
+        -2.9375,
+        -4.296875,
+        -0.40625
+      ],
+      "final_margin": 0.30624961853027344,
+      "keep": [
+        0.9444444444444444,
+        0.9166666666666666,
+        0.9375
+      ]
+    },
+    {
+      "question_id": "1016",
+      "type": "harm",
+      "question": "Is there a dining table in the image?",
+      "gt": "no",
+      "stage_margins": [
+        -0.875,
+        -0.671875,
+        -0.0625,
+        -0.328125
+      ],
+      "final_margin": 0.10937309265136719,
+      "keep": [
+        1.0,
+        0.9861111111111112,
+        0.9704861111111112
+      ]
+    },
+    {
+      "question_id": "1025",
+      "type": "harm",
+      "question": "Is there a handbag in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.5,
+        -3.40625,
+        0.40625,
+        -0.234375
+      ],
+      "final_margin": -0.02187347412109375,
+      "keep": [
+        0.9444444444444444,
+        0.9097222222222222,
+        0.8940972222222222
+      ]
+    },
+    {
+      "question_id": "1043",
+      "type": "harm",
+      "question": "Is there a traffic light in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.8125,
+        -1.109375,
+        -2.046875,
+        -1.171875
+      ],
+      "final_margin": -1.4593753814697266,
+      "keep": [
+        0.9444444444444444,
+        0.9166666666666666,
+        0.8958333333333334
+      ]
+    },
+    {
+      "question_id": "1215",
+      "type": "benefit",
+      "question": "Is there a handbag in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.46875,
+        -0.125,
+        -1.25,
+        -0.28125
+      ],
+      "final_margin": 0.6687507629394531,
+      "keep": [
+        0.9444444444444444,
+        0.9236111111111112,
+        0.9010416666666666
+      ]
+    },
+    {
+      "question_id": "1333",
+      "type": "harm",
+      "question": "Is there a person in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -3.0,
+        -4.546875,
+        -2.265625,
+        -2.65625
+      ],
+      "final_margin": -2.3812484741210938,
+      "keep": [
+        0.9722222222222222,
+        0.9375,
+        0.9340277777777778
+      ]
+    },
+    {
+      "question_id": "1339",
+      "type": "benefit",
+      "question": "Is there a handbag in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.953125,
+        -1.28125,
+        -0.375,
+        -0.84375
+      ],
+      "final_margin": 0.043750762939453125,
+      "keep": [
+        0.9444444444444444,
+        0.9444444444444444,
+        0.9375
+      ]
+    },
+    {
+      "question_id": "1463",
+      "type": "benefit",
+      "question": "Is there a parking meter in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.953125,
+        -2.328125,
+        -0.375,
+        -0.453125
+      ],
+      "final_margin": 0.7468738555908203,
+      "keep": [
+        0.9444444444444444,
+        0.9166666666666666,
+        0.8958333333333334
+      ]
+    },
+    {
+      "question_id": "1507",
+      "type": "benefit",
+      "question": "Is there a clock in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.359375,
+        -2.640625,
+        -0.359375,
+        -0.5625
+      ],
+      "final_margin": 0.07499885559082031,
+      "keep": [
+        0.9444444444444444,
+        0.9027777777777778,
+        0.875
+      ]
+    },
+    {
+      "question_id": "1512",
+      "type": "harm",
+      "question": "Is there a cup in the image?",
+      "gt": "no",
+      "stage_margins": [
+        -0.90625,
+        -0.78125,
+        -1.671875,
+        -0.375
+      ],
+      "final_margin": 0.04999542236328125,
+      "keep": [
+        1.0,
+        1.0,
+        0.9722222222222222
+      ]
+    },
+    {
+      "question_id": "2163",
+      "type": "harm",
+      "question": "Is there a sports ball in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.65625,
+        -2.375,
+        -1.375,
+        -1.9375
+      ],
+      "final_margin": -2.9624977111816406,
+      "keep": [
+        0.9444444444444444,
+        0.9166666666666666,
+        0.9166666666666666
+      ]
+    },
+    {
+      "question_id": "2253",
+      "type": "harm",
+      "question": "Is there a bowl in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -2.109375,
+        -2.84375,
+        -2.96875,
+        -1.359375
+      ],
+      "final_margin": -0.7593765258789062,
+      "keep": [
+        0.9444444444444444,
+        0.9722222222222222,
+        0.9479166666666666
+      ]
+    },
+    {
+      "question_id": "2275",
+      "type": "benefit",
+      "question": "Is there a backpack in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.859375,
+        -1.03125,
+        -0.03125,
+        -0.1875
+      ],
+      "final_margin": 0.35000038146972656,
+      "keep": [
+        0.9444444444444444,
+        0.9097222222222222,
+        0.9079861111111112
+      ]
+    },
+    {
+      "question_id": "2355",
+      "type": "harm",
+      "question": "Is there a bowl in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -2.515625,
+        -1.859375,
+        -1.671875,
+        -1.234375
+      ],
+      "final_margin": -0.20937538146972656,
+      "keep": [
+        0.9444444444444444,
+        0.9305555555555556,
+        0.9045138888888888
+      ]
+    },
+    {
+      "question_id": "2478",
+      "type": "benefit",
+      "question": "Is there a cup in the image?",
+      "gt": "no",
+      "stage_margins": [
+        -1.125,
+        -0.75,
+        -3.84375,
+        -0.515625
+      ],
+      "final_margin": -0.028123855590820312,
+      "keep": [
+        1.0,
+        0.9861111111111112,
+        0.9739583333333334
+      ]
+    },
+    {
+      "question_id": "2497",
+      "type": "harm",
+      "question": "Is there a tv in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -2.515625,
+        -2.359375,
+        -1.5,
+        -1.1875
+      ],
+      "final_margin": -0.125,
+      "keep": [
+        0.9444444444444444,
+        0.9097222222222222,
+        0.8923611111111112
+      ]
+    },
+    {
+      "question_id": "2559",
+      "type": "harm",
+      "question": "Is there a car in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.40625,
+        -2.515625,
+        -1.578125,
+        -0.921875
+      ],
+      "final_margin": -0.5343742370605469,
+      "keep": [
+        0.9444444444444444,
+        0.9166666666666666,
+        0.9236111111111112
+      ]
+    },
+    {
+      "question_id": "2639",
+      "type": "benefit",
+      "question": "Is there a handbag in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.84375,
+        -2.171875,
+        -0.203125,
+        -0.703125
+      ],
+      "final_margin": 0.20937347412109375,
+      "keep": [
+        0.9444444444444444,
+        0.9444444444444444,
+        0.9184027777777778
+      ]
+    },
+    {
+      "question_id": "2695",
+      "type": "harm",
+      "question": "Is there a snowboard in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.46875,
+        0.40625,
+        -0.046875,
+        -0.28125
+      ],
+      "final_margin": -0.13125038146972656,
+      "keep": [
+        0.9444444444444444,
+        0.9375,
+        0.9201388888888888
+      ]
+    },
+    {
+      "question_id": "2697",
+      "type": "benefit",
+      "question": "Is there a backpack in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -0.96875,
+        -1.578125,
+        -0.921875,
+        -0.40625
+      ],
+      "final_margin": 0.04374885559082031,
+      "keep": [
+        0.9444444444444444,
+        0.9375,
+        0.9184027777777778
+      ]
+    },
+    {
+      "question_id": "2745",
+      "type": "benefit",
+      "question": "Is there a potted plant in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.390625,
+        0.203125,
+        -1.421875,
+        -0.1875
+      ],
+      "final_margin": 0.7749996185302734,
+      "keep": [
+        0.9444444444444444,
+        0.9305555555555556,
+        0.9079861111111112
+      ]
+    },
+    {
+      "question_id": "2802",
+      "type": "harm",
+      "question": "Is there a bottle in the image?",
+      "gt": "no",
+      "stage_margins": [
+        -0.90625,
+        -1.140625,
+        0.28125,
+        -0.390625
+      ],
+      "final_margin": 0.021877288818359375,
+      "keep": [
+        1.0,
+        0.9861111111111112,
+        0.9618055555555556
+      ]
+    },
+    {
+      "question_id": "2887",
+      "type": "benefit",
+      "question": "Is there a backpack in the image?",
+      "gt": "yes",
+      "stage_margins": [
+        -1.625,
+        -2.21875,
+        -1.4375,
+        -0.703125
+      ],
+      "final_margin": 0.034374237060546875,
+      "keep": [
+        0.9444444444444444,
+        0.9444444444444444,
+        0.9131944444444444
+      ]
+    }
+  ],
+  "paired_changed_margins": [
+    {
+      "q": "311",
+      "condition": "C",
+      "type": "harm",
+      "m0": -2.1875,
+      "m3": -0.703125,
+      "mf": 0.484375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "457",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.984375,
+      "m3": -0.40625,
+      "mf": 0.05624961853027344,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "513",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.984375,
+      "m3": -0.296875,
+      "mf": 0.2531242370605469,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "591",
+      "condition": "C",
+      "type": "harm",
+      "m0": -1.671875,
+      "m3": 0.265625,
+      "mf": 1.8156261444091797,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "645",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.828125,
+      "m3": -0.28125,
+      "mf": 0.15625,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1016",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.875,
+      "m3": -0.40625,
+      "mf": -0.03125190734863281,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1025",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.5,
+      "m3": -0.140625,
+      "mf": 0.14687347412109375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1043",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.8125,
+      "m3": -0.109375,
+      "mf": 0.453125,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1333",
+      "condition": "C",
+      "type": "harm",
+      "m0": -3.0,
+      "m3": -0.90625,
+      "mf": 0.7687511444091797,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1512",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.90625,
+      "m3": -0.46875,
+      "mf": -0.11875152587890625,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2163",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.65625,
+      "m3": 1.84375,
+      "mf": 3.84375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2253",
+      "condition": "C",
+      "type": "harm",
+      "m0": -2.109375,
+      "m3": 3.125,
+      "mf": 7.3125,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2355",
+      "condition": "C",
+      "type": "harm",
+      "m0": -2.515625,
+      "m3": -1.046875,
+      "mf": 0.1281261444091797,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2497",
+      "condition": "C",
+      "type": "harm",
+      "m0": -2.515625,
+      "m3": -0.921875,
+      "mf": 0.35312461853027344,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2559",
+      "condition": "C",
+      "type": "harm",
+      "m0": -1.40625,
+      "m3": 0.1875,
+      "mf": 1.4625015258789062,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2695",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.46875,
+      "m3": -0.15625,
+      "mf": 0.09375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2802",
+      "condition": "C",
+      "type": "harm",
+      "m0": -0.90625,
+      "m3": -0.40625,
+      "mf": -0.0062503814697265625,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "162",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -0.828125,
+      "m3": -0.21875,
+      "mf": 0.2687492370605469,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "627",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.109375,
+      "m3": -0.71875,
+      "mf": -0.40625,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "945",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.296875,
+      "m3": -0.90625,
+      "mf": -0.59375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1215",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.46875,
+      "m3": -0.859375,
+      "mf": -0.3718738555908203,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1339",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.953125,
+      "m3": -0.953125,
+      "mf": -0.15312576293945312,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1463",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.953125,
+      "m3": -1.0,
+      "mf": -0.2375011444091797,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1507",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.359375,
+      "m3": -0.953125,
+      "mf": -0.6281242370605469,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2275",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -0.859375,
+      "m3": -0.734375,
+      "mf": -0.6343727111816406,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2478",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.125,
+      "m3": -0.46875,
+      "mf": 0.05624961853027344,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2639",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.84375,
+      "m3": -0.953125,
+      "mf": -0.24062538146972656,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2697",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -0.96875,
+      "m3": -0.4375,
+      "mf": -0.012500762939453125,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2745",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.390625,
+      "m3": -0.734375,
+      "mf": -0.20937347412109375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2887",
+      "condition": "C",
+      "type": "benefit",
+      "m0": -1.625,
+      "m3": -1.34375,
+      "mf": -1.1187515258789062,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "311",
+      "condition": "D",
+      "type": "harm",
+      "m0": -2.1875,
+      "m3": -1.203125,
+      "mf": -0.41562461853027344,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "457",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.984375,
+      "m3": -0.4375,
+      "mf": 0.0,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "513",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.984375,
+      "m3": -0.71875,
+      "mf": -0.5062484741210938,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "591",
+      "condition": "D",
+      "type": "harm",
+      "m0": -1.671875,
+      "m3": -2.875,
+      "mf": -3.8374996185302734,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "645",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.828125,
+      "m3": -0.453125,
+      "mf": -0.15312767028808594,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1016",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.875,
+      "m3": -0.328125,
+      "mf": 0.10937309265136719,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1025",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.5,
+      "m3": -0.234375,
+      "mf": -0.02187347412109375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1043",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.8125,
+      "m3": -1.171875,
+      "mf": -1.4593753814697266,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1333",
+      "condition": "D",
+      "type": "harm",
+      "m0": -3.0,
+      "m3": -2.65625,
+      "mf": -2.3812484741210938,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1512",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.90625,
+      "m3": -0.375,
+      "mf": 0.04999542236328125,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2163",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.65625,
+      "m3": -1.9375,
+      "mf": -2.9624977111816406,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2253",
+      "condition": "D",
+      "type": "harm",
+      "m0": -2.109375,
+      "m3": -1.359375,
+      "mf": -0.7593765258789062,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2355",
+      "condition": "D",
+      "type": "harm",
+      "m0": -2.515625,
+      "m3": -1.234375,
+      "mf": -0.20937538146972656,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2497",
+      "condition": "D",
+      "type": "harm",
+      "m0": -2.515625,
+      "m3": -1.1875,
+      "mf": -0.125,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2559",
+      "condition": "D",
+      "type": "harm",
+      "m0": -1.40625,
+      "m3": -0.921875,
+      "mf": -0.5343742370605469,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2695",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.46875,
+      "m3": -0.28125,
+      "mf": -0.13125038146972656,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2802",
+      "condition": "D",
+      "type": "harm",
+      "m0": -0.90625,
+      "m3": -0.390625,
+      "mf": 0.021877288818359375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "162",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -0.828125,
+      "m3": -0.4375,
+      "mf": -0.12499809265136719,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "627",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.109375,
+      "m3": -0.265625,
+      "mf": 0.4093742370605469,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "945",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.296875,
+      "m3": -0.40625,
+      "mf": 0.30624961853027344,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1215",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.46875,
+      "m3": -0.28125,
+      "mf": 0.6687507629394531,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1339",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.953125,
+      "m3": -0.84375,
+      "mf": 0.043750762939453125,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1463",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.953125,
+      "m3": -0.453125,
+      "mf": 0.7468738555908203,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "1507",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.359375,
+      "m3": -0.5625,
+      "mf": 0.07499885559082031,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2275",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -0.859375,
+      "m3": -0.1875,
+      "mf": 0.35000038146972656,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2478",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.125,
+      "m3": -0.515625,
+      "mf": -0.028123855590820312,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2639",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.84375,
+      "m3": -0.703125,
+      "mf": 0.20937347412109375,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2697",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -0.96875,
+      "m3": -0.40625,
+      "mf": 0.04374885559082031,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2745",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.390625,
+      "m3": -0.1875,
+      "mf": 0.7749996185302734,
+      "start_margin_equal_to_C": true
+    },
+    {
+      "q": "2887",
+      "condition": "D",
+      "type": "benefit",
+      "m0": -1.625,
+      "m3": -0.703125,
+      "mf": 0.034374237060546875,
+      "start_margin_equal_to_C": true
+    }
+  ],
+  "scope": "LLaVA-v1.6-Vicuna-7B; POPE Popular 3000; historical B/C/D; first answer token only for token metrics; no new model inference",
+  "overall": {
+    "B": {
+      "count": 3000,
+      "correct": 2648,
+      "accuracy": 0.8826666666666667,
+      "invalid": 0,
+      "TP": 1193,
+      "TN": 1455,
+      "FP": 45,
+      "FN": 307
+    },
+    "C": {
+      "count": 3000,
+      "correct": 2710,
+      "accuracy": 0.9033333333333333,
+      "invalid": 0,
+      "TP": 1273,
+      "TN": 1437,
+      "FP": 63,
+      "FN": 227
+    },
+    "D": {
+      "count": 3000,
+      "correct": 2706,
+      "accuracy": 0.902,
+      "invalid": 0,
+      "TP": 1270,
+      "TN": 1436,
+      "FP": 64,
+      "FN": 230
+    }
+  },
+  "selection_effect": {
+    "left": "C",
+    "right": "D",
+    "count": 3000,
+    "left_accuracy": 0.9033333333333333,
+    "right_accuracy": 0.902,
+    "accuracy_delta": -0.0013333333333332975,
+    "accuracy_delta_percentage_points": -0.13333333333332975,
+    "prediction_changed_count": 30,
+    "corrected_count": 13,
+    "degraded_count": 17,
+    "net_corrected_minus_degraded": -4,
+    "mcnemar_exact_two_sided_p_value": 0.584664711728692
+  },
+  "cd_effect": {
+    "left": "B",
+    "right": "C",
+    "count": 3000,
+    "left_accuracy": 0.8826666666666667,
+    "right_accuracy": 0.9033333333333333,
+    "accuracy_delta": 0.02066666666666661,
+    "accuracy_delta_percentage_points": 2.066666666666661,
+    "prediction_changed_count": 98,
+    "corrected_count": 80,
+    "degraded_count": 18,
+    "net_corrected_minus_degraded": 62,
+    "mcnemar_exact_two_sided_p_value": 1.6606697571045604e-10
+  },
+  "sha256": {
+    "audit/runs/step4_ablation_v1/full_B_20260926T050031Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260926_130041_samples_pope_pop.jsonl": "a5967690538317d7acbb0184a55f5c5f9b87d935aeba8402b6ee6108252be811",
+    "audit/runs/step4_ablation_v1/full_C_20260926T082950Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260926_163001_samples_pope_pop.jsonl": "8a9410a5bc4dbc70bc5bd17a2f4293aff978cebcb4820b92722326e6420b39cb",
+    "audit/runs/step2_token_selection_v2/full_20260925T124957Z/results/liuhaotian__llava-v1.6-vicuna-7b/20260925_205012_samples_pope_pop.jsonl": "ece07a7827ea192a350e1334ea3b6b7b216c1fdad596c09920e369846152d44f",
+    "audit/runs/step4_ablation_v1/bcd_full_paired_report.json": "a8f0072e1f33dc40ba67daf974cd486ef3c57925da6640092f8fdbc564155797",
+    "lmms_eval/recursion_utils.py": "73008eba72385130bd03e2c049e6c3c154c0cb3a9509577178012684b4987468",
+    "lmms_eval/second_audit.py": "9e8ba36e508bebc4f4a71f9904ff816c938fb1a1f6ca0d9a0ca115c0bf7cab55",
+    "LLaVA-NeXT/llava/mm_utils.py": "00ab1d05f6443a544d855440ebf4f6cbda68b72dadaa13297f4fab68626b2ada",
+    "LLaVA-NeXT/llava/model/language_model/llava_recursion.py": "b8a230398ef37c6a02ea08f7bc539e966a235ca4098ffe5b6ed5cf3fa34553ca"
+  },
+  "checks": {
+    "aligned_question_ids_gt_question_input": true,
+    "count_per_condition": 3000,
+    "D_capture_sample_count": 3000,
+    "D_transition_count": 9000,
+    "paired_changed_case_count": 30,
+    "initial_yes_no_margin_equal_in_changed_C_D_pairs": true,
+    "max_telescoping_residual": 4.577636718794409e-06
+  }
+}

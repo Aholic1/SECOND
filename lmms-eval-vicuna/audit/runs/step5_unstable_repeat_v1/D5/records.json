@@ -1,0 +1,108 @@
+{
+  "457": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a snowboard in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 640,
+        "height": 480
+      },
+      "padding": {
+        "left": 0,
+        "top": 80,
+        "right": 0,
+        "bottom": 80
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "c37c42d847641dfc28e83ab5709dab9529e789e76ff69e75931ac5b432e781bf",
+      "-2_to_-1/consumed_mask": "52894fed64d8ae7e298cba3f96cfeabcb339e06f4778769a8ffa7f4117281beb",
+      "-1_to_0/applied_mask": "72eb28cc40d0fc7da63afaae0b79391847b1420647ac256433380114a1141af4",
+      "-1_to_0/consumed_mask": "4a0e536e08f72176735e5b0c2702b3fe8082769f1cca175915da4cfde871ac06",
+      "0_to_1/applied_mask": "d66baba03f47243615cfbe2f01974001c300db868cc6ab3c403ab62f165fd1aa",
+      "0_to_1/consumed_mask": "d66baba03f47243615cfbe2f01974001c300db868cc6ab3c403ab62f165fd1aa"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 140,
+      "-1_to_0": 536,
+      "0_to_1": 2108
+    },
+    "attention_hashes": {
+      "-2_to_-1": "ec9434f53fd982255b849692052230918fc3413cae98bd62c90a2104d35e20a5",
+      "-1_to_0": "d48f27038589a5998b3a71f74db42a5358154c516e38304ca64650b63f3bf58f",
+      "0_to_1": "36df52e646b2112204771674aad8e74ea8bb2395769d8c307f855ce292c5e6c5"
+    },
+    "yes_no_margin": 0.0,
+    "rank": 0
+  },
+  "1512": {
+    "prediction": "no",
+    "final_token_ids": [
+      1939,
+      2
+    ],
+    "prompt": "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: <image>\nIs there a cup in the image?\nAnswer the question using a single word or phrase. ASSISTANT:",
+    "generation_config": {
+      "max_new_tokens": 128,
+      "temperature": 0.0,
+      "top_p": 0,
+      "num_beams": 1,
+      "do_sample": false
+    },
+    "image_transform": {
+      "original_size": {
+        "width": 383,
+        "height": 640
+      },
+      "padding": {
+        "left": 128,
+        "top": 0,
+        "right": 129,
+        "bottom": 0
+      },
+      "mask_coordinate_space": "model_input_canvas",
+      "grid_to_canvas": "Each grid cell maps to its proportional rectangle on the padded square canvas.",
+      "model_input_size": {
+        "width": 640,
+        "height": 640
+      }
+    },
+    "mask_hashes": {
+      "-2_to_-1/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-2_to_-1/consumed_mask": "6f8a8f158e11ecfb76eb1342d003fa1c3648285f602a143ef804cc5a3331c9e4",
+      "-1_to_0/applied_mask": "f96b00baa17f1f2a4065696f25f0c754bc5281eed2bd4098fd2a7d4451d95498",
+      "-1_to_0/consumed_mask": "4bf10af4958150f6376dd2aa2d73168c1e18a75e80dc66ae02e701af1d31ae7f",
+      "0_to_1/applied_mask": "a3ba6823593996a68e690cb08dc1896b2a17946199fba265499800b851baddf7",
+      "0_to_1/consumed_mask": "a3ba6823593996a68e690cb08dc1896b2a17946199fba265499800b851baddf7"
+    },
+    "consumed_counts": {
+      "-2_to_-1": 144,
+      "-1_to_0": 576,
+      "0_to_1": 2164
+    },
+    "attention_hashes": {
+      "-2_to_-1": "ccab233fc45abce78a300565cf7ba5c92b718abcc193b59872c63ff3c2131ae7",
+      "-1_to_0": "d27b9b86463519fa74d1e4e528971aed17b47d06e37217656ad207179eda487d",
+      "0_to_1": "8d0947516eb91e8ea8b5cef7c673a0d9d257300ba1380480a2febd761e5102b9"
+    },
+    "yes_no_margin": -0.23125267028808594,
+    "rank": 1
+  }
+}

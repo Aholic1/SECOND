@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "count": 48,
+  "cohort": {
+    "folder": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/manifests/step5_changed30_matched_v1",
+    "sha256_index": "e2dec4f578b5af5eff299d0719b1711b4aab2fdb729edff5979351658c81202c",
+    "combined_sha256": "746e4644d84714ee8c43dc3463781838f0dc74185c7581d4e2d04e20ddb86f0b",
+    "count": 48,
+    "historical_matching_status": "NEEDS_REVIEW",
+    "control_count": 18
+  },
+  "blind_zip": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step5_review_v1/blind_review.zip",
+  "warning": "Do not give review_key_private.json or original manifests to independent reviewers; original labels are unchanged."
+}

@@ -1,0 +1,21 @@
+{
+  "driver_sha256": "9b53c0857cdf0ee2537f699f7ad17110aaf6e95732690d9dd3536102c778b90d",
+  "baseline_study": "/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step6_interventions_v1",
+  "baseline_completion_sha256": {
+    "C1": "a9e6b5b833e4bc6964c556f6ea57336a8029a35b19c87155bc9fd910f6f2cd24",
+    "D1": "4dc2c463b822c80635818e4773e3e86455124cfcb03577b230fc3c7e72553547",
+    "D2": "250c54937818a27bfd310f1b897e9420b27235060ea36138892a5fba74a4d51c",
+    "C2": "a036613233f36df65600931b16a988a49369267eb19db46f24077be0953324fb"
+  },
+  "primary_ids": [
+    "2253",
+    "2559",
+    "311",
+    "645",
+    "1043"
+  ],
+  "excluded_from_primary_interpretation": {
+    "1025": "Observed actual mask instability; retained in full 48-question execution cohort."
+  },
+  "design": "First-token fixed masks; later tokens adaptive; three predeclared random seeds; selected-case inference only."
+}

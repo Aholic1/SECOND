@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "purpose": "Step 4 full 3000-sample ablation",
+  "mode": "full",
+  "task": "pope_pop",
+  "expected_count": 3000,
+  "condition": "B",
+  "condition_definition": "recursive all-token without contrastive decoding",
+  "artifact_mode": "compact",
+  "git_commit": "1a4bdd2a9e4a0bd23f67a31821cdcbb4af962ac4",
+  "runtime": {
+    "conda_environment": "SECOND_clean",
+    "cuda_visible_devices": "0,1",
+    "num_processes": 2,
+    "main_process_port": 29920
+  },
+  "second_parameters": {
+    "generation_type": "recursion",
+    "fix_grid": "2x2",
+    "attention_thresholding_type": "attn_topk",
+    "attention_threshold": 1.0,
+    "positional_embedding_type": "bilinear_interpolation",
+    "stages": [
+      -2,
+      -1,
+      0,
+      1
+    ],
+    "contrastive_alphas": [
+      0.8,
+      0.8,
+      0.8
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "snapshot_sha256": "dee6d36a21e84345b1303fc5bf06760cfa9363424b90d1908c8a8fe004f97690",
+  "output_hashes": {
+    "records.json": "a6bff2ae295082ebebd0df5ef85fbd31803f3f975faa64022c90583dd03aa347",
+    "validation_report.json": "78c38c1131a26efeba87926a28313231faf27d1f4d2de0823484b9cc60959a0c",
+    "run_manifest.json": "b8940cb8fd3df0ef721ef8e333982bf17b93d4cd5b66fc2c2e4f27830e1571e1"
+  },
+  "semantics": "Artifact and sample validation passed; prediction repeatability is assessed separately."
+}

@@ -1,0 +1,19 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+[32m2026-09-19 18:54:40.926[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m358[0m - [1mVerbosity set to DEBUG[0m
+[32m2026-09-19 18:54:40.927[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate[0m:[36m358[0m - [1mVerbosity set to DEBUG[0m
+[32m2026-09-19 18:54:41.210[0m | [34m[1mDEBUG   [0m | [36mlmms_eval.tasks[0m:[36m_get_task_and_group[0m:[36m452[0m - [34m[1m`group` and `group_alias` keys in tasks' configs will no longer be used in the next release of lmms-eval. `tag` will be used to allow to call a collection of tasks just like `group`. `group` will be removed in order to not cause confusion with the new ConfigurableGroup which will be the offical way to create groups with addition of group-wide configuations.[0m
+[32m2026-09-19 18:54:41.223[0m | [34m[1mDEBUG   [0m | [36mlmms_eval.tasks[0m:[36m_get_task_and_group[0m:[36m452[0m - [34m[1m`group` and `group_alias` keys in tasks' configs will no longer be used in the next release of lmms-eval. `tag` will be used to allow to call a collection of tasks just like `group`. `group` will be removed in order to not cause confusion with the new ConfigurableGroup which will be the offical way to create groups with addition of group-wide configuations.[0m
+[32m2026-09-19 18:54:43.559[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m441[0m - [1mEvaluation tracker args: {'output_path': '/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step2_token_selection_v2/diagnostic_20260919T185433Z/results'}[0m
+[32m2026-09-19 18:54:43.559[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m530[0m - [1mSelected Tasks: ['pope_pop_audit'][0m
+[32m2026-09-19 18:54:43.562[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m155[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+[32m2026-09-19 18:54:43.596[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m441[0m - [1mEvaluation tracker args: {'output_path': '/home/yxq/Downloads/SECOND-main/lmms-eval-vicuna/audit/runs/step2_token_selection_v2/diagnostic_20260919T185433Z/results'}[0m
+[32m2026-09-19 18:54:43.597[0m | [1mINFO    [0m | [36m__main__[0m:[36mcli_evaluate_single[0m:[36m530[0m - [1mSelected Tasks: ['pope_pop_audit'][0m
+[32m2026-09-19 18:54:43.599[0m | [1mINFO    [0m | [36mlmms_eval.evaluator[0m:[36msimple_evaluate[0m:[36m155[0m - [1mSetting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234[0m
+initialize llava model with modification
+initialize llava model with modification

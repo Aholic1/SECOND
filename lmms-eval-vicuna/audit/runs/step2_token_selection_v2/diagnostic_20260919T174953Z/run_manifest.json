@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "capture_schema_version": 2,
+  "mode": "diagnostic",
+  "task": "pope_pop_audit",
+  "expected_count": 100,
+  "condition": "D",
+  "artifact_mode": "visual",
+  "audit_token_idx": 0,
+  "git_commit": "96287ad9316f3f9ccdec81d2082e171feb5f1d90",
+  "step1_baseline": "audit/step1_full/pope_pop_3000_baseline/baseline_predictions.jsonl",
+  "diagnostic_manifest": "audit/step1_diagnostic/diagnostic_manifest.json",
+  "runtime": {
+    "conda_environment": "SECOND_clean",
+    "python": "Python 3.10.20",
+    "cuda_visible_devices": "0,1",
+    "num_processes": 2,
+    "main_process_port": 29891
+  },
+  "second_parameters": {
+    "generation_type": "recursion",
+    "fix_grid": "2x2",
+    "attention_thresholding_type": "attn_topk",
+    "attention_threshold": 1.0,
+    "positional_embedding_type": "bilinear_interpolation",
+    "stages": [
+      -2,
+      -1,
+      0,
+      1
+    ],
+    "contrastive_alphas": [
+      0.8,
+      0.8,
+      0.8
+    ]
+  }
+}

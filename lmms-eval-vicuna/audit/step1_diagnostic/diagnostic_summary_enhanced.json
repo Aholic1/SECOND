@@ -1,0 +1,36 @@
+{
+  "total": 120,
+  "by_base_stratum": {
+    "TP": 40,
+    "TN": 30,
+    "FN": 40,
+    "FP": 10
+  },
+  "by_visual_stratum": {
+    "TP_small_center": 15,
+    "TP_small_peripheral": 10,
+    "TP_large_center": 10,
+    "TP_medium_center": 5,
+    "TN_simple": 10,
+    "TN_medium": 10,
+    "TN_complex": 10,
+    "FN_small_center": 15,
+    "FN_small_peripheral": 10,
+    "FN_medium_center": 5,
+    "FN_large_center": 5,
+    "FN_simple": 5,
+    "FP_hallucination": 10
+  },
+  "target_size_distribution": {
+    "small": 50,
+    "large": 15,
+    "medium": 10,
+    "unknown": 15
+  },
+  "complexity_distribution": {
+    "medium": 54,
+    "complex": 33,
+    "simple": 33
+  },
+  "unique_images": 107
+}
